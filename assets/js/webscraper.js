@@ -1,3 +1,10 @@
+// For http requests - //https://github.com/request/request
+const request = require('request');
+const requestOptions = {headers: {'User-Agent': "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"}};
+const statusCodeMeaning = require('./js/statusCodeMeaning.js');
+// For jquery-like node.js - //https://cheerio.js.org/
+const cheerio = require('cheerio');
+
 var doc = document;
 
 function webscrapeformsearch(inputItem) {

@@ -3,6 +3,9 @@ All website links within the UI should be opened with a default program. Copora 
 Dictionary tables have special rules for search results and search field input.
 */
 
+// Manage Shell interactions - https://github.com/electron/electron/blob/master/docs/api/shell.md
+const {shell} = require('electron')
+
 // pagination check
 var page = window.location.href;
 if (page.endsWith("index.html")) {

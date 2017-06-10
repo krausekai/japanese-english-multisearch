@@ -8,13 +8,7 @@ const url = require('url')
 let mainWindow
 
 // Right-click context menu - https://github.com/sindresorhus/electron-context-menu
-require('electron-context-menu')({
-    prepend: (params, browserWindow) => [{
-        label: 'Rainbow',
-        // Only show it when right-clicking images
-        visible: params.mediaType === 'image'
-    }]
-});
+require('electron-context-menu')({});
 
 function createWindow() {
     // Create the browser window.
@@ -32,17 +26,13 @@ function createWindow() {
         protocol: 'file:',
         slashes: true
     }))
-
-    // Open the DevTools.
-    // mainWindow.webContents.openDevTools()
 	
 	//Hide the default menubar
 	mainWindow.setMenu(null);
 	
     // Emitted when the window is closed.
-    mainWindow.on('closed', function() { // also typed as: win.on('closed', () => {
-		// Dereference window object(s). Usually windows are stored in an array (if multi-window).
-        mainWindow = null
+    mainWindow.on('closed', function() {
+		app.quit();
     })
 }
 

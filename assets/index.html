@@ -7,12 +7,10 @@
 	<link rel='stylesheet' href='./css/kotobankDict.css'>
 	<link rel='stylesheet' href='./css/ldoceDict.css'>
 	<script>//window.$ = window.jQuery = require('./js/jquery.min.js');</script>
-	<script src='./js/globalRequire.js'></script>
 	<script src='./js/inputfocus.js'></script>
 	<script src='./js/tabs.js'></script>
 	<script src='./js/webscraper.js'></script>
-	<script src='./js/about.js'></script>
-	<script src='./js/updater.js'></script>
+	<script src='./js/popupWindows.js'></script>
 	<script>
 		window.onload = function () {
 			//inputfocus.js
@@ -26,8 +24,8 @@
 				let tabOne = document.getElementsByClassName('tbodySize')[0];
 				let tabTwo = document.getElementsByClassName('tbodySize')[1];
 				// Make sure to minus the header height below
-				tabOne.style.height = window.innerHeight - 100 + 'px';
-				tabTwo.style.height = window.innerHeight - 155 + 'px';
+				tabOne.style.height = window.innerHeight - 97 + 'px';
+				tabTwo.style.height = window.innerHeight - 153 + 'px';
 			}
 			tableResize();
 			window.addEventListener("resize", tableResize, false);
@@ -45,7 +43,7 @@
 			<form id='webscrapeform' class='webscrapeform pop'>
 				<input type='text' name='webscrapeformterm'>
 				<input type='button' class='button headBtnMaxSize searchBtn' id='formsubmitbtn' value='&#128269;' onclick='webscrapeformsearch();return false;' />
-				<input type='button' class='button headBtnMaxSize' id='aboutbtn' value='?' onclick='about();return false;' /><br />
+				<input type='button' class='button headBtnMaxSize' id='aboutbtn' value='?' onclick='showAbout();return false;' /><br />
 				<div class='stretch'>
 					<label class='button tablinks'><input type='radio' name='searchType' onclick="changeTab(event, 'tabOne');" value='dictionary' checked />Dictionaries</label>
 					<label class='button tablinks'><input type='radio' name='searchType' onclick="changeTab(event, 'tabTwo');" value='corpus'  />Corpora</label>
