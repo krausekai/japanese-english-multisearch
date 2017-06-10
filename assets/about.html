@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' href='./css/style.css'>
+	<script src='./js/globalRequire.js'></script>
+	<script src='./js/about.js'></script>
+	<script src='./js/updater.js'></script>
+	<title>About</title>
+</head>
+
+<body>
+	<div id='about' class='mainContent about'>
+		<input type='button' class='button headBtnMaxSize' id='formsubmitbtn' value='Check for updates' onclick='checkVersion();return false;' /> 
+		
+		<p><b>Report an issue or make a request:</b><br />
+		<a href='https://github.com/krausekai/japanese-english-multisearch/issues'>https://github.com/krausekai/japanese-english-multisearch/issues</a></p>
+		
+		<div class='license'>
+			<p><b>Copyright</b></p>
+			<p>This program is written by Kai Krause. This program is free and open source, and is licensed under the MIT license.</p>
+			
+			<p>This program is powered by:</p>
+			<ul>
+				<li> Node.JS <script>document.write(process.versions.node)</script>,
+				<li> Chrome <script>document.write(process.versions.chrome)</script>,
+				<li> and Electron <script>document.write(process.versions.electron)</script>.
+			</ul>
+			<p>Please see the license file(s) in the source distribution for more information.</p>
+			
+			<b>Dictionaries and Corpora</b>
+			<p>This program searches these dictionaries and corpora (not all are HTTPS compliant):</p>
+			<ul>
+				<li> <a href='http://ejje.weblio.jp/'>http://ejje.weblio.jp/</a></script>
+				<li> <a href='https://kotobank.jp/'>https://kotobank.jp/</a></script>
+				<li> <a href='http://www.ldoceonline.com/'>http://www.ldoceonline.com/</a></script>
+				<li> <a href='http://www.alc.co.jp/'>http://www.alc.co.jp/</a></script>
+				<li> <a href='https://www.linguee.com/'>https://www.alc.co.jp/</a></script>
+			</ul>
+			
+			<p>This program is <b>not</b> associated or directly involved with the dictionaries and corpora searched from this program, or any associated entity or person. This program makes no effort to store or cache the data from any dictionary or corpus, and makes no effort to infringe upon any copyright. This program is made in good faith.</p>
+		</div>
+	</div>
+	
+	<footer>
+		<input type='button' class='button stretchBtn' id='closebtn' value='Close Window' onclick='window.close();return false;' /><br />
+	</footer>
+	
+	<script src='./js/ahrefLinkListener.js'></script>
+	<script src='./js/security.js'></script>
+</body>
+</html>

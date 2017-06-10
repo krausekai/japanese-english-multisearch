@@ -1,0 +1,896 @@
+/*
+	This file was generated using the "CSS Used" (https://chrome.google.com/webstore/detail/cdopjfddjlonogibjahpnmjpoangjfff) extension.
+	To do this, load the website and inspect the page. Delete unneeded nodes, then run this extension.
+	In your code editor, consider regex (e.g. ^[.]) to prepend IDs or Classes to each selector found.
+*/
+
+/*! CSS Used from: http://www.ldoceonline.com/common.css?version=1.1.26 */
+
+.ldoceDictOutput * {
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+.ldoceDictOutput body {
+	height:100%;
+    background: #fff;
+    font-family: arial, helvetica, sans-serif;
+    color: #333333;
+    flex-direction: column;
+    min-height: 100%;
+    overflow-y: scroll;
+}
+
+.ldoceDictOutput a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.ldoceDictOutput a:hover {
+    cursor: pointer;
+}
+
+.ldoceDictOutput h1 {
+    display: block;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.ldoceDictOutput a {
+    -webkit-transition: color 0.5s, background-color 0.5s;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.ldoceDictOutput .content {
+    position: relative;
+    flex: 1 0 auto;
+    min-height: 500px;
+}
+
+.ldoceDictOutput .entry_content {
+    margin: 28px 50px 20px 50px;
+}
+
+.ldoceDictOutput .EXAMPLE {
+    color: #778899;
+    margin-left: 20px;
+}
+
+.ldoceDictOutput .entry_content .dictionary .defRef {
+    border-bottom: thin dotted gray;
+}
+
+.ldoceDictOutput .content .speaker:hover {
+    cursor: pointer;
+}
+
+.ldoceDictOutput .responsive_cell6 {
+    width: 60%;
+}
+
+[class*="responsive_cell"] {
+    float: left;
+}
+
+.ldoceDictOutput .content h1.pagetitle {
+    margin-bottom: 20px;
+}
+
+.ldoceDictOutput #ad_btmslot.am-default {
+    text-align: center;
+}
+
+.ldoceDictOutput .contentslot {
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 332px) {
+    .ldoceDictOutput .Tail .contentslot {
+        margin-left: -10px;
+    }
+}
+
+@media screen and (max-width: 761px) {
+    [class*="responsive_cell"] {
+        float: none;
+        width: auto;
+    }
+    .ldoceDictOutput h1 {
+        font-size: 1.6em;
+        margin-top: 5px;
+    }
+    .ldoceDictOutput .content {
+        min-height: 200px;
+        margin-bottom: 20px;
+    }
+    .ldoceDictOutput .entry_content {
+        margin: 15px 10px 10px 10px;
+    }
+    .ldoceDictOutput .content h1.pagetitle,
+    .ldoceDictOutput .dictionary {
+        margin-bottom: 10px;
+    }
+    .ldoceDictOutput .dictionary_intro {
+        margin: 5px 0 10px 0px!important;
+    }
+}
+
+@media screen and (min-width: 762px) and (max-width: 947px) {
+    .ldoceDictOutput .content {
+        margin: 0 0 30px 0;
+        min-height: 500px;
+    }
+    .ldoceDictOutput h1 {
+        margin-bottom: 10px;
+    }
+    .ldoceDictOutput .content h1.pagetitle {
+        margin-bottom: 10px;
+    }
+    .ldoceDictOutput .responsive_cell6 {
+        width: 59%;
+    }
+    .ldoceDictOutput .entry_content {
+        margin: 20px 20px 10px 20px;
+    }
+}
+
+@media screen and (min-width: 948px) and (max-width: 1224px) {
+    .ldoceDictOutput .entry_content {
+        margin: 28px 20px 20px 20px;
+    }
+    .ldoceDictOutput .responsive_cell6 {
+        width: 48%;
+    }
+}
+
+.ldoceDictOutput .page {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12pt;
+    display: block;
+}
+
+.ldoceDictOutput .pagetitle {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.ldoceDictOutput .title {
+    display: block;
+}
+
+.ldoceDictOutput .title:before {
+    content: 'title: ';
+}
+
+.ldoceDictOutput .exaGroup .title:before {
+    content: '';
+}
+
+.ldoceDictOutput .dictentry {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.ldoceDictOutput .dictionary_intro {
+    display: block;
+    background-color: #35a3ff;
+    color: #fff;
+    padding-left: 10px;
+    margin: 5px 0 10px -7px;
+}
+
+.ldoceDictOutput .asset_intro {
+    border: solid 1px;
+    border-color: #f1d600;
+    background-color: #f1d600;
+    color: #fff;
+    font-weight: normal;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.ldoceDictOutput .yellow_box {
+    margin-top: 22px;
+}
+
+.ldoceDictOutput .ldoceEntry .ACTIV {
+    display: none;
+}
+
+.ldoceDictOutput .ldoceEntry .COLLO {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.ldoceDictOutput .ldoceEntry .ColloExa {
+    display: block;
+}
+
+.ldoceDictOutput .ldoceEntry .COLLOINEXA {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .ldoceEntry .EXAMPLE {
+    display: block;
+    margin-left: 20px;
+    color: gray;
+}
+
+.ldoceDictOutput .ldoceEntry .synopp {
+    color: #fff;
+    border-color: #f1d600;
+    background-color: #f1d600;
+}
+
+.ldoceDictOutput .ldoceEntry .FREQ {
+    color: red;
+    border-color: red;
+}
+
+.ldoceDictOutput .ldoceEntry .LEVEL {
+    color: red;
+    font-size: 120%;
+}
+
+.ldoceDictOutput .ldoceEntry .GLOSS {
+    color: #364395;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ldoceDictOutput .ldoceEntry .frequent .HYPHENATION {
+    color: red;
+    font-size: 160%;
+}
+
+.ldoceDictOutput .ldoceEntry .HWD {
+    display: none;
+}
+
+.ldoceDictOutput .ldoceEntry .HYPHENATION {
+    font-weight: bold;
+    font-size: 160%;
+    color: red;
+}
+
+.ldoceDictOutput .ldoceEntry .OPP {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .ldoceEntry .POS {
+    color: green;
+    font-weight: bold;
+    margin: 0 0 0 10px;
+}
+
+.ldoceDictOutput .ldoceEntry .Sense {
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.ldoceDictOutput .ldoceEntry .SYN {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .ldoceEntry .neutral {
+    color: black;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+}
+
+.ldoceDictOutput .ldoceEntry .sensenum {
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+.ldoceDictOutput .ldoceEntry .synopp,
+.ldoceDictOutput .ldoceEntry .FREQ {
+    display: inline-block;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: solid 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.ldoceDictOutput .ldoceEntry .ThesBox {
+    display: block;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: solid #364395 1px;
+    padding: 15px;
+    margin: 8px 0;
+}
+
+.ldoceDictOutput .ThesBox .heading {
+    line-height: 2em;
+}
+
+.ldoceDictOutput .ldoceEntry .heading {
+    font-weight: bold;
+    font-size: 120%;
+    color: #364395;
+}
+
+.ldoceDictOutput .ldoceEntry .SECHEADING {
+    display: table;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: solid #6f469d 2px;
+    padding-left: 4px;
+    padding-right: 20px;
+    margin: 25px 0 10px 0;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    background-color: #6f469d;
+}
+
+.ldoceDictOutput .ldoceEntry .Exponent {
+    display: block;
+    margin: 15px 0 0 6px;
+}
+
+.ldoceDictOutput .ldoceEntry .EXP {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .ldoceEntry .DEFBOLD {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .ldoceEntry .exafile {
+    color: gray;
+    font-style: normal;
+    font-size: 120%;
+    padding: 5px;
+}
+
+.ldoceDictOutput .ldoceEntry .amefile {
+    color: #4693db;
+    font-size: 130%;
+    padding-left: 5px;
+}
+
+.ldoceDictOutput .ldoceEntry .brefile {
+    color: #fa6360;
+    font-size: 130%;
+    padding-left: 5px;
+}
+
+.ldoceDictOutput span.neutral {
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+}
+
+.ldoceDictOutput span.sensenum {
+    font-style: normal;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-left: 3px;
+}
+
+.ldoceDictOutput span.synopp {
+    font-style: normal;
+    font-weight: bold;
+    color: darkblue;
+}
+
+.ldoceDictOutput span.heading {
+    font-weight: bold;
+    font-size: 120%;
+    color: #364395;
+}
+
+.ldoceDictOutput .exaGroup .title {
+    font-size: 110%;
+    font-weight: bold;
+    color: black;
+    display: block;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.ldoceDictOutput .exaGroup .exa {
+    display: block;
+    color: gray;
+    margin-left: 15px;
+}
+
+.ldoceDictOutput .exaGroup .NodeW {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .asset {
+    margin-top: 30px;
+}
+
+.ldoceDictOutput .page {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12pt;
+    display: block;
+}
+
+.ldoceDictOutput .pagetitle {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.ldoceDictOutput .page {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12pt;
+    display: block;
+}
+
+.ldoceDictOutput .pagetitle {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+
+/*! CSS Used from: http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css */
+
+.ldoceDictOutput .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ldoceDictOutput .fa-volume-up:before {
+    content: "\f028";
+}
+
+
+
+/*! CSS Used from: http://www.ldoceonline.com/common.css?version=1.1.26 */
+.ldoceDictOutput ul {
+    list-style-type: none;
+}
+
+.ldoceDictOutput a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.ldoceDictOutput a:hover {
+    cursor: pointer;
+}
+
+.ldoceDictOutput h1 {
+    display: block;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.ldoceDictOutput a {
+    -webkit-transition: color 0.5s, background-color 0.5s;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.ldoceDictOutput .searches {
+    list-style: disc outside;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.ldoceDictOutput .searches li {
+    padding: 0.5em;
+    background: aliceblue;
+    margin-bottom: 5px;
+}
+
+.ldoceDictOutput .searches li a {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .searches li a:hover {
+    text-decoration: underline;
+}
+
+.ldoceDictOutput .search_word {
+    color: #364395;
+}
+
+.ldoceDictOutput .page_content {
+    margin: 28px 50px 20px 50px;
+}
+
+#ad_btmslot.am-default {
+    text-align: center;
+}
+
+@media screen and (max-width: 761px) {
+    .ldoceDictOutput h1 {
+        font-size: 1.6em;
+        margin-top: 5px;
+    }
+    .ldoceDictOutput .searches {
+        list-style: disc outside;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        margin-bottom: 15px;
+    }
+    .ldoceDictOutput .page_content {
+        margin: 15px 10px 10px 10px;
+    }
+}
+
+@media screen and (min-width: 762px) and (max-width: 947px) {
+    .ldoceDictOutput h1 {
+        margin-bottom: 10px;
+    }
+    .ldoceDictOutput .page_content {
+        margin: 20px 20px 10px 20px;
+    }
+    .ldoceDictOutput .searches {
+        list-style: disc outside;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 948px) and (max-width: 1224px) {
+    .ldoceDictOutput .page_content {
+        margin: 28px 20px 20px 20px;
+    }
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.eot?v=4.2.0);
+    src: url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.eot#iefix&v=4.2.0) format('embedded-opentype'), url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.woff?v=4.2.0) format('woff'), url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.ttf?v=4.2.0) format('truetype'), url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*! CSS Used from: http://www.ldoceonline.com/common.css?version=1.1.26 */
+
+.ldoceDictOutput .EXAMPLE {
+    color: #778899;
+    margin-left: 20px;
+}
+
+.ldoceDictOutput .ldoceEntry .ErrorBox {
+    display: block;
+}
+
+.ldoceDictOutput .ldoceEntry .EXAMPLE {
+    display: block;
+    margin-left: 20px;
+    color: gray;
+}
+
+.ldoceDictOutput .ldoceEntry .GEO {
+    font-weight: normal;
+    color: #364395;
+}
+
+.ldoceDictOutput .ldoceEntry .LEXVAR {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .ldoceEntry .LINKWORD {
+    color: #364395;
+}
+
+.ldoceDictOutput .ldoceEntry .REGISTERLAB {
+    color: purple;
+    font-style: italic;
+}
+
+.ldoceDictOutput .ldoceEntry .neutral {
+    color: black;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+}
+
+.ldoceDictOutput .ldoceEntry .warning {
+    font-style: normal;
+    font-weight: bold;
+    color: red;
+}
+
+.ldoceDictOutput .ldoceEntry .ColloBox {
+    display: block;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: solid #364395 1px;
+    padding: 15px;
+    margin: 8px 0;
+}
+
+.ldoceDictOutput .ColloBox .heading {
+    line-height: 2em;
+    margin: 0 10px 0 0;
+}
+
+.ldoceDictOutput .ldoceEntry .HEADING,
+.ldoceDictOutput .ldoceEntry .heading {
+    font-weight: bold;
+    font-size: 120%;
+    color: #364395;
+}
+
+.ldoceDictOutput .ldoceEntry .SECHEADING {
+    display: table;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: solid #6f469d 2px;
+    padding-left: 4px;
+    padding-right: 20px;
+    margin: 25px 0 10px 0;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    background-color: #6f469d;
+}
+
+.ldoceDictOutput .ldoceEntry .Collocate {
+    display: block;
+    margin: 15px 0 0 6px;
+}
+
+.ldoceDictOutput .ldoceEntry .COLLOC {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .ldoceEntry .GOODCOLLO {
+    font-style: italic;
+}
+
+.ldoceDictOutput .ldoceEntry .BADCOLLO {
+    text-decoration: line-through;
+}
+
+.ldoceDictOutput span.neutral {
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+}
+
+.ldoceDictOutput span.warning {
+    font-style: normal;
+    font-weight: bold;
+    color: red;
+}
+
+.ldoceDictOutput span.heading {
+    font-weight: bold;
+    font-size: 120%;
+    color: #364395;
+}
+
+/*! CSS Used from: http://www.ldoceonline.com/common.css?version=1.1.26 */
+
+.ldoceDictOutput .ldoceEntry .SIGNPOST {
+    background-color: #f18500;
+    color: white;
+    font-weight: bold;
+    font-size: 79%;
+    text-transform: uppercase;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 0px 5px;
+    letter-spacing: 1px;
+}
+
+/*! CSS Used from: http://www.ldoceonline.com/common.css?version=1.1.26 */
+
+.ldoceDictOutput .EXAMPLE {
+    color: #778899;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 761px) {
+    .ldoceDictOutput .dictionary_intro {
+        margin: 5px 0 10px 0px!important;
+    }
+}
+
+.ldoceDictOutput .dictentry {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.ldoceDictOutput .dictionary_intro {
+    display: block;
+    background-color: #35a3ff;
+    color: #fff;
+    padding-left: 10px;
+    margin: 5px 0 10px -7px;
+}
+
+.ldoceDictOutput .bussdictEntry .GRAM {
+    color: green;
+    font-weight: bold;
+    margin: 0 5px 10px 3px;
+}
+
+.ldoceDictOutput .bussdictEntry .POS {
+    color: green;
+    font-weight: bold;
+    margin: 0 0 0 10px;
+}
+
+.ldoceDictOutput .bussdictEntry .EXAMPLE {
+    display: block;
+    margin-left: 15px;
+    color: gray;
+}
+
+.ldoceDictOutput .bussdictEntry .GramExa {
+    display: block;
+    margin-left: 10px;
+}
+
+.ldoceDictOutput .bussdictEntry .HOMNUM {
+    vertical-align: super;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.ldoceDictOutput .bussdictEntry .HWD {
+    display: none;
+}
+
+.ldoceDictOutput .bussdictEntry .HYPHENATION {
+    font-weight: bold;
+    font-size: 160%;
+}
+
+.ldoceDictOutput .bussdictEntry .PROPFORMPREP {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .bussdictEntry .REFHWD {
+    text-transform: lowercase;
+    font-style: normal;
+    font-variant: small-caps;
+}
+
+.ldoceDictOutput .bussdictEntry .Sense {
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.ldoceDictOutput span.neutral {
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+}
+
+.ldoceDictOutput span.sensenum {
+    font-style: normal;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-left: 3px;
+}
+
+.ldoceDictOutput .bussdictEntry .SubEntry.embedded {
+    margin-top: -5px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+
+.ldoceDictOutput .bussdictEntry .SubEntry {
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 20px;
+}
+
+.ldoceDictOutput .Crossrefto {
+    color: blue;
+    font-weight: bold;
+}
+
+/*! CSS Used from: http://www.ldoceonline.com/common.css?version=1.1.26 */
+
+.ldoceDictOutput .ldoceEntry .REFLEX {
+    font-weight: bold;
+}
+
+/*! CSS Used from: http://www.ldoceonline.com/common.css?version=1.1.26 */
+
+.ldoceDictOutput .ldoceEntry .REFHOMNUM {
+    vertical-align: super;
+    font-size: 60%;
+}
+
+.ldoceDictOutput .ldoceEntry .REFHWD {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.ldoceDictOutput .ldoceEntry .neutral {
+    color: black;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+}
+
+/*! CSS Used from: http://www.ldoceonline.com/common.css?version=1.1.26 */
+
+.ldoceDictOutput .EXAMPLE {
+    color: #778899;
+    margin-left: 20px;
+}
+
+.ldoceDictOutput .ldoceEntry .COLLOINEXA {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .ldoceEntry .EXAMPLE {
+    display: block;
+    margin-left: 20px;
+    color: gray;
+}
+
+.ldoceDictOutput .ldoceEntry .F2NBox {
+    display: block;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: solid #364395 1px;
+    padding: 15px;
+    margin: 8px 0;
+}
+
+.ldoceDictOutput .ldoceEntry .heading {
+    font-weight: bold;
+    font-size: 120%;
+    color: #364395;
+}
+
+.ldoceDictOutput .ldoceEntry .EXPL {
+    display: block;
+}
+
+.ldoceDictOutput .ldoceEntry .EXPR {
+    font-weight: bold;
+}
+
+.ldoceDictOutput .Entry .topic {
+    color: red;
+    text-decoration: underline;
+}
+
+.ldoceDictOutput .Entry .topic:hover {
+    color: #4693db;
+}

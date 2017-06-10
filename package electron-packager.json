@@ -1,0 +1,38 @@
+{
+	"name": "JapaneseEnglishMultisearch",
+	"productName": "Japanese-English MultiSearch",
+	"description": "MultiSearch dictionaries and corpora",
+	"version": "0.1.0",
+	"author": "Kai Krause <kaikrause95@gmail.com>",
+	"copyright": "© 2017, Kai Krause <kaikrause95@gmail.com>",
+	"homepage": "http://example.com",
+	"license": "MIT",
+	"repository": "https://github.com/krausekai/japanese-english-multisearch",
+	"keywords": [
+		"Japanese",
+		"English",
+		"MultiSearch"
+	],
+	"main": "main.js",
+	"scripts": {
+		"start": "electron main.js",
+		"package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=./assets/images/icon.ico --prune=true --out=release-builds",
+		"package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=./assetsimages/icon.icns --prune=true --out=release-builds",
+		"package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=./assets/images/icon.png --prune=true --out=release-builds"
+	},
+	"repository": "",
+	"keywords": [
+		"Japanese",
+		"English",
+		"MultiSearch"
+	],
+	"devDependencies": {
+		"electron": "latest",
+		"electron-builder": "latest"
+	},
+	"dependencies": {
+		"electron-context-menu": "latest",
+		"request": "latest",
+		"cheerio": "latest"
+	}
+}

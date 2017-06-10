@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' href='./css/style.css'>
+	<script src='./js/globalRequire.js'></script>
+	<script src='./js/updater.js'></script>
+	<title>Updater</title>
+	<script>
+		window.onload = function () {
+			
+			let updateLink = document.getElementById('updateLink');
+			updateLink.addEventListener("click", function () {
+				setTimeout(function() {
+					app.quit();
+				}, 1000)
+			}, false)
+			
+		}
+	</script>
+</head>
+
+<body>
+	<div id='updater' class='mainContent updater'>
+		<b>A new update is available!</b> <br />
+		
+		<p>Current version is: <script>document.write(localVersion)</script>, <br />
+		New version is: <script>document.write(remoteVersion)</script>.</p>
+		
+		<p><b>Download update:</b><br />
+		<a href='https://github.com/krausekai/japanese-english-multisearch/releases' id='updateLink'>https://github.com/krausekai/japanese-english-multisearch/releases</a></p>
+		
+		<footer>
+			<input type='button' class='button' id='closebtn stretchBtn' value='Close Window' onclick='window.close();return false;' />
+		</footer>
+	</div>
+	
+	<script src='./js/ahrefLinkListener.js'></script>
+	<script src='./js/security.js'></script>
+</body>
+</html>

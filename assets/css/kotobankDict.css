@@ -1,0 +1,934 @@
+/*
+	This file was generated using the "CSS Used" (https://chrome.google.com/webstore/detail/cdopjfddjlonogibjahpnmjpoangjfff) extension.
+	To do this, load the website and inspect the page. Delete unneeded nodes, then run this extension.
+	In your code editor, consider regex (e.g. ^[.]) to prepend IDs or Classes to each selector found.
+*/
+
+/*! CSS Used from: Embedded */
+
+* {
+    font-style: normal;
+}
+
+.kotobankDict ody,
+.kotobankDict iv,
+.kotobankDict l,
+.kotobankDict i,
+.kotobankDict 1,
+.kotobankDict 2,
+.kotobankDict 3,
+.kotobankDict orm,
+.kotobankDict nput,
+.kotobankDict  {
+    margin: 0;
+    padding: 0;
+}
+
+.kotobankDict mg {
+    border: 0;
+}
+
+.kotobankDict ite {
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+.kotobankDict i {
+    list-style: none;
+}
+
+.kotobankDict 1,
+.kotobankDict 2,
+.kotobankDict 3 {
+    font-size: 100%;
+    font-weight: 700;
+}
+
+.kotobankDict mall {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+.kotobankDict mg {
+    vertical-align: middle;
+}
+
+.kotobankDict up {
+    font-size: 60%;
+    vertical-align: super;
+}
+
+.kotobankDict nput,
+.kotobankDict elect,
+.kotobankDict ption {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+.kotobankDict  {
+    outline: 0;
+}
+
+.kotobankDict rticle,
+.kotobankDict side,
+.kotobankDict ooter,
+.kotobankDict eader,
+.kotobankDict av,
+.kotobankDict ection {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.kotobankDict rticle,
+.kotobankDict side,
+.kotobankDict ooter,
+.kotobankDict eader,
+.kotobankDict av,
+.kotobankDict ection {
+    display: block;
+}
+
+.kotobankDict ody {
+    text-align: center;
+    background-color: #fff;
+    color: #1a1a1a;
+    font: 15px/1.6 Helvetica, 'Hiragino Kaku Gothic Pro', '?????? Pro W3', '????', Meiryo, 'MS P????', HirakakuProN-W3, sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+.kotobankDict  {
+    -webkit-touch-callout: none;
+}
+
+.kotobankDict :link,
+.kotobankDict :visited {
+    color: #2F6BE6;
+    text-decoration: underline;
+}
+
+.kotobankDict :hover,
+.kotobankDict :active {
+    color: #2F6BE6;
+    text-decoration: none;
+}
+
+.kotobankDict  img {
+    vertical-align: bottom;
+}
+
+.kotobankDict nput,
+.kotobankDict elect {
+    font-size: 16px;
+}
+
+.left {
+    float: left;
+    display: inline;
+}
+
+.grid01 {
+    width: 100%;
+}
+
+.grid022leftwrap {
+    margin: 0;
+}
+
+.kotobankDict 3.ttl {
+    margin: 25px 0 4px;
+}
+
+.links li {
+    border-top: 1px solid #e6e6e6;
+}
+
+.links a {
+    display: block;
+    padding: 7px 0 7px;
+    color: #1a1a1a;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.links a:hover {
+    background-color: #e6e6e6;
+}
+
+.kotobankDict l.links a {
+    padding-left: 12px;
+    background: url(https://kotobank.jp/image/pc/ico_ar.png) no-repeat 0 -185px;
+}
+
+.links li .time {
+    font-size: 73.3%;
+}
+
+.bodyWrap {
+    padding: 0 1px;
+}
+
+.kotobankDict #contentArea {
+    zoom: 1;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.kotobankDict #hdMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.kotobankDict #hdMenu .trigger a {
+    display: block;
+    text-indent: -9999px;
+    width: 40px;
+    height: 40px;
+    background: url(https://kotobank.jp/image/pc/ico_ar.png) no-repeat 0 10px;
+}
+
+.kotobankDict #hdMenu .trigger a:hover {
+    background-position: 0 -40px;
+}
+
+.kotobankDict #searchArea {
+    position: relative;
+}
+
+.kotobankDict #searchArea form {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.kotobankDict #searchArea input,
+.kotobankDict #searchArea select,
+.customSelect {
+    float: left;
+    display: inline;
+    width: 120px;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px solid #1a1a1a;
+    cursor: pointer;
+    border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+}
+
+.kotobankDict #searchArea .selectwrap {
+    position: relative;
+    float: left;
+    display: block;
+}
+
+.kotobankDict #searchArea select {
+    left: 0;
+}
+
+.customSelect {
+    padding: 8px 10px;
+    background: #1a1a1a url(https://kotobank.jp/image/pc/ico_ar.png) no-repeat 86% -238px;
+    color: #fff;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+.kotobankDict #searchArea input.searchbtn:hover {
+    border: 1px solid gray;
+    background-color: gray;
+}
+
+.kotobankDict #hdWrap .search_inputwrap {
+    margin-right: 0;
+}
+
+.kotobankDict #hdMenuCont {
+    z-index: 999;
+    text-align: left;
+    display: none;
+    position: absolute;
+    top: 0;
+    padding-left: 20px;
+    border-right: 1px solid #e6e6e6;
+    background-color: #fff;
+    font-size: 86.7%;
+}
+
+.kotobankDict #hdMenuCont .box {
+    padding: 6px 0 26px;
+}
+
+.kotobankDict #hdMenuCont #hdTodayWord.box {
+    padding-right: 20px;
+}
+
+.kotobankDict #hdTodayWord h2 {
+    padding-bottom: 7px;
+}
+
+.kotobankDict #hdTodayWord p {
+    line-height: 1.3;
+}
+
+.kotobankDict #hdTodayWord p.more,
+.kotobankDict #hdNav .links {
+    margin-top: 5px;
+}
+
+.kotobankDict #hdNav .links li {
+    border-top: 0;
+}
+
+.kotobankDict #hdNav .links li a {
+    padding: 0 0 0 12px;
+    background-position: 0 -190px;
+    line-height: 2;
+    font-weight: 700;
+}
+
+.kotobankDict #hdNav .links li.ft a {
+    font-weight: 400;
+}
+
+.kotobankDict #hdBtn h3 {
+    padding-bottom: 10px;
+}
+
+.kotobankDict #hdBtn a {
+    display: block;
+    text-indent: -9999px;
+    width: 136px;
+    height: 39px;
+    background: url(https://kotobank.jp/image/pc/bt_app.gif) no-repeat 0 0;
+}
+
+.kotobankDict #overlay {
+    z-index: 900;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: .1;
+    filter: alpha(opacity=10);
+}
+
+.kotobankDict #ftWrap {
+    background-color: #1a1a1a;
+    font-size: 73.3%;
+    color: #fff;
+}
+
+.kotobankDict #ftWrap .bodyWrap {
+    padding: 0 20px;
+}
+
+.kotobankDict #ftWrap .inner {
+    zoom: 1;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 38px 0;
+    background-color: #1a1a1a;
+}
+
+.kotobankDict #sponsor {
+    float: left;
+    display: inline;
+}
+
+.kotobankDict #sponsor li {
+    float: left;
+    display: inline;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.kotobankDict #sponsor li a {
+    display: block;
+    text-indent: -9999px;
+    background: url(https://kotobank.jp/image/pc/logo_ft.png) no-repeat;
+}
+
+.kotobankDict #sponsor a.spoa {
+    width: 98px;
+    height: 30px;
+    background-position: 0 0;
+}
+
+.kotobankDict #sponsor a.spov {
+    width: 115px;
+    height: 26px;
+    background-position: 0 -100px;
+}
+
+.kotobankDict #ftWrap .menu {
+    float: right;
+    display: inline;
+}
+
+.kotobankDict #ftWrap .menu li:first-child {
+    margin-left: 0;
+}
+
+.kotobankDict #ftWrap .menu li {
+    float: left;
+    display: inline;
+    margin-left: 20px;
+}
+
+.kotobankDict #ftWrap .menu li a {
+    color: #fff;
+    font-weight: 700;
+}
+
+.kotobankDict #copyright {
+    clear: both;
+    padding-top: 30px;
+    color: gray;
+}
+
+.kotobankDict #copyright a.spoy {
+    display: none;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) and (min-width:641px) {
+    ul.links a,
+    #hdMenu .trigger a,
+    .customSelect {
+        background-image: url(https://kotobank.jp/image/pc/ico_ar@2x.png);
+        -webkit-background-size: 50px 300px;
+        -moz-background-size: 50px 300px;
+        background-size: 50px 300px;
+    }
+    #hdBtn a {
+        background-image: url(https://kotobank.jp/image/pc/bt_app@2x.gif);
+        -webkit-background-size: 136px 39px;
+        -moz-background-size: 136px 39px;
+        background-size: 136px 39px;
+    }
+    #sponsor li a {
+        background-image: url(https://kotobank.jp/image/pc/logo_ft@2x.png);
+        -webkit-background-size: 150px 200px;
+        -moz-background-size: 150px 200px;
+        background-size: 150px 200px;
+    }
+}
+
+@media only screen and (max-width:1020px) {
+    .winpc #contentArea {
+        width: 100%;
+    }
+    .winpc #hdWrap #searchArea form {
+        width: 100%;
+    }
+    .winpc #hdWrap #searchArea input#search_input {
+        width: 100%;
+    }
+    .winpc .grid02.grid1.left {
+        width: 100%;
+    }
+    .winpc .grid022leftwrap {
+        margin-right: 340px;
+    }
+    .winpc .grid02.grid2.left {
+        width: 100%;
+    }
+}
+
+.cf,
+.kotobankDict #hdWrap,
+.kotobankDict #searchArea,
+.kotobankDict #ftWrap .menu,
+.kotobankDict #sponsor {
+    zoom: 1;
+}
+
+.cf:after,
+.kotobankDict #hdWrap:after,
+.kotobankDict #searchArea:after,
+.kotobankDict #ftWrap .menu:after,
+.kotobankDict #sponsor:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+/*! CSS Used from: Embedded */
+
+.kotobankDict #hdWrap {
+    position: relative;
+    padding-top: 40px;
+}
+
+.kotobankDict #hdWrap #toplogo a,
+.kotobankDict #hdY a {
+    display: block;
+    text-indent: -9999px;
+}
+
+.kotobankDict #hdWrap #toplogo {
+    float: left;
+    display: inline;
+    margin-top: 10px;
+}
+
+.kotobankDict #hdWrap #toplogo a {
+    width: 198px;
+    height: 40px;
+    margin-right: 40px;
+    background: url(https://kotobank.jp/image/pc/logo.gif) no-repeat 0 0;
+}
+
+.kotobankDict #hdY {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+.kotobankDict #hdY a {
+    height: 17px;
+    background: url(https://kotobank.jp/image/pc/txt_hd.png) no-repeat 0 0;
+}
+
+.kotobankDict #topicPath {
+    clear: both;
+    padding: 16px 0 10px;
+}
+
+.kotobankDict #topicPath li {
+    float: left;
+    display: inline;
+    padding-right: 5px;
+    font-size: 86.7%;
+}
+
+.kotobankDict #mainTitle {
+    position: relative;
+    padding: 8px 0 30px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.kotobankDict #mainTitle h1 {
+    font-family: "Times New Roman", Times, '?????? ProN', 'Hiragino Mincho ProN', 'YuMincho', 'Yu Mincho', '????', Meiryo, 'MS P????', serif;
+}
+
+.kotobankDict #mainTitle h1 {
+    font-weight: 700;
+    font-size: 240%;
+}
+
+.kotobankDict #mainTitle h1 span {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.kotobankDict #mainArea {
+    border-top: 1px solid #e6e6e6;
+}
+
+.kotobankDict #mainFt {
+    clear: both;
+    position: relative;
+    padding-bottom: 28px;
+}
+
+.kotobankDict #ftInfo {
+    display: none;
+}
+
+.kotobankDict #topicPath,
+.kotobankDict #mainTitle {
+    zoom: 1;
+}
+
+.kotobankDict #topicPath:after,
+.kotobankDict #mainTitle:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.kotobankDict ody:after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAPFBMVEX///8AAAD9/f2CgoKAgIAAAAAAAAAAAABLS0sAAAAAAACqqqqqqqq6urpKSkpISEgAAAC7u7u5ubn////zbsMcAAAAE3RSTlMASv6rqwAWS5YMC7/AyZWVFcrJCYaKfAAAAHhJREFUeF590kkOgCAQRFEaFVGc+/53FYmbz6JqBbyQMFSYuoQuV+iTflnstI7ssLXRvMWRaEMs84e2uVckuZe6knL0hiSPObXhj6ChzoEkIolIIpKIO4joICAIeDd7QGIfCCjOKe9HEk8mnxpIAup/F31RPZP9fAG3IAyBSJe0igAAAABJRU5ErkJggg==) url(https://kotobank.jp/img/loading.gif) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAtCAYAAADsvzj/AAAFF0lEQVR4Ac2ZW0xcVRSGPTNnhlPKcCsUAeeChkEVxhutDQwzMANaqamNWgpaH+yDIaZp1cRHbgH0gTsxkmDCI/hiRAqgD5qYRgKQ8II6TE00wfgGAcIdKeM/ydrNZIezxxg9m518gRxWmn6s9a9zhvNQJBL5T/gfjokwA5Uw0zWFeHBOugiTsAArfSWZky+iABVowAZSwRkiDSTRz1iHlJMmogATsIDTIAPYgRs8SeTTtXSQSLVKFNkivIQKksDDJFCsquqLmqZdAa/i+yCuPQ1cJHOKjdpJEWGdsIFs8BQoy83NvTEzMzO3t7f318HBweHc3Nxdj8dznWQeIWmpIryENUaiCPgdDsfN+fn5XyLcWV5eDlmt1gBqHgOpbAHIFmESySAHeECF0+m8hd/+vcgxZ3d39wBj9grqCkA6iaiyRBRunJhEpcvl+nBhYeG3iM7Z2dnZgkg1ZSgNqLI6wgebSVTZ7faPlpaW/tSTWF9f36ivr+9AbQkF3iZRhAs2dSInJ+eDUCj0h0Biq7S09BPUBkEhyAKJssKusE6QRCGoQLDfn56eDulJrK6ubgeDwS7UXgTPAztIkXUfUbhxKgLlyMRtBPtXPYm1tbXdqqoqJnEOOGhbJQCTkSJ8sJlEMNoJrFhdicPDw6PKyspe1FaD85yE2YBnLUGwSSIrK+s2bnZLehIbGxubfr+/B7WXSMJJ42QlCcVAES7YJJGdnR0dp7BgnLZKSko6qBPngIvrBEkYIKIT7PLoOKET4TjB7kbty+A8SaRxmcAxQEQn2BUI9q3Z2dl7gk7sINhRiZeoE87jMmGECB/s3JhgR8dJV2Jzc3Pb5/N1UieKKdgsEyaAY5wIk2Dj5GHBRifCgmBHb3adLBNsO3HBNkxEAWZwCmSCx4EPwb4ZJ9jbCHYXSRQDpyDYhomoNFIOUIRMvINO/KQnsbKyshMIBD5D7RVwgQWblzBahD2Sp5jN5jzM+9uLi4s/60mEw+FNbKcvUH8DVIECcAZoXLCliaRaLBbX8PBwb0RwRkZGfkftx+BdUM4+KInDbdxoWUCKoih5CQkJgYGBgS/xs6PjRPb394+ampp+RP174CIoBGcpYypQZIqYY+4dz4DLvb29Y6LONDY2fou6OuAF+SCDZCgj8kQSQDqNihfU9vX1TYlkGhoa7qDuDVBKMpQVrjMG30fYCs6gAHuRmdqurq5JkUxLS8sEaq+CMq4zJGOgCB2Fk8kHJSaTqaazs3Pi2MzQaWtrm0RtDfDFyCQyGUNFOJlEkMlkwLWenp5vRDKtra1TNGYsM5mcjKEifGeYjBfUQUaYmebm5omYzLjFC8C4zyNqTGfcNDZ1/2ABjKHudZLXkTFARJAZN/CqqnqNMqN7Ojo6vqMF4ONkVFmvFUQLQNiZ7u7u76PZAn6S4TJjrIhoAdT+iwXAdQYYKCJaAG/iPhNvAYyj7jXwAngUpAGrDBF+ATCZAuBXFOX60NDQ3TiPM1/hyfoyPf7kgNNSXyvwmSGZMk3T3hocHPwhzlPzJLLFnpZT5PztV5wZNyilbTZFmTnZrxU4GZWXATV4ap4kmeNELlEticjsSHyZq/39/V/j374P2Lk/Pj5+BznxUuDlj1acJ4B8cAH/4er29vbPR0dH58fGxubx/ac2my1Ab3iz5Yc9/gJIB05QCJ4Fz9FXD3gC5HIfi+WKCGQ0GpuzwA7yCDtdS+b/SCFfRPwaQqPxSSaS6JrlwUjR+RtEvCM0ct4sLQAAAABJRU5ErkJggg==) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAtCAYAAADsvzj/AAAFDUlEQVR4Ac2ZS0xcVRjHvTN3hisw0GIRZ3AeLWHQWqdVsRqgA86AUmpqoy20Whd2YYhprJq45BVAF7yJkQQTluDGiEhBF5qYRsIjYYMKQxNNMO4gQHgjZfxP8pF8ufEe0qQ5pyf5BTKcWfzyff/vnHt5xLQ0wgbsQCfswEY80BWPxx8I5sUlHMBJP0nm4RfRWAUMkAqOgseII8AFDNqjPYwiGuEAySADeEEuOEkE6bNjIIX22riQchHWSo+SRACc1nU9ahjGG+ASfn8Vn+WT0BNUMV0so04kFTwJTodCoeuTk5N3dnd397a3t/8dHx+fzM7OvoG/nQPPADdwscqoF2HBPgJynE5nZGFhYTZuWlNTU3/4fL6b2FMMnmUyTpJRLqKTSAbIQyu9vrW1tRv/n4Uqzfv9/g+x7xUQAh6QxmVUV0SnKRWESMXm5uZ63GJNT0//GQgEPsHeUibD20xTLeKioBdUV1e3rKysrFrJzM3N/eP1ej/F3jImIxgAcsOeDLLAKRAtLCz8HDKWlZmdnf3b4/F8zCojGADyz5F04AUvgPJoNNq2tLS0YSUzNjY2iwHwEWXmFHCzymiqRGwgiaaXD7wIysvKytqWl5e3rGQwAO4iM7ewt4SmmYfLqLpr2U0yZ0FFaWlp597e3r6VDEbzXapMlGQEA0COiEYyTmozP8lcKC4u7lhdXV2zksGhOZeVlXWLy5gHgDwRJsMqE6A2qygoKGhBm60L2izmdruZjGkAyBShxTNzlGTOgvMYAO2iAYDKxKjNSgQDQI6IRWb8VJnXMADaUZlNK5mJiYl5DAC6AQgGgCwRWjaWGR/IB+fD4XDr2trahqDN5lEZ3mbZ5gEgW4QPAD6aK3BotmIArAsqE2MDIMTajGTkinAZ3mb5NAAS58zGIQPgJvaGwVMgk5597ECTLcJl+AB4GVyKRCJfLi4uijLzGzLzHrWYj1pMVyXCB4BBz/J5oAzcwDT7OhaLWZ4zMzMzvyNX79rt9uOUNyewqRSxsbzk0Jh9H3w2MDDwV1yw+vv7Ox0OR4C+q1REAzr1+ON0TpSDD+rq6n7d2dmxusbs9/T0fJOUlBTRNO2gIg6lGSGJYyAXFIFrtbW1P4oq0dnZOYR9F8EZdqaoCDtVgrJBEoXgck1Nzfciia6urlHsu0rSOSADJEkXYRK8EufAlYaGhtsiiba2thFk4kAij75Po1fiOcIkkplEGFQ2NTWNCBz2W1tbb9tstkrsLaDvcQlN5hWFS2SyTFxubGwcFUl0dHT8gH1VTCITJHMJWSLmYAcPMlFfXy9sJ0gkMnGNpEnCXAkJIhYSReAtBHvosGCTRBgEWSV0qc8jPNhMIgyutLS0/CSSSGRC1/Uqkg5aZUKGiDkTQVAMqtrb238+RGJUHGyZb1F4Je4/2FfFwZYr4qRb7QnwEngTwR4+5JxIZOJtcbDlv2lMAR5wBjfUi7h2fCuS6Ovru6Np2nVqvzwmQcFW9+43HeSg10twix0RSfT29v5iGMY7dMLniTOh+N8KghN7lKZTIQgKMiG/IkwkCJELFiL7uMWOYE+lWUL8elRNa51APoqGh4cTN9p7TOJed3f3d4nz5P4l1ITdDU66XK5Ic3PzF0NDQ1ODg4NT+P0rCFbQM3qu4MRWLsIfX7PB0yAEngPP089TwA8yBMFWKmJ+qZBGj7FecJzw0mfpwBBLqBexseAbIBWkESnAEPybQLnIf4JfIzSb+FymAAAAAElFTkSuQmCC);
+    display: none;
+}
+
+
+.kotobankDict .dictype {
+    padding-bottom: 45px;
+}
+
+.kotobankDict .dictype h2 {
+    font-size: 140%;
+}
+
+.kotobankDict .dictype h2 span {
+    font-weight: 400;
+}
+
+.kotobankDict .dictype h3 {
+    margin-bottom: 10px;
+}
+
+.kotobankDict .dictype .ex section {
+    font-family: "Times New Roman", Times, '?????? ProN', 'Hiragino Mincho ProN', 'YuMincho', 'Yu Mincho', '????', Meiryo, 'MS P????', serif;
+    margin-bottom: 30px;
+}
+
+.kotobankDict .dictype .ex section b {
+    font-family: Helvetica, 'Hiragino Kaku Gothic Pro', '?????? Pro W3', '????', Meiryo, 'MS P????', HirakakuProN-W3, sans-serif;
+}
+
+.kotobankDict .dictype .source {
+    margin-top: 31px;
+    color: gray;
+    font-size: 73.3%;
+    line-height: 1.5;
+}
+
+.kotobankDict .dictype .source small:first-child {
+    display: inline;
+}
+
+.kotobankDict .dictype .source small {
+    display: block;
+}
+
+.kotobankDict .dictype {
+    padding-bottom: 45px;
+}
+
+.kotobankDict .dictype h2 span {
+    font-weight: 400;
+}
+
+.kotobankDict .dictype h3 {
+    margin-bottom: 24px;
+}
+
+.kotobankDict .dictype .ex section {
+    font-family: "Times New Roman", Times, '?????? ProN', 'Hiragino Mincho ProN', 'YuMincho', 'Yu Mincho', '????', Meiryo, 'MS P????', serif;
+}
+
+.kotobankDict .dictype .ex section b {
+    font-family: Helvetica, 'Hiragino Kaku Gothic Pro', '?????? Pro W3', '????', Meiryo, 'MS P????', HirakakuProN-W3, sans-serif;
+}
+
+.kotobankDict .dictype .source {
+    margin-top: 31px;
+    color: gray;
+    font-size: 73.3%;
+    line-height: 1.5;
+}
+
+.kotobankDict .dictype .source small:first-child {
+    display: inline;
+}
+
+.kotobankDict .dictype .source small {
+    display: block;
+}
+
+
+/*! CSS Used from: Embedded */
+
+:root div[id^="div-gpt-ad"] {
+    display: none!important;
+}
+
+
+/*! CSS Used from: Embedded */
+
+:root *[ssakqwh][hidden] {
+    display: none!important;
+}
+
+
+/*! CSS Used from: Embedded */
+
+.kotobankDict .pageWord.winpc {
+    font-size: 18px;
+}
+
+.kotobankDict .pageWord.winpc #hdMenuCont {
+    font-size: 13px;
+}
+
+.kotobankDict .pageWord.winpc #mainArea {
+    width: 100%;
+    border-top: none;
+}
+
+.kotobankDict .pageWord.winpc #mainTitle {
+    border-top: none;
+}
+
+.kotobankDict .pageWord.winpc #mainTitle h1 {
+    font-size: 260%;
+}
+
+.kotobankDict .pageWord.winpc .dictype h2 {
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.kotobankDict .pageWord.winpc .dictype h3 {
+    margin-bottom: 10px;
+}
+
+.kotobankDict .pageWord.winpc .dictype .source {
+    margin-top: 0;
+}
+
+.kotobankDict .pageWord.winpc .dictype .source small {
+    display: inline;
+}
+
+.kotobankDict .pageWord.winpc .dictype .source small:not(:first-child):before {
+    content: '/';
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.kotobankDict .pageWord.winpc .dictype .ex section.description {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.kotobankDict .pageWord.winpc #mainArea .dictype .pc-iframe-ad {
+    float: left;
+    margin: 0;
+}
+
+
+/*! CSS Used from: Embedded */
+
+.kotobankDict .lightboxOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: black;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: .8;
+    display: none;
+}
+
+.kotobankDict .lightbox {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    text-align: center;
+    line-height: 0;
+    font-weight: 400;
+}
+
+.kotobankDict .lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.kotobankDict .lb-outerContainer {
+    position: relative;
+    background-color: white;
+    *zoom: 1;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.kotobankDict .lb-outerContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.kotobankDict .lb-container {
+    padding: 4px;
+}
+
+.kotobankDict .lb-loader {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    line-height: 0;
+}
+
+.kotobankDict .lb-cancel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url(https://kotobank.jp/img/loading.gif) no-repeat;
+}
+
+.kotobankDict .lb-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.kotobankDict .lb-nav a {
+    outline: none;
+    background-image: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==);
+}
+
+.kotobankDict .lb-prev,
+.kotobankDict .lb-next {
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+.kotobankDict .lb-nav a.lb-prev {
+    width: 34%;
+    left: 0;
+    float: left;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAtCAYAAADsvzj/AAAFF0lEQVR4Ac2ZW0xcVRSGPTNnhlPKcCsUAeeChkEVxhutDQwzMANaqamNWgpaH+yDIaZp1cRHbgH0gTsxkmDCI/hiRAqgD5qYRgKQ8II6TE00wfgGAcIdKeM/ydrNZIezxxg9m518gRxWmn6s9a9zhvNQJBL5T/gfjokwA5Uw0zWFeHBOugiTsAArfSWZky+iABVowAZSwRkiDSTRz1iHlJMmogATsIDTIAPYgRs8SeTTtXSQSLVKFNkivIQKksDDJFCsquqLmqZdAa/i+yCuPQ1cJHOKjdpJEWGdsIFs8BQoy83NvTEzMzO3t7f318HBweHc3Nxdj8dznWQeIWmpIryENUaiCPgdDsfN+fn5XyLcWV5eDlmt1gBqHgOpbAHIFmESySAHeECF0+m8hd/+vcgxZ3d39wBj9grqCkA6iaiyRBRunJhEpcvl+nBhYeG3iM7Z2dnZgkg1ZSgNqLI6wgebSVTZ7faPlpaW/tSTWF9f36ivr+9AbQkF3iZRhAs2dSInJ+eDUCj0h0Biq7S09BPUBkEhyAKJssKusE6QRCGoQLDfn56eDulJrK6ubgeDwS7UXgTPAztIkXUfUbhxKgLlyMRtBPtXPYm1tbXdqqoqJnEOOGhbJQCTkSJ8sJlEMNoJrFhdicPDw6PKyspe1FaD85yE2YBnLUGwSSIrK+s2bnZLehIbGxubfr+/B7WXSMJJ42QlCcVAES7YJJGdnR0dp7BgnLZKSko6qBPngIvrBEkYIKIT7PLoOKET4TjB7kbty+A8SaRxmcAxQEQn2BUI9q3Z2dl7gk7sINhRiZeoE87jMmGECB/s3JhgR8dJV2Jzc3Pb5/N1UieKKdgsEyaAY5wIk2Dj5GHBRifCgmBHb3adLBNsO3HBNkxEAWZwCmSCx4EPwb4ZJ9jbCHYXSRQDpyDYhomoNFIOUIRMvINO/KQnsbKyshMIBD5D7RVwgQWblzBahD2Sp5jN5jzM+9uLi4s/60mEw+FNbKcvUH8DVIECcAZoXLCliaRaLBbX8PBwb0RwRkZGfkftx+BdUM4+KInDbdxoWUCKoih5CQkJgYGBgS/xs6PjRPb394+ampp+RP174CIoBGcpYypQZIqYY+4dz4DLvb29Y6LONDY2fou6OuAF+SCDZCgj8kQSQDqNihfU9vX1TYlkGhoa7qDuDVBKMpQVrjMG30fYCs6gAHuRmdqurq5JkUxLS8sEaq+CMq4zJGOgCB2Fk8kHJSaTqaazs3Pi2MzQaWtrm0RtDfDFyCQyGUNFOJlEkMlkwLWenp5vRDKtra1TNGYsM5mcjKEifGeYjBfUQUaYmebm5omYzLjFC8C4zyNqTGfcNDZ1/2ABjKHudZLXkTFARJAZN/CqqnqNMqN7Ojo6vqMF4ONkVFmvFUQLQNiZ7u7u76PZAn6S4TJjrIhoAdT+iwXAdQYYKCJaAG/iPhNvAYyj7jXwAngUpAGrDBF+ATCZAuBXFOX60NDQ3TiPM1/hyfoyPf7kgNNSXyvwmSGZMk3T3hocHPwhzlPzJLLFnpZT5PztV5wZNyilbTZFmTnZrxU4GZWXATV4ap4kmeNELlEticjsSHyZq/39/V/j374P2Lk/Pj5+BznxUuDlj1acJ4B8cAH/4er29vbPR0dH58fGxubx/ac2my1Ab3iz5Yc9/gJIB05QCJ4Fz9FXD3gC5HIfi+WKCGQ0GpuzwA7yCDtdS+b/SCFfRPwaQqPxSSaS6JrlwUjR+RtEvCM0ct4sLQAAAABJRU5ErkJggg==) left 48% no-repeat;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.kotobankDict .lb-nav a.lb-prev:hover {
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.kotobankDict .lb-nav a.lb-next {
+    width: 64%;
+    right: 0;
+    float: right;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAtCAYAAADsvzj/AAAFDUlEQVR4Ac2ZS0xcVRjHvTN3hisw0GIRZ3AeLWHQWqdVsRqgA86AUmpqoy20Whd2YYhprJq45BVAF7yJkQQTluDGiEhBF5qYRsIjYYMKQxNNMO4gQHgjZfxP8pF8ufEe0qQ5pyf5BTKcWfzyff/vnHt5xLQ0wgbsQCfswEY80BWPxx8I5sUlHMBJP0nm4RfRWAUMkAqOgseII8AFDNqjPYwiGuEAySADeEEuOEkE6bNjIIX22riQchHWSo+SRACc1nU9ahjGG+ASfn8Vn+WT0BNUMV0so04kFTwJTodCoeuTk5N3dnd397a3t/8dHx+fzM7OvoG/nQPPADdwscqoF2HBPgJynE5nZGFhYTZuWlNTU3/4fL6b2FMMnmUyTpJRLqKTSAbIQyu9vrW1tRv/n4Uqzfv9/g+x7xUQAh6QxmVUV0SnKRWESMXm5uZ63GJNT0//GQgEPsHeUibD20xTLeKioBdUV1e3rKysrFrJzM3N/eP1ej/F3jImIxgAcsOeDLLAKRAtLCz8HDKWlZmdnf3b4/F8zCojGADyz5F04AUvgPJoNNq2tLS0YSUzNjY2iwHwEWXmFHCzymiqRGwgiaaXD7wIysvKytqWl5e3rGQwAO4iM7ewt4SmmYfLqLpr2U0yZ0FFaWlp597e3r6VDEbzXapMlGQEA0COiEYyTmozP8lcKC4u7lhdXV2zksGhOZeVlXWLy5gHgDwRJsMqE6A2qygoKGhBm60L2izmdruZjGkAyBShxTNzlGTOgvMYAO2iAYDKxKjNSgQDQI6IRWb8VJnXMADaUZlNK5mJiYl5DAC6AQgGgCwRWjaWGR/IB+fD4XDr2trahqDN5lEZ3mbZ5gEgW4QPAD6aK3BotmIArAsqE2MDIMTajGTkinAZ3mb5NAAS58zGIQPgJvaGwVMgk5597ECTLcJl+AB4GVyKRCJfLi4uijLzGzLzHrWYj1pMVyXCB4BBz/J5oAzcwDT7OhaLWZ4zMzMzvyNX79rt9uOUNyewqRSxsbzk0Jh9H3w2MDDwV1yw+vv7Ox0OR4C+q1REAzr1+ON0TpSDD+rq6n7d2dmxusbs9/T0fJOUlBTRNO2gIg6lGSGJYyAXFIFrtbW1P4oq0dnZOYR9F8EZdqaoCDtVgrJBEoXgck1Nzfciia6urlHsu0rSOSADJEkXYRK8EufAlYaGhtsiiba2thFk4kAij75Po1fiOcIkkplEGFQ2NTWNCBz2W1tbb9tstkrsLaDvcQlN5hWFS2SyTFxubGwcFUl0dHT8gH1VTCITJHMJWSLmYAcPMlFfXy9sJ0gkMnGNpEnCXAkJIhYSReAtBHvosGCTRBgEWSV0qc8jPNhMIgyutLS0/CSSSGRC1/Uqkg5aZUKGiDkTQVAMqtrb238+RGJUHGyZb1F4Je4/2FfFwZYr4qRb7QnwEngTwR4+5JxIZOJtcbDlv2lMAR5wBjfUi7h2fCuS6Ovru6Np2nVqvzwmQcFW9+43HeSg10twix0RSfT29v5iGMY7dMLniTOh+N8KghN7lKZTIQgKMiG/IkwkCJELFiL7uMWOYE+lWUL8elRNa51APoqGh4cTN9p7TOJed3f3d4nz5P4l1ITdDU66XK5Ic3PzF0NDQ1ODg4NT+P0rCFbQM3qu4MRWLsIfX7PB0yAEngPP089TwA8yBMFWKmJ+qZBGj7FecJzw0mfpwBBLqBexseAbIBWkESnAEPybQLnIf4JfIzSb+FymAAAAAElFTkSuQmCC) right 48% no-repeat;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.kotobankDict .lb-nav a.lb-next:hover {
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.kotobankDict .lb-dataContainer {
+    margin: 0 auto;
+    padding-top: 5px;
+    *zoom: 1;
+    width: 100%;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.kotobankDict .lb-dataContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.kotobankDict .lb-data {
+    padding: 0 4px;
+    color: #ccc;
+}
+
+.kotobankDict .lb-data .lb-details {
+    width: 85%;
+    float: left;
+    text-align: left;
+    line-height: 1.1em;
+}
+
+.kotobankDict .lb-data .lb-caption {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.kotobankDict .lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: #999;
+}
+
+.kotobankDict .lb-data .lb-close {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAPFBMVEX///8AAAD9/f2CgoKAgIAAAAAAAAAAAABLS0sAAAAAAACqqqqqqqq6urpKSkpISEgAAAC7u7u5ubn////zbsMcAAAAE3RSTlMASv6rqwAWS5YMC7/AyZWVFcrJCYaKfAAAAHhJREFUeF590kkOgCAQRFEaFVGc+/53FYmbz6JqBbyQMFSYuoQuV+iTflnstI7ssLXRvMWRaEMs84e2uVckuZe6knL0hiSPObXhj6ChzoEkIolIIpKIO4joICAIeDd7QGIfCCjOKe9HEk8mnxpIAup/F31RPZP9fAG3IAyBSJe0igAAAABJRU5ErkJggg==) top right no-repeat;
+    text-align: right;
+    outline: none;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: .7;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.kotobankDict .lb-data .lb-close:hover {
+    cursor: pointer;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.kotobankDict article {
+	border-style: ridge;
+	padding: 4px;
+	margin-bottom: 8px;
+}

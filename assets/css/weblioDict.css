@@ -1,0 +1,2072 @@
+/*
+	This file was generated using the "CSS Used" (https://chrome.google.com/webstore/detail/cdopjfddjlonogibjahpnmjpoangjfff) extension.
+	To do this, load the website and inspect the page. Delete unneeded nodes, then run this extension.
+	In your code editor, consider regex (e.g. ^[.]) to prepend IDs or Classes to each selector found.
+*/
+
+/*! CSS Used from: http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css */
+
+#weblioDictOutput .fa {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#weblioDictOutput .fa-volume-up:before {
+    content: "\f028";
+}
+
+#weblioDictOutput .fa-thumb-tack:before {
+    content: "\f08d";
+}
+
+#weblioDictOutput .fa-play-circle:before {
+    content: "\f144";
+}
+
+#weblioDictOutput .fa-plus-square-o:before {
+    content: "\f196";
+}
+
+
+/*! CSS Used from: http://www.westatic.com/css/ejje/content_renew.css?sd=ejje&tst=2017053113 */
+
+#weblioDictOutput .sideBoxCnt {
+    padding: 3px;
+}
+
+#weblioDictOutput .clrBc {
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+#weblioDictOutput .sideRWordsRank {
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 3px 0 0;
+}
+
+#weblioDictOutput .sideRWordsL {
+    float: left;
+    font-weight: bold;
+    text-align: left;
+}
+
+#weblioDictOutput .sideRWordsL a:active,
+#weblioDictOutput .sideRWordsL a:hover,
+#weblioDictOutput .sideRWordsL a:link,
+#weblioDictOutput .sideRWordsL a:visited {
+    font-size: 15px;
+}
+
+#weblioDictOutput .sideRWordsDA a:active,
+#weblioDictOutput .sideRWordsDA a:hover,
+#weblioDictOutput .sideRWordsDA a:link,
+#weblioDictOutput .sideRWordsDA a:visited {
+    text-decoration: none;
+}
+
+#weblioDictOutput .sideRWordsDA b {
+    color: #808080;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#weblioDictOutput .aggltHEB {
+    margin-left: 10px;
+}
+
+#weblioDictOutput .aggltHEB span {
+    color: #aaa;
+}
+
+#weblioDictOutput .commonBtn {
+    background-color: #ea9034;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 0 0 #7e4700;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#weblioDictOutput .fa-rotate-315 {
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3.5);
+    -webkit-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+
+#weblioDictOutput .sentenceAudio,
+#weblioDictOutput .contentAudio {
+    display: none;
+}
+
+#weblioDictOutput .sentenceAudioIcon {
+    cursor: pointer;
+    padding: 0 0 0 5px;
+}
+
+#weblioDictOutput .contentTopAudioIcon,
+#weblioDictOutput .contentBodyAudioIcon {
+    cursor: pointer;
+    padding: 0 0 0 0!important;
+}
+
+#weblioDictOutput .contentTopAudioIcon {
+    font-size: 32px!important;
+}
+
+#weblioDictOutput .contentBodyAudioIcon {
+    font-size: 28px!important;
+    padding: 0 0 0 5px!important;
+    vertical-align: middle;
+}
+
+#weblioDictOutput #ePsdDl a:hover {
+    color: #564c46!important;
+    text-decoration: none;
+}
+
+#weblioDictOutput body {
+    background-color: #f5efe9;
+    color: #534a42;
+    font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 90%;
+    margin: 0;
+}
+
+#weblioDictOutput a:active,
+#weblioDictOutput a:link,
+#weblioDictOutput a:visited {
+    color: #534a42;
+}
+
+#weblioDictOutput a:hover {
+    color: #d50000;
+}
+
+#weblioDictOutput img {
+    border: none;
+}
+
+#weblioDictOutput .clr {
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+#weblioDictOutput .clrBc {
+    clear: both;
+    font-size: 10px;
+    line-height: 0;
+    overflow: hidden;
+}
+
+#weblioDictOutput #main {
+    float: left;
+    text-align: left;
+    padding: 0 0 0 8px;
+}
+
+#weblioDictOutput .topic {
+    font-size: 75%;
+    height: 44px;
+    line-height: 1.3em;
+    margin: 0 0 2px 0;
+    overflow: hidden;
+    padding-top: 5px;
+    width: 100%;
+    word-break: break-all;
+}
+
+#weblioDictOutput .topic table {
+    height: 30px;
+    width: 100%;
+}
+
+#weblioDictOutput #topicWrp {
+    padding: 2px 0 2px 8px;
+}
+
+#weblioDictOutput .topicL {
+    font-size: 11px;
+    float: left;
+    vertical-align: middle;
+}
+
+#weblioDictOutput .topicR {
+    float: right;
+    text-align: right;
+}
+
+#weblioDictOutput .topicR table {
+    border-collapse: collapse;
+    font-size: 1.1em;
+}
+
+#weblioDictOutput .wrp {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#weblioDictOutput .left {
+    vertical-align: bottom;
+}
+
+#weblioDictOutput .dictNm {
+    color: #534a42;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 11px;
+    padding-left: 1px;
+}
+
+#weblioDictOutput .dictNm a:active,
+#weblioDictOutput .dictNm a:link,
+#weblioDictOutput .dictNm a:visited,
+#weblioDictOutput .dictNm a:hover {
+    text-decoration: none;
+}
+
+#weblioDictOutput .wList {
+    font-size: .8em;
+    margin: 0 0 0 5px;
+	width: 35px;
+}
+
+#weblioDictOutput .right {
+    float: right;
+    font-size: .9em;
+    margin: 0 5px 0 0;
+    text-align: right;
+    vertical-align: top;
+}
+
+#weblioDictOutput .kijiWrp {
+    padding-left: 1px;
+}
+
+#weblioDictOutput .kiji {
+    color: #333;
+    font-size: 1.0em;
+    line-height: 1.8em;
+}
+
+#weblioDictOutput .kiji * {
+    font-size: 100%;
+    line-height: 1.8em;
+}
+
+#weblioDictOutput .midashigo:before {
+    content: "\25b6";
+}
+
+#weblioDictOutput .midashigo {
+    font-size: 115%;
+    letter-spacing: .02em;
+}
+
+#weblioDictOutput .crosslink:link,
+#weblioDictOutput .crosslink:visited,
+#weblioDictOutput .crosslink:active {
+    color: #534a42;
+    text-decoration: underline;
+}
+
+#weblioDictOutput .kijiFoot {
+    margin-top: 10px;
+    text-align: right;
+}
+
+#weblioDictOutput .copyRt {
+    margin: 0 0 0 13px;
+    text-align: left;
+}
+
+#weblioDictOutput .copyRt a:active,
+#weblioDictOutput .copyRt a:hover,
+#weblioDictOutput .copyRt a:link,
+#weblioDictOutput .copyRt a:visited {
+    color: #0054c8!important;
+}
+
+#weblioDictOutput .copyRtTbl {
+    font-size: .85em;
+    margin: 0 13px 10px 13px;
+    text-align: left;
+    width: 95%;
+}
+
+#weblioDictOutput .copyRtTbl a:active,
+#weblioDictOutput .copyRtTbl a:hover,
+#weblioDictOutput .copyRtTbl a:link,
+#weblioDictOutput .copyRtTbl a:visited {
+    color: #0054c8!important;
+}
+
+#weblioDictOutput .copyRtTblR {
+    font-size: 0;
+}
+
+#weblioDictOutput .copyRtTbl td {
+    line-height: 1.3em;
+}
+
+#weblioDictOutput .copyRtWrp .lgDict {
+    float: left;
+}
+
+#weblioDictOutput .copyRtWrp a:active,
+#weblioDictOutput .copyRtWrp a:hover,
+#weblioDictOutput .copyRtWrp a:link,
+#weblioDictOutput .copyRtWrp a:visited {
+    color: #0054c8!important;
+}
+
+#weblioDictOutput .subCatCtWrp {
+    margin: 15px 0 0 0;
+}
+
+#weblioDictOutput .subCatCtWrp table {
+    margin: 0 6px;
+}
+
+#weblioDictOutput .subCatCtWrp tr {
+    height: 10px;
+}
+
+#weblioDictOutput .subCatCtTtl {
+    background-color: #ebebeb;
+    font-size: .85em;
+    padding: 0 4px;
+    text-align: left;
+    vertical-align: top;
+    width: 85px;
+}
+
+#weblioDictOutput .subCatCtDes {
+    font-size: .8em;
+    padding: 0 5px;
+    text-align: left;
+    width: 86%;
+}
+
+#weblioDictOutput .subCatCtLink {
+    text-align: right;
+}
+
+#weblioDictOutput .conjugateRowL,
+#weblioDictOutput .conjugateRowR {
+    font-size: 11px;
+}
+
+#weblioDictOutput .conjugateRowL  {
+	width: 50px;
+}
+#weblioDictOutput .conjugateRowR  {
+	width: 150px;
+}
+#weblioDictOutput .conjugateRowR  a {
+	display: block;
+}
+
+#weblioDictOutput .conjugateRowL,
+#weblioDictOutput .conjugateRowR span {
+    margin-right: 5px;
+}
+
+#weblioDictOutput .phoneticEjjeWrp span {
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+#weblioDictOutput .phoneticEjjeDesc {
+    font-family: 'Lucida Sans Unicode', 'Times New Roman', Times, Serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#weblioDictOutput .phoneticEjjeSym {
+    padding: 0 5px 0 4px;
+}
+
+#weblioDictOutput .phoneticEjjeDc {
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 4px;
+}
+
+#weblioDictOutput .KejjeLb {
+    background-color: #f5efe9;
+    border: #534a42 solid 1px;
+    border-radius: 2px;
+    color: #534a42;
+    font-size: 13px;
+    margin-right: 2px;
+    padding: 1px 3px;
+}
+
+#weblioDictOutput .KejjeLbN {
+    font-family: 'Lucida Sans Unicode', 'Times New Roman', Times;
+    font-weight: normal;
+    padding: 0 3px 0 3px;
+}
+
+#weblioDictOutput .KejjeOs {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 0 7px 0 0;
+}
+
+#weblioDictOutput .KejjeHt {
+    font-family: 'Lucida Sans Unicode', 'Times New Roman', Times, Serif;
+    font-size: 14px;
+    padding: 0 10px 0 0;
+    letter-spacing: .1em;
+}
+
+#weblioDictOutput .KejjeIdH {
+    border-left: #564c46 solid 6px;
+    font-size: 1.2em;
+    line-height: 1.0em;
+    margin: 10px 0 5px 0;
+    padding-left: 3px;
+}
+
+#weblioDictOutput .phraseEjjeT {
+    margin: 0 0 14px 0;
+    padding: 0 0 6px 0;
+    width: 100%;
+}
+
+#weblioDictOutput .phraseEjjeT td {
+    width: 49%;
+}
+
+#weblioDictOutput .phraseEjjeT a:hover {
+    border-bottom: #cf1507 dashed 1px;
+    color: #cf1507;
+    text-decoration: none;
+}
+
+#weblioDictOutput span.pofsp,
+#weblioDictOutput .KnenjSub {
+    background-color: #564c46;
+    border: none!important;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 15px!important;
+    font-weight: normal!important;
+    line-height: 30px!important;
+    padding: 3px 5px!important;
+	max-width: 100px;
+	text-align: center;
+}
+
+#weblioDictOutput .KnenjSub,
+#weblioDictOutput .cmpygS,
+#weblioDictOutput .KggjrP,
+#weblioDictOutput .nwnejP {
+    border: none!important;
+}
+
+#weblioDictOutput .squareCircle,
+#weblioDictOutput .KejjeLb {
+    background-color: #f5efe9;
+    border: #534a42 solid 1px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 2px 5px;
+}
+
+#weblioDictOutput .Kejje .lvlNH,
+#weblioDictOutput .Kejje .lvlAH {
+    color: #564c46;
+	font-size: 13px;
+}
+
+#weblioDictOutput .Kejje .kenjeEnE {
+    border: 0;
+    display: list-item;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+
+#weblioDictOutput .KejjeLb {
+    margin-left: 0;
+}
+
+#weblioDictOutput .clrPhrBc {
+    clear: both;
+    font-size: 10px;
+    line-height: 0;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#weblioDictOutput .phraseEjCntAnc {
+    float: left;
+    margin-top: 10px;
+    text-align: left;
+}
+
+#weblioDictOutput .phraseEjCntAnc a {
+    padding-left: 2px;
+}
+
+#weblioDictOutput .phraseEjCntAncR {
+    padding-left: 5px;
+}
+
+#weblioDictOutput .qotH {
+    margin: 0;
+    padding: 0 0 25px 0;
+    width: 100%;
+}
+
+#weblioDictOutput .qotHS {
+    background-color: #f5efe9;
+    border: #534a42 solid 1px;
+    font-size: 12px;
+    padding: 0 2px;
+}
+
+#weblioDictOutput .qotHT {
+    float: left;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 0 0 2px;
+    padding: 0 2px 0 2px;
+}
+
+#weblioDictOutput .qotHTR {
+    float: right;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+#weblioDictOutput .qotC {
+    margin: 4px 0 8px 0;
+    list-style: none;
+}
+
+#weblioDictOutput .qotC b {
+    color: #ea9034;
+    line-height: 1.0em;
+}
+
+#weblioDictOutput .qotC span {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.2em;
+    padding: 0 0 0 10px;
+}
+
+#weblioDictOutput .qotCE {
+    color: #564c46;
+    font-family: Arial;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 2px 0 2px 0;
+    padding: 0;
+}
+
+#weblioDictOutput .qotCJ {
+    color: #564c46;
+    font-size: 90%;
+    line-height: 1.2em;
+    margin: -1px 0 13px 0;
+    padding: 0;
+}
+
+#weblioDictOutput a.addToSlBtn,
+#weblioDictOutput a.addToSlBtn:link,
+#weblioDictOutput a.addToSlBtn:visited,
+#weblioDictOutput a.addToSlBtn:active {
+    background-color: #48a267;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 11px;
+    margin-left: 10px;
+    padding: 2px 4px;
+    text-decoration: none;
+    vertical-align: text-bottom;
+}
+
+#weblioDictOutput a.addToSlBtn:hover {
+    color: #fff!important;
+}
+
+#weblioDictOutput span.addToSlBtnCntner {
+    padding-left: 0;
+}
+
+#weblioDictOutput .subMenu {
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+
+#weblioDictOutput .subMenuOff {
+    background-color: #fff;
+    border-left: #ccc solid 1px;
+    border-radius: 1px 1px 0 0;
+    padding: 0;
+}
+
+#weblioDictOutput .subMenuOff .subMenuTotalCount {
+    color: #e60012;
+}
+
+#weblioDictOutput .subMenuOn {
+    background-color: #564c46;
+    border-bottom: #564c46 solid 1px;
+    border-radius: 1px 1px 0 0;
+    color: #fff;
+    width: 110px;
+}
+
+#weblioDictOutput .subMenuT {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 13px;
+    margin: 3px 0 0 0;
+    width: 100%;
+}
+
+#weblioDictOutput .subMenuT td {
+    font-size: 15px;
+    padding: 5px 0 3px 0;
+    text-align: center;
+}
+
+#weblioDictOutput .subMenuTWrp {
+    border-bottom: #564c46 solid 10px;
+}
+
+#weblioDictOutput .fndAnc {
+    font-size: 10px;
+}
+
+#weblioDictOutput .fwlAnc {
+    float: left;
+    font-size: 8px;
+}
+
+#weblioDictOutput .fndAnc a:active,
+#weblioDictOutput .fndAnc a:hover,
+#weblioDictOutput .fndAnc a:link,
+#weblioDictOutput .fndAnc a:visited,
+#weblioDictOutput .fwlAnc a:active,
+#weblioDictOutput .fwlAnc a:hover,
+#weblioDictOutput .fwlAnc a:link,
+#weblioDictOutput .fwlAnc a:visited {
+    border-bottom: #534a42 dotted 1px;
+    text-decoration: none;
+}
+
+#weblioDictOutput .intrst {
+    border-top: 1px solid #ccc;
+    border-collapse: collapse;
+    font-size: 11px;
+    margin-left: 8px;
+}
+
+#weblioDictOutput #summary table:last-of-type.intrst {
+    border-bottom: 1px solid #ccc;
+}
+
+#weblioDictOutput .intrst .intrstL {
+    background-color: #f5efe6;
+    padding-left: 5px;
+    vertical-align: middle;
+	width: 100px;
+}
+
+#weblioDictOutput .intrst .intrstL h2 {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#weblioDictOutput .intrst .intrstR {
+    padding-left: 4px;
+    vertical-align: top;
+}
+
+#weblioDictOutput .agltCnt {
+    font-size: 15px;
+}
+
+#weblioDictOutput .agltCnt span {
+    color: #808080;
+    font-size: 13px;
+    padding: 0 0 0 3px;
+}
+
+#weblioDictOutput .subMenuTop {
+    margin-bottom: 9px;
+}
+
+#weblioDictOutput #ePsdQc {
+    float: left;
+    height: 30px;
+    margin-left: 10px;
+    position: relative;
+    z-index: 0;
+}
+
+#weblioDictOutput #ePsdDl {
+    cursor: pointer;
+    float: left;
+    height: 20px;
+    margin-left: 3px;
+}
+
+#weblioDictOutput #ePsdDl i {
+    font-size: 28px;
+    margin-left: 13px;
+}
+
+#weblioDictOutput .addLmFdWr {
+    position: relative;
+    z-index: 1000;
+}
+
+#weblioDictOutput .hideDictWrp {
+    float: right;
+    position: relative;
+    text-align: right;
+}
+
+#weblioDictOutput .hideDictBtn {
+    background-image: url(http://www.westatic.com/img/icons/hideDictBrown.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    cursor: hand;
+    cursor: pointer;
+    height: 28px;
+    margin: 0 0 0 auto;
+    width: 28px;
+}
+
+#weblioDictOutput .hideDictConfirm {
+    background-color: #fff;
+    border: #cacaca solid 1px;
+    box-shadow: #ccc 0 3px 3px 1px;
+    display: none;
+    padding: 0 0 5px;
+    position: absolute;
+    text-align: left;
+    top: 30px;
+    right: 1px;
+    -moz-box-shadow: #ccc 0 3px 3px 1px;
+    -webkit-box-shadow: #ccc 0 3px 3px 1px;
+}
+
+#weblioDictOutput .hideDictConfirmMsg {
+    cursor: hand;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 3px;
+}
+
+#weblioDictOutput .hideDictConfirmMsg:hover {
+    background-color: #06c;
+    color: #fff;
+}
+
+#weblioDictOutput .hideDictConfirmMsgX {
+    font-family: Meiryo;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#weblioDictOutput .hideDictConfirmLink {
+    font-size: 12px;
+    margin: 0 5px 0 5px;
+}
+
+#weblioDictOutput #contentBodyWrp {
+    background-color: #f5efe9;
+}
+
+#weblioDictOutput #contentBody {
+    margin: 0 auto;
+    position: relative;
+}
+
+#weblioDictOutput #main {
+    float: left;
+    margin: 0 15px 0 auto;
+}
+
+#weblioDictOutput #main a:link,
+#weblioDictOutput #main a:visited,
+#weblioDictOutput #main a:active {
+    color: #534a42;
+}
+
+#weblioDictOutput #main a:hover {
+    color: #4f7bb9;
+}
+
+#weblioDictOutput a:hover {
+    color: #4f7bb9;
+}
+
+#weblioDictOutput h2 {
+    font-size: 26px;
+    margin: 0;
+}
+
+#weblioDictOutput h3 {
+    margin: 5px;
+}
+
+#weblioDictOutput img {
+    border: none;
+}
+
+#weblioDictOutput p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#weblioDictOutput .clr {
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+#weblioDictOutput .clrBc {
+    clear: both;
+    content: "";
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+#weblioDictOutput div.wlaBtnI {
+    background-color: #48a267;
+    box-shadow: 0 2px 0 0 #000;
+    cursor: hand;
+    cursor: pointer;
+    padding: 0 3px 0 1px;
+    width: 140px;
+}
+
+#weblioDictOutput div.wlaBtnI img {
+    position: relative;
+    top: 2px;
+}
+
+#weblioDictOutput div.wlaBtnI span {
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+#weblioDictOutput .mainBlock {
+    background-color: #fff;
+    /*box-shadow: 4px 5px 0 0 #e8e1d2;*/
+    margin-bottom: 20px;
+    padding: 10px;
+	border-style: ridge;
+}
+
+#weblioDictOutput #summary {
+    padding: 2px 2px 15px 2px;
+}
+
+#weblioDictOutput .summaryTbl {
+    border: 0;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#weblioDictOutput .summaryTbl * {
+    vertical-align: top;
+}
+
+#weblioDictOutput .summaryL * {
+    float: left;
+}
+
+#weblioDictOutput .summaryL {
+    vertical-align: middle;
+}
+
+#weblioDictOutput .summaryC {
+    padding-top: 5px;
+    width: 140px;
+}
+
+#weblioDictOutput .summaryC table {
+    float: right;
+}
+
+#weblioDictOutput .summaryC table:after,
+#weblioDictOutput .summaryC:after {
+    content: "";
+    width: 0;
+    height: 0;
+    font-size: 0;
+    clear: both;
+}
+
+#weblioDictOutput .summaryC td {
+    text-align: center;
+    white-space: nowrap;
+}
+
+#weblioDictOutput .summaryC span {
+    color: #564c46;
+    font-size: 10px;
+}
+
+#weblioDictOutput .summaryR {
+    padding-top: 5px;
+    width: 110px;
+}
+
+#weblioDictOutput .summaryL span {
+    margin-top: 10px;
+}
+
+#weblioDictOutput h1 {
+    font-size: 30px;
+    line-height: 35px;
+    margin: 0 0 0 6px;
+    word-break: break-all;
+}
+
+#weblioDictOutput .phraseEjCntAnc a:active,
+#weblioDictOutput .phraseEjCntAnc a:hover,
+#weblioDictOutput .phraseEjCntAnc a:link,
+#weblioDictOutput .phraseEjCntAnc a:visited {
+    border-bottom: #534a42 solid 1px;
+    font-size: .8em;
+    line-height: 11px;
+    text-decoration: none;
+}
+
+#weblioDictOutput #summary span#h1Suffix {
+    font-size: 12px;
+    margin: 5px 0 0 2px;
+}
+
+#weblioDictOutput #summary span#h1Query {
+    float: left;
+    margin: 0;
+}
+
+#weblioDictOutput .summaryM span.syllableEjje {
+    padding-right: 2px;
+}
+
+#weblioDictOutput .summaryM {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 0 4px;
+}
+
+#weblioDictOutput .summaryM .squareCircle {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#weblioDictOutput .summaryM .description {
+    background-color: #564c46;
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0 5px 0 3px;
+}
+
+#weblioDictOutput .shareBtn {
+    background-color: #fcfcfc;
+    border: #564c46 solid 1px;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 0 #000;
+    color: #564c46;
+    font-size: 12px;
+    font-weight: bold;
+    height: 17px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 3px;
+    vertical-align: middle;
+    width: 68px;
+}
+
+#weblioDictOutput .hideAdBtn {
+    background-color: #48a267;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 0 #000;
+    color: #fff;
+    font-size: 12px;
+    height: 22px;
+    margin: 0;
+    padding: 0 5px;
+    vertical-align: middle;
+    width: 91px;
+}
+
+#weblioDictOutput .hideAdBtn img {
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+}
+
+#weblioDictOutput .hideAdBtn span {
+    line-height: 22px;
+}
+
+#weblioDictOutput .linkTagRClrAd a:active,
+#weblioDictOutput .linkTagRClrAd a:hover,
+#weblioDictOutput .linkTagRClrAd a:link,
+#weblioDictOutput .linkTagRClrAd a:visited {
+    text-decoration: none;
+}
+
+#weblioDictOutput b.highlight {
+    font-weight: normal;
+}
+
+#weblioDictOutput .agglutination {
+    vertical-align: top;
+}
+
+#weblioDictOutput .agglutination li {
+    font-size: 14px;
+}
+
+#weblioDictOutput .agglutination ul {
+    margin: 10px 0 0 0;
+    padding: 0 0 0 10px;
+}
+
+#weblioDictOutput .sideRWordsL {
+    width: 90%;
+}
+
+#weblioDictOutput .EGateCoreDataWrp b,
+#weblioDictOutput .descriptionWrp b {
+    text-align: center;
+}
+
+#weblioDictOutput .EGateCoreDataWrp table td:first-child,
+#weblioDictOutput .descriptionWrp table td:first-child {
+    width: 80px;
+}
+
+#weblioDictOutput .EGateCoreDataWrp table td {
+    vertical-align: top;
+}
+
+#weblioDictOutput .EGateCoreDataWrp table td,
+#weblioDictOutput .descriptionWrp table td {
+    font-size: 90%;
+    font-weight: bold;
+}
+
+#weblioDictOutput .EGateCoreDataWrp td.eGCoreDta {
+    line-height: 1.6em;
+}
+
+#weblioDictOutput .shMreIcn {
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1em;
+}
+
+#weblioDictOutput #addUwl {
+    height: 22px;
+    width: 91px;
+}
+
+#weblioDictOutput #addUwl>span {
+    position: relative;
+    font-size: 12px;
+    line-height: 1em;
+    top: 6px;
+    vertical-align: top;
+}
+
+#weblioDictOutput #addUwl>img {
+    height: 16px;
+    width: 16px;
+}
+
+#weblioDictOutput .pin-icon-cell {
+    text-align: center;
+    width: 45px;
+}
+
+#weblioDictOutput .pin-icon-cell td {
+    text-align: center;
+    white-space: nowrap;
+}
+
+#weblioDictOutput .pin-icon-cell span {
+    color: #564c46;
+    font-size: 10px;
+}
+
+#weblioDictOutput .pin-icon-cell .fa {
+    cursor: pointer;
+    font-size: 34px;
+}
+
+#weblioDictOutput .pin-icon-cell .fa:hover {
+    filter: alpha(opacity=70);
+    opacity: .7;
+}
+
+#weblioDictOutput #leadToVocabIndexBtn,
+#weblioDictOutput #leadToSpeakingTestIndexBtn {
+    color: #fff!important;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 6px;
+    text-decoration: none;
+}
+
+#weblioDictOutput #leadToVocabIndexBtn {
+    letter-spacing: 2px;
+}
+
+#weblioDictOutput #leadBtnWrp {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#weblioDictOutput #leadToVocabIndexBtnWrp.insideLlTable,
+#weblioDictOutput #leadToSpeakingTestIndexBtnWrp.insideLlTable {
+    margin: 5px 0;
+}
+
+#weblioDictOutput #leadToVocabIndexBtnWrp.insideLlTable #leadToVocabIndexBtn,
+#weblioDictOutput #leadToSpeakingTestIndexBtnWrp.insideLlTable #leadToSpeakingTestIndexBtn {
+    margin: 0 0 0 auto;
+}
+
+#weblioDictOutput #learning-level-table-wrap {
+    display: table;
+    width: 100%;
+}
+
+#weblioDictOutput #learning-level-table {
+    display: table-cell;
+}
+
+#weblioDictOutput #learning-level-table div {
+    display: table;
+}
+
+#weblioDictOutput .learning-level-row {
+    display: table-row;
+}
+
+#weblioDictOutput .learning-level-row span {
+    display: table-cell;
+    padding: 2px 0;
+}
+
+#weblioDictOutput .learning-level-label {
+    text-align: right;
+	width: 50px;
+}
+
+#weblioDictOutput .learning-level-content {
+    padding-right: 15px!important;
+	width: 60px;
+}
+
+
+/*! CSS Used from: http://www.westatic.com/css/dict.css?tst=2017053113 */
+
+#weblioDictOutput h2 {
+    font-size: 1.17em;
+}
+
+#weblioDictOutput .KejjeYrMS,
+#weblioDictOutput .KejjeYrR {
+    background-color: #f7f7f7;
+    font-size: .9em;
+    vertical-align: top;
+}
+
+#weblioDictOutput .KejjeYrMS {
+    width: 13px;
+}
+
+#weblioDictOutput .KejjeYrR {
+    padding: 0 4px 0 4px;
+}
+
+#weblioDictOutput .KejjeYr {
+    border: 0;
+    border-collapse: collapse;
+    margin: 6px 0 16px 70px;
+    padding: 0;
+}
+
+#weblioDictOutput .KejjeYrMS i {
+    margin: 2px 0 0 2px;
+}
+
+#weblioDictOutput .KejjeYrHd {
+    padding: 0 .5em 0 0;
+}
+
+#weblioDictOutput .KejjeYrTxt {
+    display: none;
+    margin: 0;
+    padding: 0 .5em 0 0;
+}
+
+#weblioDictOutput .KejjeYrHd a,
+#weblioDictOutput .KejjeYrTxt a {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrHd a:active,
+#weblioDictOutput .KejjeYrTxt a:active {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrHd a:hover,
+#weblioDictOutput .KejjeYrTxt a:hover {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrHd a:visited,
+#weblioDictOutput .KejjeYrTxt a:visited {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrLn {
+    background-image: url(http://www.westatic.com/img/iconCclBlS.png);
+    background-position: left 5px;
+    background-repeat: no-repeat;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0 0 0 16px;
+}
+
+#weblioDictOutput .KejjeYrLn span {
+    line-height: 1.6em;
+    margin: 0;
+    padding: 0;
+}
+
+#weblioDictOutput .KejjeYrLn .KejjeYrEn {
+    font-family: Arial;
+    font-weight: bold;
+}
+
+#weblioDictOutput .KejjeYrKwrd {
+    line-height: 1.0em;
+}
+
+#weblioDictOutput .KejjeYrMS,
+#weblioDictOutput .KejjeYrR {
+    background-color: #f7f7f7;
+    font-size: .9em;
+    vertical-align: top;
+}
+
+#weblioDictOutput .KejjeYrMS {
+    width: 13px;
+}
+
+#weblioDictOutput .KejjeYrR {
+    padding: 0 4px 0 4px;
+}
+
+#weblioDictOutput .KejjeYrHd {
+    padding: 0 .5em 0 0;
+}
+
+#weblioDictOutput .KejjeYrTxt {
+    display: none;
+    margin: 0;
+    padding: 0 .5em 0 0;
+}
+
+#weblioDictOutput .KejjeYrHd a,
+#weblioDictOutput .KejjeYrTxt a {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrHd a:active,
+#weblioDictOutput .KejjeYrTxt a:active {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrHd a:hover,
+#weblioDictOutput .KejjeYrTxt a:hover {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrHd a:visited,
+#weblioDictOutput .KejjeYrTxt a:visited {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrLn {
+    background-image: url(http://www.westatic.com/img/iconCclBlS.png);
+    background-position: left 5px;
+    background-repeat: no-repeat;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0 0 0 16px;
+}
+
+#weblioDictOutput .KejjeYrLn span {
+    line-height: 1.6em;
+    margin: 0;
+    padding: 0;
+}
+
+#weblioDictOutput .KejjeYrLn .KejjeYrEn {
+    font-family: Arial;
+    font-weight: bold;
+}
+
+#weblioDictOutput .KejjeYrKwrd {
+    line-height: 1.0em;
+}
+
+#weblioDictOutput .KejjeSm {
+    font-size: .8em;
+    font-weight: normal;
+    line-height: 1.0em;
+    padding-left: 4px;
+	max-width: 60px;
+	text-align: center;
+}
+
+#weblioDictOutput .Kejje .lvlNH,
+#weblioDictOutput .Kejje .lvlAH,
+#weblioDictOutput .Kejje .lvlB {
+    float: left;
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+}
+
+#weblioDictOutput .Kejje .lvlNH {
+    font-size: 1.3em;
+    font-weight: bold;
+    height: 1.1em;
+    width: 28px;
+}
+
+#weblioDictOutput .Kejje .lvlAH {
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.6em;
+    width: 16px;
+}
+
+#weblioDictOutput .Kejje .lvlB {
+    padding: .1em 0 0 0;
+}
+
+#weblioDictOutput .Kejje .lvlB {
+    margin: .3em 0 0 0;
+}
+
+#weblioDictOutput .KejjeYrMS,
+#weblioDictOutput .KejjeYrR {
+    background-color: #f7f7f7;
+    font-size: .9em;
+    vertical-align: top;
+}
+
+#weblioDictOutput .KejjeYrMS {
+    width: 13px;
+}
+
+#weblioDictOutput .KejjeYrR {
+    padding: 0 4px 0 4px;
+}
+
+#weblioDictOutput .KejjeYr {
+    border: 0;
+    border-collapse: collapse;
+    margin: 6px 0 16px 25px;
+    padding: 0;
+}
+
+#weblioDictOutput .KejjeYrHd {
+    padding: 0 .5em 0 0;
+}
+
+#weblioDictOutput .KejjeYrTxt {
+    display: none;
+    margin: 0;
+    padding: 0 .5em 0 0;
+}
+
+#weblioDictOutput .KejjeYrHd a,
+#weblioDictOutput .KejjeYrTxt a {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrHd a:active,
+#weblioDictOutput .KejjeYrTxt a:active {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrHd a:hover,
+#weblioDictOutput .KejjeYrTxt a:hover {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrHd a:visited,
+#weblioDictOutput .KejjeYrTxt a:visited {
+    color: black;
+}
+
+#weblioDictOutput .KejjeYrLn {
+    background-image: url(http://www.westatic.com/img/iconCclBlS.png);
+    background-position: left 5px;
+    background-repeat: no-repeat;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0 0 0 16px;
+}
+
+#weblioDictOutput .KejjeYrLn span {
+    line-height: 1.6em;
+    margin: 0;
+    padding: 0;
+}
+
+#weblioDictOutput .KejjeYrLn .KejjeYrEn {
+    font-family: Arial;
+    font-weight: bold;
+}
+
+#weblioDictOutput .KejjeYrKwrd {
+    line-height: 1.0em;
+}
+
+#weblioDictOutput .Kejje .lvlNH,
+#weblioDictOutput .Kejje .lvlAH,
+#weblioDictOutput .Kejje .lvlB {
+    float: left;
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+}
+
+#weblioDictOutput .Kejje .lvlNH {
+    font-size: 1.3em;
+    font-weight: bold;
+    height: 1.1em;
+    width: 28px;
+}
+
+#weblioDictOutput .Kejje .lvlAH {
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.6em;
+    width: 16px;
+}
+
+#weblioDictOutput .Kejje .lvlB {
+    padding: .1em 0 0 0;
+}
+
+#weblioDictOutput .Kejje .lvlB {
+    margin: .3em 0 0 0;
+}
+
+#weblioDictOutput .rmvDots {
+    background: none!important;
+    padding: 0!important;
+}
+
+#weblioDictOutput .LiscjYr {
+    background-color: #f7f7f7;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#weblioDictOutput .LiscjYr a {
+    color: #000;
+}
+
+#weblioDictOutput .LiscjYr a:hover {
+    color: #000;
+}
+
+#weblioDictOutput .LiscjYr a:active {
+    color: #000;
+}
+
+#weblioDictOutput .LiscjYr a:visited {
+    color: #000;
+}
+
+#weblioDictOutput .LiscjYr div {
+    line-height: 1.0em;
+    margin-left: 10px;
+}
+
+#weblioDictOutput .LiscjYr .kanren {
+    font-family: Arial;
+    margin: 5px 0 0 24px;
+}
+
+#weblioDictOutput .LiscjYrHd:before {
+    margin-right: 3px;
+}
+
+#weblioDictOutput .LiscjYrHd .LiscjHdC {
+    border: #666 solid 1px;
+    color: #363636;
+    font-size: .9em;
+    margin-left: 16px;
+    padding: 1px;
+}
+
+#weblioDictOutput .Wejty .wejtyInfo {
+    border: #b5b6b5 solid 1px;
+    font-size: .8em;
+    line-height: 1.32em;
+    margin: 50px 0 0 0;
+    padding: 10px;
+}
+
+#weblioDictOutput .Enwik * {
+    line-height: 1.2em;
+}
+
+#weblioDictOutput .Enwik h3,
+#weblioDictOutput .Enwik h4 {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+#weblioDictOutput .Enwik p,
+#weblioDictOutput .Enwik ol,
+#weblioDictOutput .Enwik ul {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+#weblioDictOutput .Enwik .ewSubTtlH {
+    font-size: 1.1em;
+    line-height: 1.0em;
+    margin: 0 0 3px 0;
+}
+
+#weblioDictOutput .Enwik .ewSubTtlH span {
+    border-left: #815733 solid 5px;
+    margin-left: 2px;
+    padding: 0 2px 0 5px;
+    text-decoration: none;
+}
+
+#weblioDictOutput .Enwik li {
+    line-height: 1.3em;
+}
+
+#weblioDictOutput .Enwik .ewSubDsc {
+    margin: 15px 0 5px 0;
+}
+
+#weblioDictOutput .Nwnej .nwnejP {
+    border-left: #815733 solid 6px;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.0em;
+    margin: 12px 0 2px 0;
+    padding-left: 3px;
+}
+
+#weblioDictOutput .Nwnej .nwnejSEnL,
+#weblioDictOutput .Nwnej .nwnejSEnR {
+    float: left;
+    margin: 12px 0 0 0;
+    padding: 0 0 12px 0;
+}
+
+#weblioDictOutput .Nwnej .nwnejSEnL {
+    line-height: 1.4em;
+    width: 16px;
+}
+
+#weblioDictOutput .Nwnej .nwnejS p {
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+}
+
+#weblioDictOutput .Nwnej .nwnejS a {
+    line-height: 1.0em;
+}
+
+#weblioDictOutput .Nwnej .nwnejYr {
+    background-color: #f7f7f7;
+    margin: 0 0 0 60px;
+    padding: 0;
+}
+
+#weblioDictOutput .Nwnej .nwnejYrR {
+    background-color: #f7f7f7;
+    font-size: .9em;
+    vertical-align: top;
+}
+
+#weblioDictOutput .Nwnej .nwnejYrR {
+    padding: 0 4px 0 4px;
+}
+
+#weblioDictOutput .Nwnej .nwnejYrHd {
+    padding: 0 .5em 0 0;
+}
+
+#weblioDictOutput .Nwnej .nwnejYrLn {
+    background-image: url(http://www.westatic.com/img/iconCclBlS.png);
+    background-position: left 5px;
+    background-repeat: no-repeat;
+    line-height: 1.2em;
+    padding: 0 0 0 12px;
+}
+
+#weblioDictOutput .Nwnej .nwnejYrE,
+#weblioDictOutput .Nwnej .nwnejYrJ {
+    font-size: .9em;
+    margin: 0;
+}
+
+#weblioDictOutput .Nwnej .nwnejYrE {
+    font-family: Arial;
+    font-weight: bold;
+    padding-right: 8px;
+}
+
+#weblioDictOutput .Nwnej .nwnejThL {
+    font-size: 9px;
+	position:relative;
+    top: 28px;
+}
+
+#weblioDictOutput .Nwnej .nwnejThL a:active,
+#weblioDictOutput .Nwnej .nwnejThL a:hover,
+#weblioDictOutput .Nwnej .nwnejThL a:link,
+#weblioDictOutput .Nwnej .nwnejThL a:visited {
+    border-bottom: #534a42 dotted 1px;
+    font-size: 9px;
+    line-height: 10px;
+    text-decoration: none;
+}
+
+#weblioDictOutput .Kggjr .kggjrP {
+    border-left: #815733 solid 6px;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.0em;
+    margin: 10px 0 5px 0;
+    padding-left: 3px;
+}
+
+#weblioDictOutput .Kggjr .kggjrB {
+    background-color: #f7f7f7;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#weblioDictOutput .Kggjr .kggjrB a {
+    color: #000;
+}
+
+#weblioDictOutput .Kggjr .kggjrB a:hover {
+    color: #000;
+}
+
+#weblioDictOutput .Kggjr .kggjrB a:active {
+    color: #000;
+}
+
+#weblioDictOutput .Kggjr .kggjrB a:visited {
+    color: #000;
+}
+
+#weblioDictOutput .Kggjr .kggjrB div {
+    line-height: 1.4em;
+    margin-left: 10px;
+}
+
+#weblioDictOutput .Kggjr .kggjrBC {
+    border: #666 solid 1px;
+    color: #363636;
+    font-size: .9em;
+    margin-left: 16px;
+    padding: 1px;
+}
+
+#weblioDictOutput .Kggjr .kggjrBB {
+    font-family: Arial;
+    margin: 5px 0 0 24px;
+    padding-left: 16px;
+}
+
+#weblioDictOutput .Kggjr .kggjrYr {
+    background-color: #f7f7f7;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#weblioDictOutput .Kggjr .kggjrYr a {
+    color: #000;
+}
+
+#weblioDictOutput .Kggjr .kggjrYr a:hover {
+    color: #000;
+}
+
+#weblioDictOutput .Kggjr .kggjrYr a:active {
+    color: #000;
+}
+
+#weblioDictOutput .Kggjr .kggjrYr a:visited {
+    color: #000;
+}
+
+#weblioDictOutput .Kggjr .kggjrYr div {
+    line-height: 1.0em;
+    margin-left: 10px;
+}
+
+#weblioDictOutput .Kggjr .kggjrYrHdFld i {
+    margin-right: 3px;
+}
+
+#weblioDictOutput .Kggjr .kggjrYrHdFld:before {
+    margin-right: 3px;
+}
+
+#weblioDictOutput .Kggjr .kggjrYrHdFld span {
+    cursor: pointer;
+}
+
+#weblioDictOutput .Kggjr .kggjrYrHdFld .kggjrHdC {
+    border: #666 solid 1px;
+    color: #363636;
+    font-size: .9em;
+    padding: 1px;
+}
+
+#weblioDictOutput .Kggjr .kggjrR,
+#weblioDictOutput .Kggjr .kggjrRF {
+    background-image: url(http://www.westatic.com/img/iconCclBlS.png);
+    background-position: 2px 8px;
+    background-repeat: no-repeat;
+    font-family: Arial;
+    font-weight: normal;
+    margin: 2px 0 0 24px;
+    padding: 0 0 0 14px;
+}
+
+#weblioDictOutput .Kggjr .kggjrRF {
+    display: none;
+}
+
+#weblioDictOutput .Kggjr .kggjrYrEn {
+    font-weight: bold;
+}
+
+#weblioDictOutput .Cmpyg .cmpygS {
+    border-left: #815733 solid 6px;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.0em;
+    margin: 10px 0 5px 0;
+    padding-left: 3px;
+}
+
+#weblioDictOutput .Cmpyg .cmpygC {
+    line-height: 1.0em;
+}
+
+#weblioDictOutput .Cmpyg .cmpygHdC {
+    background-color: #f0f0f0;
+    border: #666 solid 1px;
+    color: #363636;
+    font-size: .9em;
+    padding: 1px;
+}
+
+#weblioDictOutput .Cmpyg .cmpygYr {
+    background-color: #f7f7f7;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#weblioDictOutput .Cmpyg .cmpygYr a {
+    color: #000;
+}
+
+#weblioDictOutput .Cmpyg .cmpygYr a:hover {
+    color: #000;
+}
+
+#weblioDictOutput .Cmpyg .cmpygYr a:active {
+    color: #000;
+}
+
+#weblioDictOutput .Cmpyg .cmpygYr a:visited {
+    color: #000;
+}
+
+#weblioDictOutput .Cmpyg .cmpygYr div {
+    line-height: 1.0em;
+    margin-left: 10px;
+}
+
+#weblioDictOutput .Cmpyg .cmpygYrHdFld i {
+    margin-bottom: -2px;
+    margin-right: 3px;
+}
+
+#weblioDictOutput .Cmpyg .cmpygYrHdFld:before {
+    margin-right: 3px;
+}
+
+#weblioDictOutput .Cmpyg .cmpygYrHdFld span {
+    cursor: pointer;
+}
+
+#weblioDictOutput .Cmpyg .cmpygYrHdFld .cmpygHdC {
+    border: #666 solid 1px;
+    color: #363636;
+    font-size: .9em;
+    padding: 1px;
+}
+
+#weblioDictOutput .Cmpyg .cmpygR,
+#weblioDictOutput .Cmpyg .cmpygRF {
+    background-image: url(http://www.westatic.com/img/iconCclBlS.png);
+    background-position: 2px 8px;
+    background-repeat: no-repeat;
+    font-family: Arial;
+    font-weight: normal;
+    margin: 2px 0 0 24px;
+    padding: 0 0 0 14px;
+}
+
+#weblioDictOutput .Cmpyg .cmpygRF {
+    display: none;
+}
+
+#weblioDictOutput .Cmpyg .cmpygYrEn {
+    font-weight: bold;
+}
+
+#weblioDictOutput .Mcrsy .mcrsyC {
+    background-color: #f0f0f0;
+    border: #666 solid 1px;
+    color: #363636;
+    font-size: .9em;
+    line-height: 1.0em;
+    padding: 1px;
+}
+
+#weblioDictOutput .Mcrsy .mcrsyB {
+    background-color: #f7f7f7;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 8px 5px 8px 5px;
+}
+
+#weblioDictOutput .Mcrsy .mcrsyB p {
+    margin: 0 0 6px 16px;
+}
+
+#weblioDictOutput .Mcrsy .mcrsyBC {
+    background-color: #eee;
+    border: #666 solid 1px;
+    color: #363636;
+    font-size: .9em;
+    padding: 1px;
+}
+
+#weblioDictOutput .Wehgj .wehgjT span {
+    background-color: #f0f0f0;
+    border: #666 solid 1px;
+    color: #363636;
+    font-size: .9em;
+    line-height: 1.0em;
+    padding: 1px;
+}
+
+#weblioDictOutput .Wehgj .wehgjT {
+    padding: 0;
+}
+
+#weblioDictOutput .Wsmyg p {
+    margin: 0;
+}
+
+#weblioDictOutput .Wsmyg .wsmygC {
+    margin: 0 0 8px 0;
+}
+
+#weblioDictOutput .Wsmyg .wsmygC span {
+    background-color: #f0f0f0;
+    border: #666 solid 1px;
+    color: #363636;
+    font-size: .9em;
+    line-height: 1.0em;
+    padding: 1px;
+}
+
+#weblioDictOutput .EgtejLb {
+    background-color: #f5efe9;
+    border: #534a42 solid 1px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 2px 0;
+    margin-right: 8px;
+    padding: 0 3px!important;
+    white-space: nowrap;
+}
+
+#weblioDictOutput .EgtejRSpc {
+    margin-right: 10px;
+}
+
+#weblioDictOutput .EgtejSub,
+#weblioDictOutput .EgtejSubS {
+    background-color: #564c46;
+    border: none!important;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal!important;
+    line-height: 30px!important;
+    margin-right: 5px;
+    padding: 0 8px!important;
+}
+
+#weblioDictOutput .EgtejSubS {
+    font-size: 12px;
+}
+
+#weblioDictOutput .EgtejSub a {
+    color: #fff!important;
+    text-decoration: none!important;
+}
+
+#weblioDictOutput .EgtejBld {
+    font-weight: bold;
+}
+
+#weblioDictOutput .EgtejYrAr,
+#weblioDictOutput .EgtejIdxAr {
+    background-color: #f7f7f7;
+}
+
+#weblioDictOutput .EgtejYrTb {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#weblioDictOutput .EgtejYrTb td {
+    vertical-align: top;
+}
+
+#weblioDictOutput .EgtejWrp {
+    margin-left: 2px;
+}
+
+#weblioDictOutput .EgtejCcl {
+    background-color: #564c46;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+	padding: 4px;
+}
+
+#weblioDictOutput .EgtejAncTgt {
+    margin-top: -140px;
+    padding-top: 140px;
+}
+
+#weblioDictOutput .rmvDots {
+    background: none!important;
+    padding: 0!important;
+}
+
+#weblioDictOutput .Jmdct .jmdctGlsL {
+    float: left;
+    margin: 0;
+    vertical-align: top;
+    width: 20px;
+}
+
+#weblioDictOutput .Jmdct .jmdctL {
+    background-color: #f0f0f0;
+    border: #666 solid 1px;
+    color: #363636;
+    font-size: .9em;
+    font-weight: normal;
+    line-height: 1.0em;
+}
+
+#weblioDictOutput .Stwdj .stwdjYr div {
+    line-height: 1.0em;
+    margin-left: 10px;
+}
+
+#weblioDictOutput .Stwdj .stwdjR, .Stwdj .stwdjRF {
+    background-image: url(http://www.westatic.com/img/iconCclBlS.png);
+    background-position: 2px 8px;
+    background-repeat: no-repeat;
+    font-family: Arial;
+    font-weight: normal;
+    margin: 2px 0 0 24px;
+    padding: 0 0 0 14px;
+}
+
+#weblioDictOutput span {
+	white-space: normal !important;
+}

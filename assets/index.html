@@ -1,0 +1,108 @@
+<html>
+<head>
+	<meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' href='./css/style.css'>
+	<link rel='stylesheet' href='./css/weblioDict.css'>
+	<link rel='stylesheet' href='./css/kotobankDict.css'>
+	<link rel='stylesheet' href='./css/ldoceDict.css'>
+	<script>//window.$ = window.jQuery = require('./js/jquery.min.js');</script>
+	<script src='./js/globalRequire.js'></script>
+	<script src='./js/inputfocus.js'></script>
+	<script src='./js/tabs.js'></script>
+	<script src='./js/webscraper.js'></script>
+	<script src='./js/about.js'></script>
+	<script src='./js/updater.js'></script>
+	<script>
+		window.onload = function () {
+			//inputfocus.js
+			window.addEventListener("keydown", function () {
+				inputFocus(event, "webscrapeform", "webscrapeformterm");
+			}, true)
+			//tabs.js
+			changeTab(event, 'tabOne');
+			
+			function tableResize () {
+				let tabOne = document.getElementsByClassName('tbodySize')[0];
+				let tabTwo = document.getElementsByClassName('tbodySize')[1];
+				// Make sure to minus the header height below
+				tabOne.style.height = window.innerHeight - 100 + 'px';
+				tabTwo.style.height = window.innerHeight - 155 + 'px';
+			}
+			tableResize();
+			window.addEventListener("resize", tableResize, false);
+			
+			//updater.js
+			checkVersion();
+		}
+	</script>
+	<title>Japanese-English MultiSearch</title>
+</head>
+
+<body class='overflowHidden'>
+	<header>
+		<div id='freeSearchForm' onsubmit='webscrapeformsearch();return false;' method='post'>
+			<form id='webscrapeform' class='webscrapeform pop'>
+				<input type='text' name='webscrapeformterm'>
+				<input type='button' class='button headBtnMaxSize searchBtn' id='formsubmitbtn' value='&#128269;' onclick='webscrapeformsearch();return false;' />
+				<input type='button' class='button headBtnMaxSize' id='aboutbtn' value='?' onclick='about();return false;' /><br />
+				<div class='stretch'>
+					<label class='button tablinks'><input type='radio' name='searchType' onclick="changeTab(event, 'tabOne');" value='dictionary' checked />Dictionaries</label>
+					<label class='button tablinks'><input type='radio' name='searchType' onclick="changeTab(event, 'tabTwo');" value='corpus'  />Corpora</label>
+				</div>
+			</form>
+		</div>
+	</header>
+	
+	<div id='mainContent' class='mainContent'>
+	
+		<!-- Menu --> 
+		<div id='tabOne' class='tabcontent pop'>
+			<table border='1' class='outputTables'>
+				<thead>
+					<tr>
+						<th><span class='weblioLogo'>W</span>eblio</th>
+						<th>コトバンク ・ <span class='ldoceLogo'>LDOCE</span> (Longman)</th>
+					</tr>
+				</thead>
+				<tbody class='tbodySize'>
+					<tr>
+						<td id='weblioDictOutput'></td>
+						<!-- classes: kotobankDict / ldoceDictOutput -->
+						<td id='secondaryDictOutput' class=''></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div id='tabTwo' class='tabcontent pop'>
+			<div id='googleForm'>
+				<span class='googleLogo'>Google</span> Translate: <span id='googleOutput'></span>
+			</div>
+			
+			<table border='1' class='outputTables'>
+				<thead>
+					<tr>
+						<th><span class='weblioLogo'>W</span>eblio</th>
+						<th><span class='alcLogo'>アルク</span></th>
+						<th><span class='lingueeLogo-first'>L</span><span class='lingueeLogo'>inguee</span></th>
+					</tr>
+				</thead>
+				<tbody class='tbodySize'>
+					<tr>
+						<td id='weblioOutput'></td>
+						<td id='alcOutput'></td>
+						<td id='lingueeOutput'></td>
+					</tr>
+				</tbody>
+			</table>
+			<button id='seeMoreBtn' class='button stretchBtn' onclick='seeMore()'>See More</button>
+		</div>
+		
+	</div>
+	
+	<audio id='globalAudioPlayer' src='' style='visibility:hidden'></audio>
+	<script src='./js/ahrefLinkListener.js'></script>
+	<script src='./js/security.js'></script>
+</body>
+</html>
