@@ -43,7 +43,7 @@ function webscrapeformsearch(inputItem) {
 	var weblioUrl = "http://ejje.weblio.jp/sentence/content/" + encodeURI(inputItem);
 	weblioCorpus(weblioUrl);
 	
-	var alcUrl = "http://eow.alc.co.jp/search?q=" + encodeURI(inputItem) + "&pg=1";
+	var alcUrl = "https://eow.alc.co.jp/search?q=" + encodeURI(inputItem) + "&pg=1";
 	alcCorpus(alcUrl);
 	
 	var lingueeUrl = "https://www.linguee.com/" + sourceLang + "-" + targetLang + "/search?query=" + encodeURI(inputItem) + "&ajax=1";

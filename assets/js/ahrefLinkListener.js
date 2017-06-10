@@ -30,19 +30,18 @@ function index () {
 		var e = window.e || e;
 		// if this is a clicked URL
 		if (e.target.localName == 'a' || e.target.localName == 'A' || e.target.parentNode.nodeName == 'a' || e.target.parentNode.nodeName == 'A') {
-			// Prevent opening the URL
 			e.preventDefault();
-			// For the Longman dictionary results, if this is a search page, search the embedded URL
+			// For dictionary results, load other results in like iframes for that dictionary only
 			var url = e.target.parentNode.href || e.target.href;
-			if (url.startsWith("http://ejje.weblio.jp/content/")) {
+			if (url.startsWith("http://ejje.weblio.jp/content/") || url.startsWith("https://ejje.weblio.jp/content/")) {
 				weblioDictionary(url);
 				return;
 			}
-			if (url.startsWith("https://kotobank.jp/word/")) {
+			if (url.startsWith("http://kotobank.jp/word/") || url.startsWith("https://kotobank.jp/word/")) {
 				kotobankDictionary(url);
 				return;
 			}
-			if (url.startsWith("http://www.ldoceonline.com/dictionary/") || url.startsWith("http://www.ldoceonline.com/search/direct/")) {
+			if (url.startsWith("http://www.ldoceonline.com/dictionary/") || url.startsWith("https://www.ldoceonline.com/dictionary/") || url.startsWith("http://www.ldoceonline.com/search/direct/") ||  url.startsWith("https://www.ldoceonline.com/search/direct/")) {
 				ldoceDictionary(url);
 				return;
 			}
