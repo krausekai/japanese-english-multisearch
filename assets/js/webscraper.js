@@ -50,7 +50,7 @@ function webscrapeformsearch(inputItem) {
 	var weblioUrl = "http://ejje.weblio.jp/sentence/content/" + encodeURI(inputItem);
 	weblioCorpus(weblioUrl);
 	
-	var alcUrl = "https://eow.alc.co.jp/search?q=" + encodeURI(inputItem) + "&pg=1";
+	var alcUrl = "http://eow.alc.co.jp/search?q=" + encodeURI(inputItem) + "&pg=1";
 	alcCorpus(alcUrl);
 	
 	var lingueeUrl = "https://www.linguee.com/" + sourceLang + "-" + targetLang + "/search?query=" + encodeURI(inputItem) + "&ajax=1";
@@ -77,7 +77,8 @@ function googleTranslate(inputItem) {
 			doc.getElementById("googleOutput").innerHTML = result;
 			//return result;
 		} else {
-			doc.getElementById("googleOutput").innerHTML = output.innerHTML += '<span class="devtext">Error: ' + statusCodeMeaning(response.statusCode) + '</span>';
+			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
+			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
 		}
 	})
 }
@@ -128,7 +129,8 @@ function weblioDictionary(url) {
 			
 			output.innerHTML += $("#main").html();
 		} else {
-			output.innerHTML += '<span class="devtext">Error: ' + statusCodeMeaning(response.statusCode) + '</span>';
+			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
+			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
 		}
 	});
 }
@@ -158,7 +160,8 @@ function kotobankDictionary(url) {
 			output.innerHTML += $("body").html();
 			
 		} else {
-			output.innerHTML += '<span class="devtext">Error: ' + statusCodeMeaning(response.statusCode) + '</span>';
+			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
+			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
 		}
 	});
 	
@@ -197,7 +200,8 @@ function ldoceDictionary(url) {
 			}
 			
 		} else {
-			output.innerHTML += '<span class="devtext">Error: ' + statusCodeMeaning(response.statusCode) + '</span>';
+			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
+			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
 		}
 	});
 }
@@ -288,7 +292,8 @@ function weblioCorpus(url) {
 			}
 			seeMoreBtnVisibilityCheck();
 		} else {
-			output.innerHTML += '<span class="devtext">Error: ' + statusCodeMeaning(response.statusCode) + '</span>';
+			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
+			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
 		}
 	});
 }
@@ -347,7 +352,8 @@ function alcCorpus(url) {
 			}
 			seeMoreBtnVisibilityCheck();
 		} else {
-			output.innerHTML += output.innerHTML += '<span class="devtext">Error: ' + statusCodeMeaning(response.statusCode) + '</span>';
+			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
+			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
 		}
 	});
 }
@@ -381,7 +387,8 @@ function lingueeCorpus(url) {
 			})
 			output.innerHTML += '<span class="devtext">End of Results</span>'
 		} else {
-			output.innerHTML += output.innerHTML += '<span class="devtext">Error: ' + statusCodeMeaning(response.statusCode) + '</span>';
+			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
+			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
 		}
 	});
 }

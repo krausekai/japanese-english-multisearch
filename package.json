@@ -2,7 +2,7 @@
 	"name": "JapaneseEnglishMultisearch",
 	"productName": "Japanese-English MultiSearch",
 	"description": "Search multiple Japanese-English dictionaries and corpora",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"author": "Kai Krause <kaikrause95@gmail.com>",
 	"copyright": "© 2017, Kai Krause <kaikrause95@gmail.com>",
 	"homepage": "https://github.com/krausekai/",
