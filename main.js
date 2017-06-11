@@ -27,6 +27,8 @@ function createWindow() {
         slashes: true
     }))
 	
+	//mainWindow.webContents.openDevTools()
+	
 	//Hide the default menubar
 	mainWindow.setMenu(null);
 	

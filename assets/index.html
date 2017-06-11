@@ -7,16 +7,12 @@
 	<link rel='stylesheet' href='./css/kotobankDict.css'>
 	<link rel='stylesheet' href='./css/ldoceDict.css'>
 	<script>//window.$ = window.jQuery = require('./js/jquery.min.js');</script>
-	<script src='./js/inputfocus.js'></script>
 	<script src='./js/tabs.js'></script>
+	<script src='./js/inputfocus.js'></script>
 	<script src='./js/webscraper.js'></script>
-	<script src='./js/popupwindows.js'></script>
+	<script src='./js/popupWindows.js'></script>
 	<script>
 		window.onload = function () {
-			//inputfocus.js
-			window.addEventListener("keydown", function () {
-				inputFocus(event, "webscrapeform", "webscrapeformterm");
-			}, true)
 			//tabs.js
 			changeTab(event, 'tabOne');
 			
@@ -30,7 +26,12 @@
 			tableResize();
 			window.addEventListener("resize", tableResize, false);
 			
-			//updater.js
+			//inputfocus.js
+			window.addEventListener("keydown", function () {
+				inputFocus(event, "webscrapeform", "webscrapeformterm");
+			}, true)
+			
+			//popupwindows.js
 			checkVersion();
 		}
 	</script>
