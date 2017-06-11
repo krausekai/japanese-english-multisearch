@@ -6,6 +6,7 @@ window.addEventListener("keydown", function () {
 }, true)
 */
 
+var doc = document;
 var previousKeyCode;
 
 function inputFocus (event, id, element) {
@@ -35,9 +36,9 @@ function inputFocus (event, id, element) {
 	var id = id || '';
 	var element = element || '';
 	if (id != '' && element != '') {
-		var input = document.getElementById(id).elements[element];
+		var input = doc.getElementById(id).elements[element];
 	} else if (id != '' && element == '') {
-		var input = document.getElementById(id);
+		var input = doc.getElementById(id);
 	} else {
 		return console.error("inputFocus error: no input ID assigned");
 	}

@@ -1,7 +1,6 @@
 // For opening new windows or importing files
-const BrowserWindow = require('electron').remote.BrowserWindow
+var BrowserWindow = require('electron').remote.BrowserWindow
 var path = require('path')
-
 // Open a html file dialog window
 function showWindow(file, options) {
 	let filePath = path.join('file://', __dirname, file)
@@ -24,8 +23,12 @@ function showAbout() {
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-const localVersion = require('electron').remote.app.getVersion();
-const remoteVersionUrl = 'https://raw.githubusercontent.com/krausekai/japanese-english-multisearch/master/package.json';
+// For http requests - //https://github.com/request/request
+var request = require('request');
+var requestOptions = {headers: {'User-Agent': "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"}};
+
+var localVersion = require('electron').remote.app.getVersion();
+var remoteVersionUrl = 'https://raw.githubusercontent.com/krausekai/japanese-english-multisearch/master/package.json';
 var remoteVersion = localStorage.getItem("remoteVersion");
 
 function checkVersion() {

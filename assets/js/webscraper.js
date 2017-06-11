@@ -1,9 +1,31 @@
 // For http requests - //https://github.com/request/request
-const request = require('request');
-const requestOptions = {headers: {'User-Agent': "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"}};
-const statusCodeMeaning = require('./js/statusCodeMeaning.js');
+var request = require('request');
+var requestOptions = {headers: {'User-Agent': "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"}};
 // For jquery-like node.js - //https://cheerio.js.org/
-const cheerio = require('cheerio');
+var cheerio = require('cheerio');
+
+// Readable status codes
+function statusCodeMeaning(statusCode) {
+	if (statusCode == 400) {
+		return "Bad request."
+	}
+	if (statusCode == 404) {
+		return "Page not found."
+	}
+	if (statusCode == 500 || statusCode == 501) {
+		return "Server error, try again later."
+	}
+	if (statusCode == 503 || statusCode == 550) {
+		return "Connection refused by server, try again later."
+	}
+	return "Try again later."
+}
+
+// Readable error output
+function outputError(error, response) {
+	let status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
+	return '<span class="devtext">' + status + '</span>';
+}
 
 // Thanks to https://stackoverflow.com/a/23303587/1679669
 // Fix broken chains for SSL Certificates by adding their authority to the trust
@@ -14,6 +36,8 @@ require('ssl-root-cas').inject();
 var cas = https.globalAgent.options.ca;
 // ALC.co.jp
 cas.push(fs.readFileSync(path.join(__dirname, 'ssl', 'GlobalSignOrganizationValidationCA-SHA256-G2.crt')));
+
+//........................................................................................................
 
 var doc = document;
 
@@ -87,7 +111,7 @@ function googleTranslate(inputItem) {
 			doc.getElementById("googleOutput").innerHTML = result;
 			//return result;
 		} else {
-			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
+			
 			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
 		}
 	})
@@ -139,8 +163,7 @@ function weblioDictionary(url) {
 			
 			output.innerHTML += $("#main").html();
 		} else {
-			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			output.innerHTML += '<span class="devtext">' + error + '</span>';
+			output.innerHTML += outputError(error, response);
 		}
 	});
 }
@@ -170,8 +193,7 @@ function kotobankDictionary(url) {
 			output.innerHTML += $("body").html();
 			
 		} else {
-			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			output.innerHTML += '<span class="devtext">' + error + '</span>';
+			output.innerHTML += outputError(error, response);
 		}
 	});
 	
@@ -210,8 +232,7 @@ function ldoceDictionary(url) {
 			}
 			
 		} else {
-			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			output.innerHTML += '<span class="devtext">' + error + '</span>';
+			output.innerHTML += outputError(error, response);
 		}
 	});
 }
@@ -302,8 +323,7 @@ function weblioCorpus(url) {
 			}
 			seeMoreBtnVisibilityCheck();
 		} else {
-			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			output.innerHTML += '<span class="devtext">' + error + '</span>';
+			output.innerHTML += outputError(error, response);
 		}
 	});
 }
@@ -362,8 +382,7 @@ function alcCorpus(url) {
 			}
 			seeMoreBtnVisibilityCheck();
 		} else {
-			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			output.innerHTML += '<span class="devtext">' + error + '</span>';
+			output.innerHTML += outputError(error, response);
 		}
 	});
 }
@@ -397,8 +416,7 @@ function lingueeCorpus(url) {
 			})
 			output.innerHTML += '<span class="devtext">End of Results</span>'
 		} else {
-			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			output.innerHTML += '<span class="devtext">' + error + '</span>';
+			output.innerHTML += outputError(error, response);
 		}
 	});
 }

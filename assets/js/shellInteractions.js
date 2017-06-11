@@ -6,6 +6,17 @@ Dictionary tables have special rules for search results and search field input.
 // Manage Shell interactions - https://github.com/electron/electron/blob/master/docs/api/shell.md
 const {shell} = require('electron')
 
+var doc = document;
+
+//Disable evals for scripts
+window.eval = global.eval = function() {
+	throw new Error("Sorry, we do not support window.eval() for security reasons.");
+}
+
+//Disable drag drop events
+doc.addEventListener('dragover', function (e) {e.preventDefault()});
+doc.addEventListener('drop', function (e) {e.preventDefault()});
+
 // pagination check
 var page = window.location.href;
 if (page.endsWith("index.html")) {
@@ -16,8 +27,8 @@ if (page.endsWith("index.html")) {
 
 // for the page named "index.html"
 function index () {
-	//Audio (currently only for ldoce/longman dictionary)
-	var globalAudio = document.getElementById('globalAudioPlayer');
+	//Assign an audio player (currently only for ldoce/longman dictionary)
+	var globalAudio = doc.getElementById('globalAudioPlayer');
 	function playAudio(e) {
 		var e = window.e || e;
 		var audioFile = e.target.getAttribute("data-src-mp3");
@@ -26,9 +37,9 @@ function index () {
 			globalAudio.play();
 		}
 	}
-	document.addEventListener('click', playAudio, true);
+	doc.addEventListener('click', playAudio, true);
 	
-	// Input clicked URL's inner text as a term from the tabOne (dictionary) div into the search bar
+	// From the tabOne (dictionary) div, input clicked URL's inner website URL text as terms into the searchbar
 	function tabOneClickback(e) {
 		var e = window.e || e;
 		// if this is a clicked URL
@@ -51,15 +62,15 @@ function index () {
 			// Else, open default
 			//defaultClickback(e);
 			// Else, input the clicked URL text into the input box for searching
-			var input = document.getElementById("webscrapeform").elements["webscrapeformterm"];
+			var input = doc.getElementById("webscrapeform").elements["webscrapeformterm"];
 			input.value = e.target.innerText;
 		}
 	}
 	// Dictionary tab
-	var tabOne = document.getElementById("tabOne");
+	var tabOne = doc.getElementById("tabOne");
 	tabOne.addEventListener('click', tabOneClickback, false);
 	// Corpora tab
-	var tabTwo = document.getElementById("tabTwo");
+	var tabTwo = doc.getElementById("tabTwo");
 	tabTwo.addEventListener('click', defaultClickback, false);
 }
 
