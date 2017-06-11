@@ -5,6 +5,16 @@ const statusCodeMeaning = require('./js/statusCodeMeaning.js');
 // For jquery-like node.js - //https://cheerio.js.org/
 const cheerio = require('cheerio');
 
+// Thanks to https://stackoverflow.com/a/23303587/1679669
+// Fix broken chains for SSL Certificates by adding their authority to the trust
+var fs = require('fs');
+var path = require('path');
+var https = require('https'), cas;
+require('ssl-root-cas').inject();
+var cas = https.globalAgent.options.ca;
+// ALC.co.jp
+cas.push(fs.readFileSync(path.join(__dirname, 'ssl', 'GlobalSignOrganizationValidationCA-SHA256-G2.crt')));
+
 var doc = document;
 
 function webscrapeformsearch(inputItem) {
@@ -50,7 +60,7 @@ function webscrapeformsearch(inputItem) {
 	var weblioUrl = "http://ejje.weblio.jp/sentence/content/" + encodeURI(inputItem);
 	weblioCorpus(weblioUrl);
 	
-	var alcUrl = "http://eow.alc.co.jp/search?q=" + encodeURI(inputItem) + "&pg=1";
+	var alcUrl = "https://eow.alc.co.jp/search?q=" + encodeURI(inputItem) + "&pg=1";
 	alcCorpus(alcUrl);
 	
 	var lingueeUrl = "https://www.linguee.com/" + sourceLang + "-" + targetLang + "/search?query=" + encodeURI(inputItem) + "&ajax=1";
@@ -130,7 +140,7 @@ function weblioDictionary(url) {
 			output.innerHTML += $("#main").html();
 		} else {
 			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
+			output.innerHTML += '<span class="devtext">' + error + '</span>';
 		}
 	});
 }
@@ -161,7 +171,7 @@ function kotobankDictionary(url) {
 			
 		} else {
 			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
+			output.innerHTML += '<span class="devtext">' + error + '</span>';
 		}
 	});
 	
@@ -201,7 +211,7 @@ function ldoceDictionary(url) {
 			
 		} else {
 			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
+			output.innerHTML += '<span class="devtext">' + error + '</span>';
 		}
 	});
 }
@@ -293,7 +303,7 @@ function weblioCorpus(url) {
 			seeMoreBtnVisibilityCheck();
 		} else {
 			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
+			output.innerHTML += '<span class="devtext">' + error + '</span>';
 		}
 	});
 }
@@ -353,7 +363,7 @@ function alcCorpus(url) {
 			seeMoreBtnVisibilityCheck();
 		} else {
 			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
+			output.innerHTML += '<span class="devtext">' + error + '</span>';
 		}
 	});
 }
@@ -388,7 +398,7 @@ function lingueeCorpus(url) {
 			output.innerHTML += '<span class="devtext">End of Results</span>'
 		} else {
 			var status = error || 'Error: ' + statusCodeMeaning(response.statusCode);
-			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
+			output.innerHTML += '<span class="devtext">' + error + '</span>';
 		}
 	});
 }

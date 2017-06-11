@@ -3,13 +3,13 @@ function changeTab(evt, tabName) {
 	var i, tabcontent, tablinks;
 
 	// Get all elements with class="tabcontent" and hide them
-	tabcontent = doc.getElementsByClassName("tabcontent");
+	tabcontent = document.getElementsByClassName("tabcontent");
 	for (i = 0; i < tabcontent.length; i++) {
 		tabcontent[i].style.display = "none";
 	}
 
 	// Get all elements with class="tablinks", and remove or add the 'active' class to them as necessary (and check for duplicates with indexOf)
-	tablinks = doc.getElementsByClassName("tablinks");
+	tablinks = document.getElementsByClassName("tablinks");
 	for (i = 0; i < tablinks.length; i++) {
 		var child = tablinks[i].children[0];
 		if (!child.checked && tablinks[i].className.indexOf(" active") >= 0) {
@@ -20,5 +20,5 @@ function changeTab(evt, tabName) {
 	}
 
 	// Show the current tab
-	doc.getElementById(tabName).style.display = "block";
+	document.getElementById(tabName).style.display = "block";
 }

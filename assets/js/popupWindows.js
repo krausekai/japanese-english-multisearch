@@ -1,6 +1,6 @@
 // For opening new windows or importing files
 const BrowserWindow = require('electron').remote.BrowserWindow
-const path = require('path')
+var path = require('path')
 
 // Open a html file dialog window
 function showWindow(file, options) {
@@ -29,20 +29,12 @@ const remoteVersionUrl = 'https://raw.githubusercontent.com/krausekai/japanese-e
 var remoteVersion = localStorage.getItem("remoteVersion");
 
 function checkVersion() {
-	let page = window.location.href;
-	
 	request(remoteVersionUrl, requestOptions, function (error, response, data) {
 		if (!error && response.statusCode == 200) {
 			data = JSON.parse(data);
 			localStorage.setItem("remoteVersion", data.version);
 			if (data.version > localVersion) {
 				showUpdater();
-			} else if (!page.endsWith("index.html")) {
-				alert("No new updates");
-			}
-		} else {
-			if (!page.endsWith("index.html")) {
-				alert("Try again later");
 			}
 		}
 	});

@@ -58,6 +58,7 @@
 	"dependencies": {
 		"cheerio": "latest",
 		"electron-context-menu": "latest",
-		"request": "latest"
+		"request": "latest",
+		"ssl-root-cas": "^1.2.3"
 	}
 }
