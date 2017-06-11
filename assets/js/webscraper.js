@@ -109,10 +109,8 @@ function googleTranslate(inputItem) {
 		if (!error && response.statusCode == 200) {
 			var result = html.match(/".*?"/)[0].slice(1,-1);
 			doc.getElementById("googleOutput").innerHTML = result;
-			//return result;
 		} else {
-			
-			doc.getElementById("googleOutput").innerHTML = '<span class="devtext">' + error + '</span>';
+			doc.getElementById("googleOutput").innerHTML = output.innerHTML += outputError(error, response);
 		}
 	})
 }
