@@ -1,38 +1,39 @@
+<!DOCTYPE HTML>
 <html>
-<head>
-	<meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-	<link rel='stylesheet' href='./css/style.css'>
-	<script src='./js/updater.js'></script>
-	<script>
-		window.onload = function () {
-			const app = require('electron').remote.app;
-			let updateLink = document.getElementById('updateLink');
-			updateLink.addEventListener("click", function () {
-				setTimeout(function() {
-					app.quit();
-				}, 1000)
-			}, false)
-		}
-	</script>
-	<title>Updater</title>
-</head>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/style.css">
+		<script src="./js/updater.js"></script>
+		<script>
+			window.onload = function () {
+				const app = require("electron").remote.app;
+				let updateLink = document.getElementById("updateLink");
+				updateLink.addEventListener("click", function () {
+					setTimeout(function() {
+						app.quit();
+					}, 1000)
+				}, false)
+			}
+		</script>
+		<title>Updater</title>
+	</head>
 
-<body>
-	<div id='updater' class='mainContent updater'>
-		<b>A new update is available!</b> <br />
-		
-		<p>Current version is: <script>document.write(localVersion)</script>, <br />
-		New version is: <script>document.write(remoteVersion)</script>.</p>
-		
-		<p><b>Download update:</b><br />
-		<a href='https://github.com/krausekai/japanese-english-multisearch/releases/latest' id='updateLink'>https://github.com/krausekai/japanese-english-multisearch/releases/latest</a></p>
-	</div>
-	
-	<footer>
-		<input type='button' class='button stretchBtn' id='closebtn' value='Close Window' onclick='window.close();return false;' /><br />
-	</footer>
-	
-	<script src='./js/shellInteractions.js'></script>
-</body>
+	<body>
+		<div id="updater" class="mainContent updater">
+			<b>A new update is available!</b> <br />
+
+			<p>Current version is: <script>document.write(localVersion)</script>, <br />
+			New version is: <script>document.write(remoteVersion)</script>.</p>
+
+			<p><b>Download update:</b><br />
+			<a href="https://github.com/krausekai/japanese-english-multisearch/releases/latest" id="updateLink">https://github.com/krausekai/japanese-english-multisearch/releases/latest</a></p>
+		</div>
+
+		<footer>
+			<input type="button" class="button stretchBtn" id="closebtn" value="Close Window" onclick="window.close();return false;" /><br />
+		</footer>
+
+		<script src="./js/shellInteractions.js"></script>
+	</body>
 </html>

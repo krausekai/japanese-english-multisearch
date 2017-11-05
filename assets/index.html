@@ -1,134 +1,135 @@
+<!DOCTYPE HTML>
 <html>
-<head>
-	<meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-	<link rel='stylesheet' href='./css/style.css'>
-	<link rel='stylesheet' href='./css/weblioDict.css'>
-	<link rel='stylesheet' href='./css/kotobankDict.css'>
-	<link rel='stylesheet' href='./css/ldoceDict.css'>
-	<script src='./js/tabs.js'></script>
-	<script src='./js/inputFocus.js'></script>
-	<script src='./js/searchHistory.js'></script>
-	<script src='./js/webscraper.js'></script>
-	<script src='./js/updater.js'></script>
-	<script src='./js/about.js'></script>
-	<script>
-		window.onload = function () {
-			//Resize GUI
-			function tableResize () {
-				var tabOne = document.getElementsByClassName('tbodySize')[0];
-				var tabTwo = document.getElementsByClassName('tbodySize')[1];
-				// Make sure to minus the header height below
-				tabOne.style.height = window.innerHeight - 97 + 'px';
-				tabTwo.style.height = window.innerHeight - 153 + 'px';
-			}
-			tableResize();
-			window.addEventListener("resize", tableResize, false);
-			
-			//Onload events
-			tabs.onload();
-			inputFocus.onload();
-			searchHistory.onload();
-			about.onload();
-			updater.checkVersion();
-			
-			//Searchbar
-			function searchBar() {
-				var doc = document;
-				
-				//Get the search term
-				var searchTerm = doc.getElementById("search").elements["searchbar"].value;
-				if (searchTerm == '') {
-					return
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/weblioDict.css">
+		<link rel="stylesheet" href="./css/kotobankDict.css">
+		<link rel="stylesheet" href="./css/ldoceDict.css">
+		<script src="./js/tabs.js"></script>
+		<script src="./js/inputFocus.js"></script>
+		<script src="./js/searchHistory.js"></script>
+		<script src="./js/webscraper.js"></script>
+		<script src="./js/updater.js"></script>
+		<script src="./js/about.js"></script>
+		<script>
+			window.onload = function () {
+				//Resize GUI
+				function tableResize () {
+					var tabOne = document.getElementsByClassName("tbodySize")[0];
+					var tabTwo = document.getElementsByClassName("tbodySize")[1];
+					// Make sure to minus the header height below
+					tabOne.style.height = window.innerHeight - 97 + "px";
+					tabTwo.style.height = window.innerHeight - 153 + "px";
 				}
-				
-				//Reset the scrollbar
-				var tableBodies = doc.getElementsByClassName("tbodySize");
-				for (var i = 0; i < tableBodies.length; ++i) {
-					tableBodies[0].scrollTop = 0;
-				}
-				
-				//Perform the search
-				var searchType = doc.getElementById("search").elements["searchType"].value;
-				if (searchType == 'dictionary') {
-					dictionarySearch(searchTerm);
-				} else {
-					corpusSearch(searchTerm);
-				}
-			}
-			var searchform = doc.getElementById("freeSearchForm");
-			searchform.addEventListener("submit", searchBar, false);
-			var searchformbutton = doc.getElementById("search").elements["searchbutton"];
-			searchformbutton.addEventListener("click", searchBar, false);
-		}
-	</script>
-	<title>Japanese-English MultiSearch</title>
-</head>
+				tableResize();
+				window.addEventListener("resize", tableResize, false);
 
-<body class='overflowHidden'>
-	<header>
-		<div id='freeSearchForm' onsubmit='return false;' method='post'>
-			<form id='search' class='searchbar pop'>
-				<input type='text' name='searchbar'>
-				<input type='button' class='button headBtnMaxSize searchBtn' id='formsubmitbtn' name='searchbutton' value='&#128269;' onclick='return false;' />
-				<select name='searchHistoryMenu'></select>
-				<input type='button' class='button headBtnMaxSize' id='aboutbtn' name='aboutbutton' value='?' onclick='return false;' /><br />
-				<div class='stretch'>
-					<label class='button tablinks'><input type='radio' name='searchType' onclick="tabs.changeTab(event, 'tabOne');" value='dictionary' checked />Dictionaries</label>
-					<label class='button tablinks'><input type='radio' name='searchType' onclick="tabs.changeTab(event, 'tabTwo');" value='corpus'  />Corpora</label>
-				</div>
-			</form>
-		</div>
-	</header>
-	
-	<div id='mainContent' class='mainContent'>
-	
-		<!-- Menu --> 
-		<div id='tabOne' class='tabcontent pop'>
-			<table border='1' class='outputTables'>
-				<thead>
-					<tr>
-						<th><span class='weblioLogo'>W</span>eblio</th>
-						<th>コトバンク ・ <span class='ldoceLogo'>LDOCE</span> (Longman)</th>
-					</tr>
-				</thead>
-				<tbody class='tbodySize'>
-					<tr>
-						<td id='weblioDictOutput'></td>
-						<!-- classes: kotobankDict / ldoceDictOutput -->
-						<td id='secondaryDictOutput' class=''></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		
-		<div id='tabTwo' class='tabcontent pop'>
-			<div id='googleForm'>
-				<span class='googleLogo'>Google</span> Translate: <span id='googleOutput'></span>
+				//Onload events
+				tabs.onload();
+				inputFocus.onload();
+				searchHistory.onload();
+				about.onload();
+				updater.checkVersion();
+
+				//Searchbar
+				function searchBar() {
+					var doc = document;
+
+					//Get the search term
+					var searchTerm = doc.getElementById("search").elements["searchbar"].value;
+					if (searchTerm == "") {
+						return
+					}
+
+					//Reset the scrollbar
+					var tableBodies = doc.getElementsByClassName("tbodySize");
+					for (var i = 0; i < tableBodies.length; ++i) {
+						tableBodies[0].scrollTop = 0;
+					}
+
+					//Perform the search
+					var searchType = doc.getElementById("search").elements["searchType"].value;
+					if (searchType == "dictionary") {
+						dictionarySearch(searchTerm);
+					} else {
+						corpusSearch(searchTerm);
+					}
+				}
+				var searchform = doc.getElementById("freeSearchForm");
+				searchform.addEventListener("submit", searchBar, false);
+				var searchformbutton = doc.getElementById("search").elements["searchbutton"];
+				searchformbutton.addEventListener("click", searchBar, false);
+			}
+		</script>
+		<title>Japanese-English MultiSearch</title>
+	</head>
+
+	<body class="overflowHidden">
+		<header>
+			<div id="freeSearchForm" onsubmit="return false;" method="post">
+				<form id="search" class="searchbar pop">
+					<input type="text" name="searchbar">
+					<input type="button" class="button headBtnMaxSize searchBtn" id="formsubmitbtn" name="searchbutton" value="&#128269;" onclick="return false;" />
+					<select name="searchHistoryMenu"></select>
+					<input type="button" class="button headBtnMaxSize" id="aboutbtn" name="aboutbutton" value="?" onclick="return false;" /><br />
+					<div class="stretch">
+						<label class="button tablinks"><input type="radio" name="searchType" onclick="tabs.changeTab(event, 'tabOne');" value="dictionary" checked />Dictionaries</label>
+						<label class="button tablinks"><input type="radio" name="searchType" onclick="tabs.changeTab(event, 'tabTwo');" value="corpus"  />Corpora</label>
+					</div>
+				</form>
 			</div>
-			
-			<table border='1' class='outputTables'>
-				<thead>
-					<tr>
-						<th><span class='weblioLogo'>W</span>eblio</th>
-						<th><span class='alcLogo'>アルク</span></th>
-						<th><span class='lingueeLogo-first'>L</span><span class='lingueeLogo'>inguee</span></th>
-					</tr>
-				</thead>
-				<tbody class='tbodySize'>
-					<tr>
-						<td id='weblioOutput'></td>
-						<td id='alcOutput'></td>
-						<td id='lingueeOutput'></td>
-					</tr>
-				</tbody>
-			</table>
-			<button id='seeMoreBtn' class='button stretchBtn' onclick='seeMore()'>See More</button>
+		</header>
+
+		<div id="mainContent" class="mainContent">
+
+			<!-- Menu -->
+			<div id="tabOne" class="tabcontent pop">
+				<table border="1" class="outputTables">
+					<thead>
+						<tr>
+							<th><span class="weblioLogo">W</span>eblio</th>
+							<th>コトバンク ・ <span class="ldoceLogo">LDOCE</span> (Longman)</th>
+						</tr>
+					</thead>
+					<tbody class="tbodySize">
+						<tr>
+							<td id="weblioDictOutput"></td>
+							<!-- classes: kotobankDict / ldoceDictOutput -->
+							<td id="secondaryDictOutput" class=""></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div id="tabTwo" class="tabcontent pop">
+				<div id="googleForm">
+					<span class="googleLogo">Google</span> Translate: <span id="googleOutput"></span>
+				</div>
+
+				<table border="1" class="outputTables">
+					<thead>
+						<tr>
+							<th><span class="weblioLogo">W</span>eblio</th>
+							<th><span class="alcLogo">アルク</span></th>
+							<th><span class="lingueeLogo-first">L</span><span class="lingueeLogo">inguee</span></th>
+						</tr>
+					</thead>
+					<tbody class="tbodySize">
+						<tr>
+							<td id="weblioOutput"></td>
+							<td id="alcOutput"></td>
+							<td id="lingueeOutput"></td>
+						</tr>
+					</tbody>
+				</table>
+				<button id="seeMoreBtn" class="button stretchBtn" onclick="seeMore()">See More</button>
+			</div>
+
 		</div>
-		
-	</div>
-	
-	<audio id='globalAudioPlayer' src='' style='visibility:hidden'></audio>
-	<script src='./js/shellInteractions.js'></script>
-</body>
+
+		<audio id="globalAudioPlayer" src="" style="visibility:hidden"></audio>
+		<script src="./js/shellInteractions.js"></script>
+	</body>
 </html>
