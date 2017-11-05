@@ -37,12 +37,14 @@ header input[type="submit"] {
 header input[type="text"] {
 	top: 0;
 	left: 0;
-	width:85%;
+	width:80%;
 }
 form {
 	text-align: center;
 	margin: 0;
 }
+
+/*Change focus colors for inputs*/
 textarea:focus {
 	outline: none !important;
 	box-shadow: 0 0 2px #7B9DD3;
@@ -50,11 +52,12 @@ textarea:focus {
 	margin: 5px 1px 3px 0px;
 	border: 1px solid #7B9DD3;
 }
-input:focus {
+input:focus, select:focus, option:focus {
 	outline: none !important;
 	box-shadow: 0 0 2px #7B9DD3;
 	border: 1px solid #7B9DD3;
 }
+
 header .headBtnMaxSize {
 	height: 30px;
 	max-height: 30px;
@@ -85,6 +88,12 @@ header .headBtnMaxSize {
 }
 .searchBtn {
 	font-size: 14px;
+}
+header select {
+	max-width:65px;
+	width:65px;
+	max-height:30px;
+	height:30px;
 }
 .stretch {
 	width: 100%;
@@ -176,17 +185,10 @@ header .headBtnMaxSize {
 	float: left;
 	width: 100%;
 }
-#tabOne .outputTables > tbody > tr {
+#tabOne .outputTables > tbody > tr, #tabTwo .outputTables > tbody > tr {
 	height:100%;
 }
-#tabTwo .outputTables > tbody > tr {
-    height:100%;
-}
-#tabOne .outputTables > .tbodySize {
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-#tabTwo .outputTables > .tbodySize {
+#tabOne .outputTables > .tbodySize, #tabTwo .outputTables > .tbodySize {
     overflow-y: scroll;
     overflow-x: hidden;
 }

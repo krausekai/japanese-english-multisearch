@@ -6,19 +6,18 @@
 	<link rel='stylesheet' href='./css/weblioDict.css'>
 	<link rel='stylesheet' href='./css/kotobankDict.css'>
 	<link rel='stylesheet' href='./css/ldoceDict.css'>
-	<script>//window.$ = window.jQuery = require('./js/jquery.min.js');</script>
 	<script src='./js/tabs.js'></script>
-	<script src='./js/inputfocus.js'></script>
+	<script src='./js/inputFocus.js'></script>
+	<script src='./js/searchHistory.js'></script>
 	<script src='./js/webscraper.js'></script>
-	<script src='./js/popupWindows.js'></script>
+	<script src='./js/updater.js'></script>
+	<script src='./js/about.js'></script>
 	<script>
 		window.onload = function () {
-			//tabs.js
-			changeTab(event, 'tabOne');
-			
+			//Resize GUI
 			function tableResize () {
-				let tabOne = document.getElementsByClassName('tbodySize')[0];
-				let tabTwo = document.getElementsByClassName('tbodySize')[1];
+				var tabOne = document.getElementsByClassName('tbodySize')[0];
+				var tabTwo = document.getElementsByClassName('tbodySize')[1];
 				// Make sure to minus the header height below
 				tabOne.style.height = window.innerHeight - 97 + 'px';
 				tabTwo.style.height = window.innerHeight - 153 + 'px';
@@ -26,13 +25,41 @@
 			tableResize();
 			window.addEventListener("resize", tableResize, false);
 			
-			//inputfocus.js
-			window.addEventListener("keydown", function () {
-				inputFocus(event, "webscrapeform", "webscrapeformterm");
-			}, true)
+			//Onload events
+			tabs.onload();
+			inputFocus.onload();
+			searchHistory.onload();
+			about.onload();
+			updater.checkVersion();
 			
-			//popupwindows.js
-			checkVersion();
+			//Searchbar
+			function searchBar() {
+				var doc = document;
+				
+				//Get the search term
+				var searchTerm = doc.getElementById("search").elements["searchbar"].value;
+				if (searchTerm == '') {
+					return
+				}
+				
+				//Reset the scrollbar
+				var tableBodies = doc.getElementsByClassName("tbodySize");
+				for (var i = 0; i < tableBodies.length; ++i) {
+					tableBodies[0].scrollTop = 0;
+				}
+				
+				//Perform the search
+				var searchType = doc.getElementById("search").elements["searchType"].value;
+				if (searchType == 'dictionary') {
+					dictionarySearch(searchTerm);
+				} else {
+					corpusSearch(searchTerm);
+				}
+			}
+			var searchform = doc.getElementById("freeSearchForm");
+			searchform.addEventListener("submit", searchBar, false);
+			var searchformbutton = doc.getElementById("search").elements["searchbutton"];
+			searchformbutton.addEventListener("click", searchBar, false);
 		}
 	</script>
 	<title>Japanese-English MultiSearch</title>
@@ -40,14 +67,15 @@
 
 <body class='overflowHidden'>
 	<header>
-		<div id='freeSearchForm' onsubmit='webscrapeformsearch();return false;' method='post'>
-			<form id='webscrapeform' class='webscrapeform pop'>
-				<input type='text' name='webscrapeformterm'>
-				<input type='button' class='button headBtnMaxSize searchBtn' id='formsubmitbtn' value='&#128269;' onclick='webscrapeformsearch();return false;' />
-				<input type='button' class='button headBtnMaxSize' id='aboutbtn' value='?' onclick='showAbout();return false;' /><br />
+		<div id='freeSearchForm' onsubmit='return false;' method='post'>
+			<form id='search' class='searchbar pop'>
+				<input type='text' name='searchbar'>
+				<input type='button' class='button headBtnMaxSize searchBtn' id='formsubmitbtn' name='searchbutton' value='&#128269;' onclick='return false;' />
+				<select name='searchHistoryMenu'></select>
+				<input type='button' class='button headBtnMaxSize' id='aboutbtn' name='aboutbutton' value='?' onclick='return false;' /><br />
 				<div class='stretch'>
-					<label class='button tablinks'><input type='radio' name='searchType' onclick="changeTab(event, 'tabOne');" value='dictionary' checked />Dictionaries</label>
-					<label class='button tablinks'><input type='radio' name='searchType' onclick="changeTab(event, 'tabTwo');" value='corpus'  />Corpora</label>
+					<label class='button tablinks'><input type='radio' name='searchType' onclick="tabs.changeTab(event, 'tabOne');" value='dictionary' checked />Dictionaries</label>
+					<label class='button tablinks'><input type='radio' name='searchType' onclick="tabs.changeTab(event, 'tabTwo');" value='corpus'  />Corpora</label>
 				</div>
 			</form>
 		</div>

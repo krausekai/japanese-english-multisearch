@@ -17,7 +17,7 @@
 	"build": {
 		"appId": "com.kaikrause.multisearch",
 		"asarUnpack": [
-			"./assets/license.txt"
+			"./assets/"
 		],
 		"publish": [
 			{
@@ -42,6 +42,7 @@
 		}
 	},
 	"scripts": {
+		"postinstall": "electron-builder install-app-deps",
 		"start": "electron main.js",
 		"dist:win": "build --win --ia32",
 		"dist:linux": "build --linux --x64",
@@ -51,14 +52,15 @@
 		"package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=./build/icon.png --prune=true --out=dist"
 	},
 	"devDependencies": {
-		"electron": "latest",
-		"electron-builder": "^18.6.2",
-		"electron-packager": "^8.7.1"
+		"electron": "^1.8.1",
+		"electron-builder": "latest",
+		"electron-packager": "^9.1.0",
+		"electron-rebuild": "^1.6.0"
 	},
 	"dependencies": {
-		"cheerio": "latest",
+		"cheerio": "^1.0.0-rc.2",
 		"electron-context-menu": "latest",
-		"request": "latest",
-		"ssl-root-cas": "^1.2.3"
+		"request": "^2.83.0",
+		"ssl-root-cas": "^1.2.4"
 	}
 }

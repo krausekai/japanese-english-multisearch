@@ -4,7 +4,17 @@ var requestOptions = {headers: {'User-Agent': "Mozilla/5.0 (Windows NT 6.1; Win6
 // For jquery-like node.js - //https://cheerio.js.org/
 var cheerio = require('cheerio');
 
-// Readable status codes
+// Thanks to https://stackoverflow.com/a/23303587/1679669
+// Fix broken chains for SSL Certificates by adding their authority to the trust
+var fs = require('fs');
+var path = require('path');
+var https = require('https'), cas;
+require('ssl-root-cas').inject();
+var cas = https.globalAgent.options.ca;
+// ALC.co.jp
+cas.push(fs.readFileSync(path.join(__dirname, './ssl/GlobalSignOrganizationValidationCA-SHA256-G2.crt')));
+
+// Readable request status codes
 function statusCodeMeaning(statusCode) {
 	if (statusCode == 400) {
 		return "Bad request."
@@ -27,27 +37,16 @@ function outputError(error, response) {
 	return '<span class="devtext">' + status + '</span>';
 }
 
-// Thanks to https://stackoverflow.com/a/23303587/1679669
-// Fix broken chains for SSL Certificates by adding their authority to the trust
-var fs = require('fs');
-var path = require('path');
-var https = require('https'), cas;
-require('ssl-root-cas').inject();
-var cas = https.globalAgent.options.ca;
-// ALC.co.jp
-cas.push(fs.readFileSync(path.join(__dirname, 'ssl', 'GlobalSignOrganizationValidationCA-SHA256-G2.crt')));
-
 //........................................................................................................
 
 var doc = document;
 
-function webscrapeformsearch(inputItem) {
-	var inputItem = inputItem || doc.getElementById("webscrapeform").elements["webscrapeformterm"].value;
-	if (inputItem == '') {
+function dictionarySearch(searchTerm) {
+	if (searchTerm == '') {
 		return
 	}
 	
-	if (/[a-zA-Z]/.test(inputItem)) {
+	if (/[a-zA-Z]/.test(searchTerm)) {
 		var sourceLang = "english";
 		var targetLang = "japanese";
 	} else {
@@ -55,46 +54,53 @@ function webscrapeformsearch(inputItem) {
 		var targetLang = "english";
 	}
 	
-	//Dictionary Search
-	var searchType = doc.getElementById("webscrapeform").elements["searchType"].value;
-	if (searchType == 'dictionary') {
-		var weblioUrl = "http://ejje.weblio.jp/content/" + encodeURI(inputItem);
-		weblioDictionary(weblioUrl);
-		
-		//secondaryOutput
-		if (sourceLang == "japanese") {
-			var kotobankUrl = "https://kotobank.jp/word/" + encodeURI(inputItem);
-			kotobankDictionary(kotobankUrl);
-		} else if (sourceLang == "english") {
-			var ldoceUrl = "http://www.ldoceonline.com/search/?q=" + encodeURI(inputItem);
-			ldoceDictionary(ldoceUrl);
-		}
-		
+	var weblioUrl = "http://ejje.weblio.jp/content/" + encodeURI(searchTerm);
+	weblioDictionary(weblioUrl);
+	
+	//secondaryOutput
+	if (sourceLang == "japanese") {
+		var kotobankUrl = "https://kotobank.jp/word/" + encodeURI(searchTerm);
+		kotobankDictionary(kotobankUrl);
+	} else if (sourceLang == "english") {
+		var ldoceUrl = "http://www.ldoceonline.com/search/?q=" + encodeURI(searchTerm);
+		ldoceDictionary(ldoceUrl);
+	}
+}
+
+function corpusSearch(searchTerm) {
+	if (searchTerm == '') {
 		return
 	}
 	
-	doc.getElementById("googleOutput").innerHTML = '';
-	googleTranslate(inputItem);
+	if (/[a-zA-Z]/.test(searchTerm)) {
+		var sourceLang = "english";
+		var targetLang = "japanese";
+	} else {
+		var sourceLang = "japanese";
+		var targetLang = "english";
+	}
 	
-	// Corpora Search
+	doc.getElementById("googleOutput").innerHTML = '';
+	googleTranslate(searchTerm);
+	
 	doc.getElementById("weblioOutput").innerHTML = '';
 	doc.getElementById("alcOutput").innerHTML = '';
 	doc.getElementById("lingueeOutput").innerHTML = '';
 	
-	var weblioUrl = "http://ejje.weblio.jp/sentence/content/" + encodeURI(inputItem);
+	var weblioUrl = "http://ejje.weblio.jp/sentence/content/" + encodeURI(searchTerm);
 	weblioCorpus(weblioUrl);
 	
-	var alcUrl = "https://eow.alc.co.jp/search?q=" + encodeURI(inputItem) + "&pg=1";
+	var alcUrl = "https://eow.alc.co.jp/search?q=" + encodeURI(searchTerm) + "&pg=1";
 	alcCorpus(alcUrl);
 	
-	var lingueeUrl = "https://www.linguee.com/" + sourceLang + "-" + targetLang + "/search?query=" + encodeURI(inputItem) + "&ajax=1";
+	var lingueeUrl = "https://www.linguee.com/" + sourceLang + "-" + targetLang + "/search?query=" + encodeURI(searchTerm) + "&ajax=1";
 	lingueeCorpus(lingueeUrl);
 }
 
 //........................................................................................................
 
-function googleTranslate(inputItem) {
-	if (/[a-zA-Z]/.test(inputItem)) {
+function googleTranslate(searchTerm) {
+	if (/[a-zA-Z]/.test(searchTerm)) {
 		var sourceLang = "en";
 		var targetLang = "ja";
 	} else {
@@ -103,14 +109,14 @@ function googleTranslate(inputItem) {
 	}
 	
 	// client=gtx refers to the google chrome translation API, allowing undefined header requests and hopefully more quota by default. Does not return valid JSON.
-	var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(inputItem);
+	var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(searchTerm);
 
 	request(url, requestOptions, function (error, response, html) {
 		if (!error && response.statusCode == 200) {
 			var result = html.match(/".*?"/)[0].slice(1,-1);
 			doc.getElementById("googleOutput").innerHTML = result;
 		} else {
-			doc.getElementById("googleOutput").innerHTML = output.innerHTML += outputError(error, response);
+			doc.getElementById("googleOutput").innerHTML = outputError(error, response);
 		}
 	})
 }
@@ -241,16 +247,6 @@ function ldoceDictionary(url) {
 var gWeblioUrl = '';
 var gAlcUrl = '';
 
-function seeMore () {
-	if (gWeblioUrl != '') {
-		weblioCorpus(gWeblioUrl);
-	}
-	if (gAlcUrl != '') {
-		alcCorpus(gAlcUrl);
-	}
-	seeMoreBtnVisibilityCheck();
-}
-
 function seeMoreBtnVisibilityCheck() {
 	var seeMoreBtn = doc.getElementById("seeMoreBtn");
 	if (gWeblioUrl == '' && gAlcUrl == '') {
@@ -302,6 +298,7 @@ function weblioCorpus(url) {
 			
 			// Get the next page for the 'see more' button
 			if ($(".TargetPage").length == 0) {
+				seeMoreBtnVisibilityCheck();
 				output.innerHTML += '<span class="devtext">End of Results</span>'
 				return
 			}
@@ -361,6 +358,7 @@ function alcCorpus(url) {
 
 			// Get the next page for the 'see more' button
 			if ($(".cur").length == 0) {
+				seeMoreBtnVisibilityCheck();
 				output.innerHTML += '<span class="devtext">End of Results</span>'
 				return
 			}

@@ -1,15 +1,16 @@
 // All input focuses the desired id (and element) with keycode (event) checking.
-// Example below:
-/*
-window.addEventListener("keydown", function () {
-	inputFocus(event, "webscrapeform", "webscrapeformterm");
-}, true)
-*/
+var inputFocus = module.exports = {};
 
 var doc = document;
 var previousKeyCode;
 
-function inputFocus (event, id, element) {
+inputFocus.onload = function () {
+	window.addEventListener("keydown", function () {
+		inputFocus.focus(event, "search", "searchbar");
+	}, true)
+}
+
+inputFocus.focus = function (event, id, element) {
 	var keycode = event.which || event.keycode;
 	//Prevent the up and down arrow keys from focusing the input
 	var upArrowKey = 38;
@@ -33,14 +34,12 @@ function inputFocus (event, id, element) {
 		previousKeyCode = keycode;
 	}
 	
-	var id = id || '';
-	var element = element || '';
-	if (id != '' && element != '') {
+	if (id && element) {
 		var input = doc.getElementById(id).elements[element];
-	} else if (id != '' && element == '') {
+	} else if (id && !element) {
 		var input = doc.getElementById(id);
 	} else {
-		return console.error("inputFocus error: no input ID assigned");
+		return console.error("error: no input ID assigned");
 	}
 	
 	input.focus();

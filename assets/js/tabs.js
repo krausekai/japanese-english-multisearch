@@ -1,7 +1,11 @@
+var tabs = {};
 var doc = document;
 
-function changeTab(evt, tabName) {
-	// Declare all variables
+tabs.onload = function () {
+	tabs.changeTab(event, 'tabOne');
+}
+
+tabs.changeTab = function (evt, tabName) {
 	var i, tabcontent, tablinks;
 
 	// Get all elements with class="tabcontent" and hide them

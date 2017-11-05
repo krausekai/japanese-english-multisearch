@@ -23,6 +23,7 @@ if (page.endsWith("index.html")) {
 	index();
 } else {
 	window.addEventListener('click', defaultClickback, false);
+	window.addEventListener('auxclick', defaultClickback, false);
 }
 
 // for the page named "index.html"
@@ -42,6 +43,12 @@ function index () {
 	// From the tabOne (dictionary) div, input clicked URL's inner website URL text as terms into the searchbar
 	function tabOneClickback(e) {
 		var e = window.e || e;
+		
+		//return if right click
+		if (e.which == 3) {
+			return;
+		}
+		
 		// if this is a clicked URL
 		if (e.target.localName == 'a' || e.target.localName == 'A' || e.target.parentNode.nodeName == 'a' || e.target.parentNode.nodeName == 'A') {
 			e.preventDefault();
@@ -62,7 +69,7 @@ function index () {
 			// Else, open default
 			//defaultClickback(e);
 			// Else, input the clicked URL text into the input box for searching
-			var input = doc.getElementById("webscrapeform").elements["webscrapeformterm"];
+			var input = doc.getElementById("search").elements["searchbar"].value;
 			input.value = e.target.innerText;
 		}
 	}
@@ -72,12 +79,19 @@ function index () {
 	// Corpora tab
 	var tabTwo = doc.getElementById("tabTwo");
 	tabTwo.addEventListener('click', defaultClickback, false);
+	tabTwo.addEventListener('auxclick', defaultClickback, false);
 }
 
 // Open other URLs with default programs and not Electron
 function defaultClickback(e) {
 	var e = window.e || e;
-	if (e.target.localName == 'a' || e.target.localName == 'A' || e.target.parentNode.nodeName == 'a' || e.target.parentNode.nodeName == 'A') {
+	
+	//return if right click
+	if (e.which == 3) {
+		return;
+	}
+	
+	if (e.target.localName == 'a') {
 		e.preventDefault();
 		shell.openExternal(e.target.href);
 	}
