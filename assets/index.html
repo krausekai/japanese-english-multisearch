@@ -34,7 +34,16 @@
 				updater.checkVersion();
 
 				//Searchbar
+				var lastSearchTime = Date.now();
 				function searchBar() {
+					//rateLimit
+					var currentSearchTime = Date.now();
+					var difference = (currentSearchTime - lastSearchTime) / 1000;
+					if (difference <= 1) {
+						return;
+					}
+					lastSearchTime = Date.now();
+
 					var doc = document;
 
 					//Get the search term
