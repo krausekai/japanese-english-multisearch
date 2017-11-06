@@ -113,12 +113,6 @@
     text-decoration: underline;
 }
 
-.kotobankDict :hover,
-.kotobankDict :active {
-    color: #2F6BE6;
-    text-decoration: none;
-}
-
 .kotobankDict  img {
     vertical-align: bottom;
 }

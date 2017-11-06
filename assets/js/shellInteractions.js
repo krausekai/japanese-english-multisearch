@@ -39,16 +39,16 @@ function index () {
 		}
 	}
 	doc.addEventListener('click', playAudio, true);
-	
+
 	// From the tabOne (dictionary) div, input clicked URL's inner website URL text as terms into the searchbar
 	function tabOneClickback(e) {
 		var e = window.e || e;
-		
+
 		//return if right click
 		if (e.which == 3) {
 			return;
 		}
-		
+
 		// if this is a clicked URL
 		if (e.target.localName == 'a' || e.target.localName == 'A' || e.target.parentNode.nodeName == 'a' || e.target.parentNode.nodeName == 'A') {
 			e.preventDefault();
@@ -69,7 +69,7 @@ function index () {
 			// Else, open default
 			//defaultClickback(e);
 			// Else, input the clicked URL text into the input box for searching
-			var input = doc.getElementById("search").elements["searchbar"].value;
+			var input = doc.getElementById("search").elements["searchbar"];
 			input.value = e.target.innerText;
 		}
 	}
@@ -85,12 +85,12 @@ function index () {
 // Open other URLs with default programs and not Electron
 function defaultClickback(e) {
 	var e = window.e || e;
-	
+
 	//return if right click
 	if (e.which == 3) {
 		return;
 	}
-	
+
 	if (e.target.localName == 'a') {
 		e.preventDefault();
 		shell.openExternal(e.target.href);
