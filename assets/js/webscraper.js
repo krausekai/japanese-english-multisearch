@@ -45,7 +45,7 @@ function dictionarySearch(searchTerm) {
 	if (searchTerm == '') {
 		return
 	}
-	
+
 	if (/[a-zA-Z]/.test(searchTerm)) {
 		var sourceLang = "english";
 		var targetLang = "japanese";
@@ -53,10 +53,10 @@ function dictionarySearch(searchTerm) {
 		var sourceLang = "japanese";
 		var targetLang = "english";
 	}
-	
+
 	var weblioUrl = "http://ejje.weblio.jp/content/" + encodeURI(searchTerm);
 	weblioDictionary(weblioUrl);
-	
+
 	//secondaryOutput
 	if (sourceLang == "japanese") {
 		var kotobankUrl = "https://kotobank.jp/word/" + encodeURI(searchTerm);
@@ -71,7 +71,7 @@ function corpusSearch(searchTerm) {
 	if (searchTerm == '') {
 		return
 	}
-	
+
 	if (/[a-zA-Z]/.test(searchTerm)) {
 		var sourceLang = "english";
 		var targetLang = "japanese";
@@ -79,20 +79,20 @@ function corpusSearch(searchTerm) {
 		var sourceLang = "japanese";
 		var targetLang = "english";
 	}
-	
+
 	doc.getElementById("googleOutput").innerHTML = '';
 	googleTranslate(searchTerm);
-	
+
 	doc.getElementById("weblioOutput").innerHTML = '';
 	doc.getElementById("alcOutput").innerHTML = '';
 	doc.getElementById("lingueeOutput").innerHTML = '';
-	
+
 	var weblioUrl = "http://ejje.weblio.jp/sentence/content/" + encodeURI(searchTerm);
 	weblioCorpus(weblioUrl);
-	
+
 	var alcUrl = "https://eow.alc.co.jp/search?q=" + encodeURI(searchTerm) + "&pg=1";
 	alcCorpus(alcUrl);
-	
+
 	var lingueeUrl = "https://www.linguee.com/" + sourceLang + "-" + targetLang + "/search?query=" + encodeURI(searchTerm) + "&ajax=1";
 	lingueeCorpus(lingueeUrl);
 }
@@ -107,7 +107,7 @@ function googleTranslate(searchTerm) {
 		var sourceLang = "ja";
 		var targetLang = "en";
 	}
-	
+
 	// client=gtx refers to the google chrome translation API, allowing undefined header requests and hopefully more quota by default. Does not return valid JSON.
 	var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(searchTerm);
 
@@ -128,17 +128,17 @@ function googleTranslate(searchTerm) {
 function weblioDictionary(url) {
 	var output = doc.getElementById("weblioDictOutput");
 	output.innerHTML = '';
-	
+
 	request(url, requestOptions, function (error, response, html) {
 		if (!error && response.statusCode == 200) {
 			var $ = cheerio.load(html);
-			
+
 			var noTermFound = $(".noResultTranslateBox").length;
 			if (noTermFound != 0) {
 				output.innerHTML += '<span class="devtext">No Term Found</span>';
 				return;
 			}
-			
+
 			$("script").replaceWith("");
 			$(".addToSlBtnCntner").replaceWith("");
 			$(".sntcA").replaceWith("");
@@ -155,7 +155,7 @@ function weblioDictionary(url) {
 			$(".hideDictWrp").replaceWith("");
 			$(".adGH").replaceWith("");
 			$(".adsbygoogle").replaceWith("");
-			
+
 			$(".mainBlock").each(function(i, element) {
 				var innertext = $(this).text();
 				//test if a main block has no content (e.g. was for ads only) and remove it
@@ -164,7 +164,7 @@ function weblioDictionary(url) {
 					$(this).replaceWith('');
 				}
 			})
-			
+
 			output.innerHTML += $("#main").html();
 		} else {
 			output.innerHTML += outputError(error, response);
@@ -175,54 +175,54 @@ function weblioDictionary(url) {
 function kotobankDictionary(url) {
 	doc.getElementById("secondaryDictOutput").classList.add('kotobankDict');
 	doc.getElementById("secondaryDictOutput").classList.remove('ldoceDictOutput');
-	
+
 	var output = doc.getElementById("secondaryDictOutput");
 	output.innerHTML = '';
-	
+
 	request(url, requestOptions, function (error, response, html) {
 		if (!error && response.statusCode == 200) {
 			var $ = cheerio.load(html);
-			
+
 			var noTermFound = $(".noRes").length;
 			if (noTermFound != 0) {
 				output.innerHTML += '<span class="devtext">No Term Found</span>';
 				return;
 			}
-			
+
 			$("header").replaceWith("");
 			$("#mainFt").replaceWith("");
 			$("footer").replaceWith("");
 			$("script").replaceWith("");
 
 			output.innerHTML += $("body").html();
-			
+
 		} else {
 			output.innerHTML += outputError(error, response);
 		}
 	});
-	
+
 }
 
 function ldoceDictionary(url) {
 	doc.getElementById("secondaryDictOutput").classList.add('ldoceDictOutput');
 	doc.getElementById("secondaryDictOutput").classList.remove('kotobankDict');
-	
+
 	var output = doc.getElementById("secondaryDictOutput");
 	output.innerHTML = '';
-	
+
 	request(url, requestOptions, function (error, response, html) {
 		if (!error && response.statusCode == 200) {
 			var $ = cheerio.load(html);
-			
+
 			var noTermFound = $(".search_title").text();
 			if (noTermFound.startsWith("Sorry, there are no results for")) {
 				output.innerHTML += '<span class="devtext">No Term Found</span>';
 				return;
 			}
-			
+
 			$("script").replaceWith("");
 			$(".pagetitle").replaceWith("");
-			
+
 			//Search Page
 			var searchPage = $(".page_content").length;
 			if (searchPage != 0) {
@@ -234,7 +234,7 @@ function ldoceDictionary(url) {
 			if (termPage != 0) {
 				output.innerHTML += $(".entry_content").html();
 			}
-			
+
 		} else {
 			output.innerHTML += outputError(error, response);
 		}
@@ -246,6 +246,16 @@ function ldoceDictionary(url) {
 //........................................................................................................
 var gWeblioUrl = '';
 var gAlcUrl = '';
+
+function seeMore() {
+	if (gWeblioUrl != '') {
+		weblioCorpus(gWeblioUrl);
+	}
+	if (gAlcUrl != '') {
+		alcCorpus(gAlcUrl);
+	}
+	seeMoreBtnVisibilityCheck();
+}
 
 function seeMoreBtnVisibilityCheck() {
 	var seeMoreBtn = doc.getElementById("seeMoreBtn");
@@ -259,27 +269,27 @@ function seeMoreBtnVisibilityCheck() {
 function weblioCorpus(url) {
 	var output = doc.getElementById("weblioOutput");
 	gWeblioUrl = '';
-	
+
 	request(url, requestOptions, function (error, response, html) {
 		if (!error && response.statusCode == 200) {
 			var $ = cheerio.load(html);
-			
+
 			var noTermFound = $(".noResultTranslateBox").length;
 			if (noTermFound != 0) {
 				output.innerHTML += '<span class="devtext">No Term Found</span>';
 				return;
 			}
-			
+
 			//En pages: En = qotCE | Jp = qotCJ
 			//Jp pages: Jp = qotCJJ | En = qotCJE
 			var langCheck = $(".qotCE").length;
-			
+
 			$(".addToSlBtnCntner").replaceWith("");
 			$(".sntcA").replaceWith("");
 			$(".script").replaceWith("");
 			$(".fa").replaceWith("");
 			$("script").replaceWith("");
-			
+
 			//Find the class qotC, which there are multiple of, each containing a sentence
 			$(".qotC").each(function(i, element) {
 				if (langCheck != 0) {
@@ -295,7 +305,7 @@ function weblioCorpus(url) {
 					output.innerHTML += '<span class="tdDst">' + eng + '</span>' + '<br />' + '<br />';
 				}
 			})
-			
+
 			// Get the next page for the 'see more' button
 			if ($(".TargetPage").length == 0) {
 				seeMoreBtnVisibilityCheck();
@@ -326,30 +336,30 @@ function weblioCorpus(url) {
 function alcCorpus(url) {
 	var output = doc.getElementById("alcOutput");
 	gAlcUrl = '';
-	
+
 	request(url, requestOptions, function (error, response, html) {
 		if (!error && response.statusCode == 200) {
 			var $ = cheerio.load(html);
-			
+
 			var noTermFound = $("#navigation_zero").length;
 			if (noTermFound != 0) {
 				output.innerHTML += '<span class="devtext">No Term Found</span>';
 				return;
 			}
-			
+
 			$(".kana").replaceWith("");
 			$(".label").replaceWith("");
 			$(".tango").replaceWith("");
 			$(".wordclass").replaceWith("");
 			$("script").replaceWith("");
-			
-			
+
+
 			$("#resultsList").find("li").each(function(i, element) {
 				$(this).find("a").replaceWith(function() {return $(this).contents();})
 
 				var source = $(element).find("h2").html();
 				var destination = $(element).find("div").html();
-				
+
 				if (source != null && destination != null) {
 					output.innerHTML += '<span class="tdSrc">' + source + '</span>' + '<br />';
 					output.innerHTML += '<span class="tdDst">' + destination + '</span>' + '<br />' + '<br />';
@@ -385,26 +395,26 @@ function alcCorpus(url) {
 
 function lingueeCorpus(url) {
 	var output = doc.getElementById("lingueeOutput");
-	
+
 	request(url, requestOptions, function (error, response, html) {
 		if (!error && response.statusCode == 200) {
 			var $ = cheerio.load(html);
-			
+
 			var noTermFound = $(".noresults").length;
 			if (noTermFound != 0) {
 				output.innerHTML += '<span class="devtext">No Term Found</span>';
 				return;
 			}
-			
+
 			$(".source_url_spacer").replaceWith("");
 			$("script").replaceWith("");
-			
+
 			$("#result_table").find("tr").each(function(i, element) {
 				//.sentence left
 				var source = $(element).find(".left").html();
 				//.sentence right2
 				var destination = $(element).find(".right2").html();
-				
+
 				if (source != null && destination != null) {
 					output.innerHTML += '<span class="tdSrc">' + source + '</span>' + '<br />';
 					output.innerHTML += '<span class="tdDst">' + destination + '</span>' + '<br />' + '<br />';
