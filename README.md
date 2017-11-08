@@ -1,6 +1,8 @@
 # Japanese-English MultiSearch
 Search multiple online Japanese-English dictionaries and corpora
 
+[Screenshot](/krausekai/japanese-english-multisearch/master/screenshot.png?raw=true)
+
 **Dictionaries and Corpora**
 
 This program searches these dictionaries and corpora (not all are HTTPS compliant):
