@@ -1,7 +1,7 @@
 # Japanese-English MultiSearch
 Search multiple online Japanese-English dictionaries and corpora
 
-![Screenshot](https://raw.githubusercontent.com/krausekai/japanese-english-multisearch/master/screenshot.png)
+![Screenshot](/build/screenshot.png?raw=true "Version 0.2.0")
 
 **Dictionaries and Corpora**
 
