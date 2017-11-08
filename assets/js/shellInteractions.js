@@ -24,8 +24,11 @@ if (page.endsWith("index.html")) {
 	var globalAudio = doc.getElementById('globalAudioPlayer');
 	function playAudio(e) {
 		var e = window.e || e;
-		var audioFile = e.target.getAttribute("data-src-mp3");
+		var audioFile = e.target.getAttribute("data-src-mp3").toString();
 		if (audioFile) {
+			if (!audioFile.includes("ldoceonline.com")) {
+				audioFile = "https://www.ldoceonline.com/" + audioFile;
+			}
 			globalAudio.src = audioFile;
 			globalAudio.play();
 		}
