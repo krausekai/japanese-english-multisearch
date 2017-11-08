@@ -894,3 +894,92 @@
 .ldoceDictOutput .Entry .topic:hover {
     color: #4693db;
 }
+
+
+/*! CSS Used from: https://www.ldoceonline.com/common.css?version=1.1.41 */
+
+.ldoceDictOutput .cloud {
+	margin-bottom: 10px;
+}
+
+.ldoceDictOutput .cloud li {
+	display: inline-block;
+}
+
+.ldoceDictOutput .cloud .topic_1 {
+	color: #2B6EFF;
+}
+
+.ldoceDictOutput .cloud .topic_2 {
+	color: #B7BFCC;
+}
+
+.ldoceDictOutput .cloud .topic_3 {
+	color: #EC0F8C;
+}
+
+.ldoceDictOutput .cloud .topic_4 {
+	font-size: 1.5em;
+	color: #FF801A;
+}
+
+.ldoceDictOutput .cloud .topic_5 {
+	font-size: 0.9em;
+	color: #00A9FF;
+}
+
+.ldoceDictOutput .cloud .topic_6 {
+	font-size: 1.1em;
+	color: #FFC300;
+}
+
+.ldoceDictOutput .cloud .topic_7 {
+	color: #74AFAD;
+}
+
+.ldoceDictOutput .cloud .topic_8 {
+	color: #A51890;
+}
+
+.ldoceDictOutput .cloud .topic_9 {
+	color: #2ECC40;
+}
+
+.ldoceDictOutput .cloud .topic_10 {
+	font-size: 1.2em;
+	color: #FF3333;
+}
+
+.ldoceDictOutput .topicCloud {
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 761px) {
+	.ldoceDictOutput .topicCloud {
+			margin-bottom: 10px;
+	}
+	.ldoceDictOutput .topic_intro {
+			margin: 5px 0 10px 0px!important;
+	}
+}
+
+.ldoceDictOutput .topic_intro {
+	display: block;
+	background-color: #35a3ff;
+	color: #fff;
+	padding-left: 10px;
+	margin: 5px 0 10px -7px;
+}
+
+.ldoceDictOutput .topicCloud .topic_other {
+	color: red;
+	text-decoration: underline;
+}
+
+.ldoceDictOutput .topicCloud .topic_other:hover {
+	color: #4693db;
+}
+
+.ldoceDictOutput .dictionary .defRef {
+	border-bottom: thin dotted gray;
+}

@@ -24,7 +24,7 @@ if (page.endsWith("index.html")) {
 	var globalAudio = doc.getElementById('globalAudioPlayer');
 	function playAudio(e) {
 		var e = window.e || e;
-		var audioFile = e.target.getAttribute("data-src-mp3").toString();
+		var audioFile = e.target.getAttribute("data-src-mp3");
 		if (audioFile) {
 			if (!audioFile.includes("ldoceonline.com")) {
 				audioFile = "https://www.ldoceonline.com/" + audioFile;
@@ -77,13 +77,12 @@ function tabOneClickback(e) {
 		}
 
 		if (url.startsWith("file:")) {
-			if (targetClass == "ldoceDictOutput" && url.includes("/dictionary/")) {
-				var searchTerm = url.match("dictionary.*");
-				url = "https://www.ldoceonline.com/" + searchTerm;
+			url = url.slice(11);
+			if (targetClass == "ldoceDictOutput") {
+				url = "https://www.ldoceonline.com/" + url;
 			}
-			else if (targetClass == "kotobankDict" && url.includes("/word/")) {
-				var searchTerm = url.match("word.*");
-				url = "https://kotobank.jp/" + searchTerm;
+			else if (targetClass == "kotobankDict") {
+				url = "https://kotobank.jp/" + url;
 			}
 		}
 
@@ -93,7 +92,7 @@ function tabOneClickback(e) {
 		else if (url.startsWith("http://kotobank.jp/word/") || url.startsWith("https://kotobank.jp/word/")) {
 			kotobankDictionary(url);
 		}
-		else if (url.startsWith("http://www.ldoceonline.com/dictionary/") || url.startsWith("https://www.ldoceonline.com/dictionary/") || url.startsWith("http://www.ldoceonline.com/search/direct/") ||  url.startsWith("https://www.ldoceonline.com/search/direct/")) {
+		else if (url.startsWith("http://www.ldoceonline.com/") || url.startsWith("https://www.ldoceonline.com/")) {
 			ldoceDictionary(url);
 		}
 		else {
