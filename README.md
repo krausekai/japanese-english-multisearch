@@ -1,7 +1,7 @@
 # Japanese-English MultiSearch
 Search multiple online Japanese-English dictionaries and corpora
 
-[Screenshot](/screenshot.png?raw=true ".")
+[Screenshot](screenshot.png?raw=true ".")
 
 **Dictionaries and Corpora**
 
