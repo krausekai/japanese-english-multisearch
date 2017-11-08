@@ -30,7 +30,7 @@ header {
 	padding:0;
 	top:0;
 }
-header input[type="button"], 
+header input[type="button"],
 header input[type="submit"] {
 	top: 0;
 }
@@ -38,25 +38,30 @@ header input[type="text"] {
 	top: 0;
 	left: 0;
 	width:80%;
+	padding: 4px;
 }
 form {
 	text-align: center;
 	margin: 0;
 }
 
+
 /*Change focus colors for inputs*/
-textarea:focus {
+textarea:focus, textarea:active {
 	outline: none !important;
 	box-shadow: 0 0 2px #7B9DD3;
 	padding: 3px 0px 3px 3px;
 	margin: 5px 1px 3px 0px;
 	border: 1px solid #7B9DD3;
 }
-input:focus, select:focus, option:focus {
+input:focus, select:focus, option:focus, button:focus,
+input:active, select:active, option:active, button:active {
 	outline: none !important;
 	box-shadow: 0 0 2px #7B9DD3;
 	border: 1px solid #7B9DD3;
+	border-color: #7B9DD3;
 }
+
 
 header .headBtnMaxSize {
 	height: 30px;
@@ -209,7 +214,7 @@ header select {
 	vertical-align: top;
 }
 .outputTables > tbody > tr > td {
-	padding: 15px;
+	padding: 10px;
 }
 .outputTables > tbody > tr > td {
 	overflow: auto;
