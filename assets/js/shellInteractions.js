@@ -66,17 +66,15 @@ function tabOneClickback(e) {
 		// Fix file:\\ paths
 		var target = e.target || e.srcElement;
 		var targetClass = target.className;
-
-		// Do a top parent check to break look check
-		while(target){
-			if (targetClass == "ldoceDictOutput" || targetClass == "kotobankDict") {
-				break;
-			}
-			target = target.parentNode;
-			targetClass = target.className;
-		}
-
 		if (url.startsWith("file:")) {
+			while(target){
+				if (targetClass == "ldoceDictOutput" || targetClass == "kotobankDict") {
+					break;
+				}
+				target = target.parentNode;
+				targetClass = target.className;
+			}
+
 			url = url.slice(11);
 			if (targetClass == "ldoceDictOutput") {
 				url = "https://www.ldoceonline.com/" + url;
