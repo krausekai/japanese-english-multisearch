@@ -2,7 +2,7 @@
 	"name": "japanese_english_multisearch",
 	"productName": "Japanese-English MultiSearch",
 	"description": "Search multiple Japanese-English dictionaries and corpora",
-	"version": "0.1.5",
+	"version": "0.2.0",
 	"author": "Kai Krause <kaikrause95@gmail.com>",
 	"copyright": "© 2017, Kai Krause <kaikrause95@gmail.com>",
 	"homepage": "https://github.com/krausekai/",
@@ -53,8 +53,8 @@
 	},
 	"devDependencies": {
 		"electron": "latest",
-		"electron-builder": "latest",
-		"electron-packager": "latest",
+		"electron-builder": "^19.49.0",
+		"electron-packager": "^10.1.0",
 		"electron-rebuild": "latest"
 	},
 	"dependencies": {
