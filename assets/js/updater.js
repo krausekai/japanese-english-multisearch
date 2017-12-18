@@ -12,8 +12,8 @@ updater.checkVersion = function () {
 		if (!error && response.statusCode == 200) {
 			data = JSON.parse(data);
 			localStorage.setItem("remoteVersion", data.version);
-			if (data.version > localVersion) {
-				showUpdater();
+			if (data.version !== localVersion) {
+				updater.showUpdater();
 			}
 		}
 	});
@@ -21,6 +21,6 @@ updater.checkVersion = function () {
 
 updater.showUpdater = function () {
 	let file = '/../updater.html'
-	let options = {frame: true, width: 650, height: 230};
+	let options = {frame: true, width: 650, height: 240};
 	popupWindows.new(file, options);
 }
