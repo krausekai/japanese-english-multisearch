@@ -52,15 +52,15 @@
 		"package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=./build/icon.png --prune=true --out=dist"
 	},
 	"devDependencies": {
-		"electron": "^1.8.2",
-		"electron-builder": "^19.56.2",
-		"electron-packager": "^10.1.2",
-		"electron-rebuild": "^1.7.3"
+		"electron": "latest",
+		"electron-builder": "^19.49.0",
+		"electron-packager": "^10.1.0",
+		"electron-rebuild": "latest"
 	},
 	"dependencies": {
 		"cheerio": "latest",
 		"electron-context-menu": "latest",
 		"request": "latest",
-		"ssl-root-cas": "^1.2.5"
+		"ssl-root-cas": "latest"
 	}
 }

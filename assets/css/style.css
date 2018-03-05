@@ -1,7 +1,9 @@
+* {
+	font-family: Meiryo UI !important;
+}
 html, body {
 	margin:0;
 	padding:0;
-	font-family: Meiryo UI;
 	color: #171717;
 	background-color: #FFFFFF;
 }
@@ -65,6 +67,7 @@ input:active, select:active, option:active, button:active {
 
 
 header .headBtnMaxSize {
+	font-size: 14px;
 	height: 30px;
 	max-height: 30px;
 	width: 35px;
@@ -92,8 +95,25 @@ header .headBtnMaxSize {
 .button:hover {
 	background-color: #EFEFEF;
 }
+/*
+<div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+*/
 .searchBtn {
-	font-size: 14px;
+	background:url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K");
+	background-repeat: no-repeat;
+	background-size: 30px 18px;
+	background-position-y: 5px;
+	background-position-x: 1px;
+}
+/*
+<div>Icons made by <a href="https://www.flaticon.com/authors/eleonor-wang" title="Eleonor Wang">Eleonor Wang</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+*/
+.aboutBtn {
+	background:url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI2IDI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNiAyNiIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CiAgPGc+CiAgICA8cGF0aCBkPSJtMTQsMjJoLTJjLTAuNiwwLTEsMC40LTEsMXYyYzAsMC42IDAuNCwxIDEsMWgyYzAuNiwwIDEtMC40IDEtMXYtMmMwLTAuNi0wLjQtMS0xLTF6IiBmaWxsPSIjMDAwMDAwIi8+CiAgICA8cGF0aCBkPSJNMTMsMEM4LDAsNCw0LDQsOWMwLDAuNSwwLDEsMC4xLDEuNWMwLjEsMC42LDAuNywwLjksMS4zLDAuOGwxLjktMC42YzAuNS0wLjEsMC44LTAuNiwwLjctMS4xQzgsOS40LDgsOS4yLDgsOSAgIGMwLTIuOCwyLjItNSw1LTVzNSwyLjIsNSw1YzAsMS43LTEsMi41LTIuOCw0Yy0xLjcsMS40LTMuNywzLTQuMiw1LjljLTAuMSwwLjYsMC40LDEuMSwxLDEuMWgyYzAuNSwwLDAuOS0wLjMsMS0wLjggICBjMC4zLTEuMiwxLjItMiwyLjctMy4xQzE5LjYsMTQuNiwyMiwxMi43LDIyLDlDMjIsNCwxOCwwLDEzLDB6IiBmaWxsPSIjMDAwMDAwIi8+CiAgPC9nPgo8L3N2Zz4K");
+	background-repeat: no-repeat;
+	background-size: 15px 18px;
+	background-position-y: 5px;
+	background-position-x: 8px;
 }
 header select {
 	max-width:65px;
@@ -274,4 +294,10 @@ footer {
 	text-align:center;
 	bottom:0;
 	margin: 0;
+}
+
+
+/* ldoce dictionary override */
+.ldoceDictOutput .fa:before {
+	content: "\1F56A" !important;
 }

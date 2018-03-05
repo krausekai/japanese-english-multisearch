@@ -140,6 +140,8 @@ function weblioDictionary(url) {
 			}
 
 			$("script").replaceWith("");
+			$(".free-reg-banner").replaceWith("");
+			$(".theme-learning-banner").replaceWith("");
 			$(".addToSlBtnCntner").replaceWith("");
 			$(".sntcA").replaceWith("");
 			$(".fa").replaceWith("");
