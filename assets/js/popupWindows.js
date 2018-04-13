@@ -1,16 +1,15 @@
+var ipcRenderer = require("electron").ipcRenderer;
+
 var popupsWindows = module.exports = {};
+var updater = require("./js/updater.js");
 
-// For opening new windows or importing files
-var BrowserWindow = require('electron').remote.BrowserWindow
-var path = require('path')
+// Event listener for the about button
+var searchformbutton = doc.getElementById("search").elements["aboutbutton"];
+searchformbutton.addEventListener("click", aboutWindow, false);
 
-// Open a html file dialog window
-popupsWindows.new = function (file, options) {
-	let filePath = path.join('file://', __dirname, file)
-	options = options || {};
-	
-	let win = new BrowserWindow(options)
-	win.on('close', function () { win = null })
-	win.loadURL(filePath)
-	win.show()
+async function aboutWindow() {
+	ipcRenderer.send('open-about-window');
 }
+
+// Check for new versions
+updater.checkVersion();

@@ -33,14 +33,14 @@ inputFocus.focus = function (event, id, element) {
 	} else {
 		previousKeyCode = keycode;
 	}
-	
+
 	if (id && element) {
 		var input = doc.getElementById(id).elements[element];
 	} else if (id && !element) {
 		var input = doc.getElementById(id);
 	} else {
-		return console.error("error: no input ID assigned");
+		return console.error("No input ID assigned");
 	}
-	
+
 	input.focus();
 }

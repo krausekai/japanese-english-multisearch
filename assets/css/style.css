@@ -166,6 +166,13 @@ header select {
 	font-family: 'Signika', sans-serif;
 }
 
+#glossForm {
+	max-height: 50px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+
 #googleForm {
 	padding:5px;
 }

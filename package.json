@@ -52,7 +52,7 @@
 		"package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=./build/icon.png --prune=true --out=dist"
 	},
 	"devDependencies": {
-		"electron": "^1.8.2",
+		"electron": "^1.8.4",
 		"electron-builder": "^19.56.2",
 		"electron-packager": "^10.1.2",
 		"electron-rebuild": "^1.7.3"
@@ -60,7 +60,9 @@
 	"dependencies": {
 		"cheerio": "latest",
 		"electron-context-menu": "latest",
-		"request": "latest",
+		"rakutenma": "^1.0.0",
+		"request": "^2.85.0",
+		"request-promise": "latest",
 		"ssl-root-cas": "^1.2.5"
 	}
 }

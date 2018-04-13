@@ -1,5 +1,6 @@
 // Modules required from electron
 const {app, BrowserWindow} = require('electron')
+const ipc = require('electron').ipcMain
 
 const path = require('path')
 const url = require('url')
@@ -57,3 +58,53 @@ app.on('window-all-closed', function() {
 		app.quit()
 	}
 })
+
+
+var aboutWindow = null;
+ipc.on('open-about-window', function () {
+	if (aboutWindow) {
+			return;
+	}
+
+	aboutWindow = new BrowserWindow({
+			frame: true,
+			height: 500,
+			resizable: true,
+			width: 650
+	});
+
+	aboutWindow.loadURL(url.format({
+		pathname: path.join(__dirname, './assets/about.html'),
+		protocol: 'file:',
+		slashes: true
+	}))
+
+	aboutWindow.on('closed', function () {
+			aboutWindow = null;
+	});
+});
+
+
+var updaterWindow = null;
+ipc.on('open-updater-window', function () {
+	if (aboutWindow) {
+			return;
+	}
+
+	updaterWindow = new BrowserWindow({
+			frame: true,
+			height: 250,
+			resizable: true,
+			width: 650
+	});
+
+	updaterWindow.loadURL(url.format({
+		pathname: path.join(__dirname, './assets/updater.html'),
+		protocol: 'file:',
+		slashes: true
+	}))
+
+	updaterWindow.on('closed', function () {
+			updaterWindow = null;
+	});
+});

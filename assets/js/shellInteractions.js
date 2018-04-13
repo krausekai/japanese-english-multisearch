@@ -4,7 +4,7 @@ Dictionary tables have special rules for search results and search field input.
 */
 
 // Manage Shell interactions - https://github.com/electron/electron/blob/master/docs/api/shell.md
-const {shell} = require('electron')
+const {shell} = require("electron")
 
 var doc = document;
 
@@ -58,7 +58,7 @@ function tabOneClickback(e) {
 	}
 
 	// if this is a clicked URL
-	if (e.target.localName == 'a' || e.target.localName == 'A' || e.target.parentNode.nodeName == 'a' || e.target.parentNode.nodeName == 'A') {
+	if (e.target.localName == "a" || e.target.localName == "A" || e.target.parentNode.nodeName == "a" || e.target.parentNode.nodeName == "A") {
 		e.preventDefault();
 
 		var url = e.target.parentNode.href || e.target.href;
@@ -110,7 +110,7 @@ function defaultClickback(e) {
 		return;
 	}
 
-	if (e.target.localName == 'a' || e.target.localName == 'A' || e.target.parentNode.nodeName == 'a' || e.target.parentNode.nodeName == 'A') {
+	if (e.target.localName == "a" || e.target.localName == "A" || e.target.parentNode.nodeName == "a" || e.target.parentNode.nodeName == "A") {
 		e.preventDefault();
 		shell.openExternal(e.target.href);
 	}
