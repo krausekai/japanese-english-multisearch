@@ -7,6 +7,9 @@
 		<script src="./js/updater.js"></script>
 		<script>
 			window.onload = function () {
+				const shellinteractions = require("./js/shellInteractions");
+				shellinteractions.onload();
+
 				const app = require("electron").remote.app;
 				let updateLink = document.getElementById("updateLink");
 				updateLink.addEventListener("click", function () {
@@ -34,6 +37,5 @@
 			<input type="button" class="button stretchBtn" id="closebtn" value="Close Window" onclick="window.close();return false;" /><br />
 		</footer>
 
-		<script src="./js/shellInteractions.js"></script>
 	</body>
 </html>

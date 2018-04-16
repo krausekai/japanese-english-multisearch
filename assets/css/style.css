@@ -37,7 +37,7 @@ header input[type="button"],
 header input[type="submit"] {
 	top: 0;
 }
-header input[type="text"] {
+header input[type="search"] {
 	top: 0;
 	left: 0;
 	width:80%;
@@ -171,6 +171,9 @@ header select {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	white-space: nowrap;
+}
+#glossForm .token {
+	margin: 5px;
 }
 
 #googleForm {

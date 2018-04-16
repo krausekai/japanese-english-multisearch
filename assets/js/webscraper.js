@@ -1,17 +1,19 @@
-// For http requests - //https://github.com/request/request
-var request = require('request-promise');
-// For jquery-like node.js - //https://cheerio.js.org/
-var cheerio = require('cheerio');
+var webscraper = module.exports = {};
 
-// Thanks to https://stackoverflow.com/a/23303587/1679669
-// Fix broken chains for SSL Certificates by adding their authority to the trust
-var fs = require("fs");
-var path = require("path");
-var https = require("https"), cas;
+const request = require('request-promise');
+const cheerio = require('cheerio');
+
+// Fix broken chains for SSL Certificates by adding their authority to the trust - https://stackoverflow.com/a/23303587/1679669
+const https = require("https");
 require("ssl-root-cas").inject();
-var cas = https.globalAgent.options.ca;
-// ALC.co.jp
-cas.push(fs.readFileSync(path.join(__dirname, "./ssl/GlobalSignOrganizationValidationCA-SHA256-G2.crt")));
+const cas = https.globalAgent.options.ca;
+// ALC Certificate
+const fs = require("fs");
+const path = require("path");
+const alcCert = path.join(__dirname, "./ssl/GlobalSignOrganizationValidationCA-SHA256-G2.crt");
+fs.readFile(alcCert, (err, data) => {
+	cas.push(data);
+});
 
 // Readable request status codes
 function statusCodeMeaning(statusCode) {
@@ -63,38 +65,38 @@ function getLanguage(term) {
 
 var doc = document;
 
-async function dictionarySearch(searchTerm) {
+webscraper.dictionarySearch = async function (searchTerm) {
 	if (searchTerm == '') return
 	var lang = getLanguage(searchTerm);
 
 	var weblioUrl = "http://ejje.weblio.jp/content/" + encodeURI(searchTerm);
-	weblioDictionary(weblioUrl);
+	webscraper.weblioDictionary(weblioUrl);
 
 	//secondaryOutput
 	if (lang.source == "ja") {
 		var kotobankUrl = "https://kotobank.jp/word/" + encodeURI(searchTerm);
-		kotobankDictionary(kotobankUrl);
+		webscraper.kotobankDictionary(kotobankUrl);
 	} else if (lang.source == "en") {
 		var ldoceUrl = "http://www.ldoceonline.com/search/?q=" + encodeURI(searchTerm);
-		ldoceDictionary(ldoceUrl);
+		webscraper.ldoceDictionary(ldoceUrl);
 	}
 }
 
-async function corpusSearch(searchTerm) {
+webscraper.corpusSearch = async function (searchTerm) {
 	if (searchTerm == '') return
 
 	doc.getElementById("googleOutput").innerHTML = '';
-	googleTranslate(searchTerm);
+	webscraper.googleTranslate(searchTerm);
 
 	doc.getElementById("weblioOutput").innerHTML = '';
 	doc.getElementById("alcOutput").innerHTML = '';
 	doc.getElementById("lingueeOutput").innerHTML = '';
 
 	var weblioUrl = "http://ejje.weblio.jp/sentence/content/" + encodeURI(searchTerm);
-	weblioCorpus(weblioUrl);
+	webscraper.weblioCorpus(weblioUrl);
 
 	var alcUrl = "https://eow.alc.co.jp/search?q=" + encodeURI(searchTerm) + "&pg=1";
-	alcCorpus(alcUrl);
+	webscraper.alcCorpus(alcUrl);
 
 	var lang = getLanguage(searchTerm);
 	if (lang.source == "en") lang.source = "english";
@@ -102,15 +104,15 @@ async function corpusSearch(searchTerm) {
 	if (lang.target == "en") lang.target = "english";
 	if (lang.target == "ja") lang.target = "japanese";
 	var lingueeUrl = "https://www.linguee.com/" + lang.source + "-" + lang.target + "/search?query=" + encodeURI(searchTerm) + "&ajax=1";
-	lingueeCorpus(lingueeUrl);
+	webscraper.lingueeCorpus(lingueeUrl);
 }
 
 //........................................................................................................
 
-async function googleTranslate(searchTerm) {
+webscraper.googleTranslate = async function (searchTerm) {
 	var lang = getLanguage(searchTerm);
 
-	// client=gtx refers to the google chrome translation API, allowing undefined header requests and hopefully more quota by default. Does not return valid JSON.
+	// client=gtx is Google Chrome's API, and allows undefined header requests. Quota may be unlimited. Does not return valid JSON.
 	var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + lang.source + "&tl=" + lang.target + "&dt=t&q=" + encodeURI(searchTerm);
 	var response = await getRequest(url);
 	var result = response.match(/".*?"/)[0].slice(1,-1);
@@ -121,7 +123,7 @@ async function googleTranslate(searchTerm) {
 // DICTIONARIES
 //........................................................................................................
 
-async function weblioDictionary(url) {
+webscraper.weblioDictionary = async function (url) {
 	var output = doc.getElementById("weblioDictOutput");
 	output.innerHTML = '';
 
@@ -165,7 +167,7 @@ async function weblioDictionary(url) {
 	output.innerHTML += $("#main").html();
 }
 
-async function kotobankDictionary(url) {
+webscraper.kotobankDictionary = async function (url) {
 	doc.getElementById("secondaryDictOutput").classList.add('kotobankDict');
 	doc.getElementById("secondaryDictOutput").classList.remove('ldoceDictOutput');
 
@@ -189,7 +191,7 @@ async function kotobankDictionary(url) {
 	output.innerHTML += $("body").html();
 }
 
-async function ldoceDictionary(url) {
+webscraper.ldoceDictionary = async function (url) {
 	doc.getElementById("secondaryDictOutput").classList.add('ldoceDictOutput');
 	doc.getElementById("secondaryDictOutput").classList.remove('kotobankDict');
 
@@ -238,7 +240,7 @@ function seeMoreBtnVisibilityCheck() {
 	else seeMoreBtn.style.visibility = 'visible';
 }
 
-async function weblioCorpus(url) {
+webscraper.weblioCorpus = async function (url) {
 	var output = doc.getElementById("weblioOutput");
 	gWeblioUrl = '';
 
@@ -301,7 +303,7 @@ async function weblioCorpus(url) {
 	seeMoreBtnVisibilityCheck();
 }
 
-async function alcCorpus(url) {
+webscraper.alcCorpus = async function (url) {
 	var output = doc.getElementById("alcOutput");
 	gAlcUrl = '';
 
@@ -356,7 +358,7 @@ async function alcCorpus(url) {
 	seeMoreBtnVisibilityCheck();
 }
 
-async function lingueeCorpus(url) {
+webscraper.lingueeCorpus = async function (url) {
 	var output = doc.getElementById("lingueeOutput");
 
 	var response = await getRequest(url);

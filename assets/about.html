@@ -4,6 +4,12 @@
 		<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./css/style.css">
+		<script>
+			window.onload = function() {
+				const shellinteractions = require("./js/shellInteractions");
+				shellinteractions.onload();
+			}
+		</script>
 		<title>About</title>
 	</head>
 
@@ -47,6 +53,5 @@
 			<input type="button" class="button stretchBtn" id="closebtn" value="Close Window" onclick="window.close();return false;" /><br />
 		</footer>
 
-		<script src="./js/shellInteractions.js"></script>
 	</body>
 </html>

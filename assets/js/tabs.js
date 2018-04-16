@@ -1,11 +1,22 @@
-var tabs = {};
+var tabs = module.exports = {};
 var doc = document;
 
-tabs.onload = function () {
+tabs.onload = async function () {
+	//Resize GUI
+	var tableResize = async function () {
+		var tabOne = document.getElementsByClassName("tbodySize")[0];
+		var tabTwo = document.getElementsByClassName("tbodySize")[1];
+		// Make sure to minus the header height below
+		tabOne.style.height = window.innerHeight - 97 + "px";
+		tabTwo.style.height = window.innerHeight - 153 + "px";
+	}
+	tableResize();
+	window.addEventListener("resize", tableResize, false);
+
 	tabs.changeTab(event, 'tabOne');
 }
 
-tabs.changeTab = function (evt, tabName) {
+tabs.changeTab = async function (evt, tabName) {
 	var i, tabcontent, tablinks;
 
 	// Get all elements with class="tabcontent" and hide them

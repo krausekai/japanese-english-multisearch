@@ -7,20 +7,10 @@ searchHistory.onload = function () {
 	//Find searchHistoryMenu
 	searchHistoryMenu = doc.getElementById("search").elements["searchHistoryMenu"];
 	searchHistoryMenu.addEventListener("click", searchHistory.jump, false);
-	
-	//Add searchTerms
-	var searchform = doc.getElementById("freeSearchForm");
-	searchform.addEventListener("submit", searchHistory.add, false);
-	var searchformbutton = doc.getElementById("search").elements["searchbutton"];
-	searchformbutton.addEventListener("click", searchHistory.add, false);
 }
 
-searchHistory.add = function () {
-	//Get the search term
-	var searchTerm = doc.getElementById("search").elements["searchbar"].value;
-	if (searchTerm == '') {
-		return
-	}
+searchHistory.add = function (searchTerm) {
+	if (searchTerm == '') return;
 	//Check for duplicates
 	for (var i = 0; i < searchTerms.length; ++i) {
 		if (searchTerm == searchTerms[i]) {
@@ -38,9 +28,7 @@ searchHistory.jump = function () {
 	//Get the search term and searchHistory item
 	var searchTerm = doc.getElementById("search").elements["searchbar"].value;
 	var searchHistoryItem = searchHistoryMenu.value;
-	if (searchTerm == '' || searchTerm == searchHistoryItem) {
-		return
-	}
+	if (searchTerm == "" || searchTerm == searchHistoryItem) return;
 	//Redo the search
 	doc.getElementById("search").elements["searchbar"].value = searchHistoryItem;
 	doc.getElementById("search").elements["searchbutton"].click();

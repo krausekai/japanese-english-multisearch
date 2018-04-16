@@ -4,13 +4,13 @@ var inputFocus = module.exports = {};
 var doc = document;
 var previousKeyCode;
 
-inputFocus.onload = function () {
+inputFocus.onload = async function () {
 	window.addEventListener("keydown", function () {
 		inputFocus.focus(event, "search", "searchbar");
 	}, true)
 }
 
-inputFocus.focus = function (event, id, element) {
+inputFocus.focus = async function (event, id, element) {
 	var keycode = event.which || event.keycode;
 	//Prevent the up and down arrow keys from focusing the input
 	var upArrowKey = 38;
