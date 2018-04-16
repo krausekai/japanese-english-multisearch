@@ -41,16 +41,16 @@ function searchBar() {
 
 	// Tokenize sentences if there are multiple terms, from the dictionary tab
 	var terms = rakuten.tokenize(searchTerm);
-	var glossForm = document.getElementById("glossForm");
+	var glossTokens = document.getElementById("glossTokens");
 	if (terms.length > 1 && searchType == "dictionary") {
 		// show visibility
-		glossForm.innerHTML = "";
-		glossForm.style.visibility = "visible";
+		glossTokens.innerHTML = "";
+		glossTokens.style.visibility = "visible";
 		for (var i = 0; i < terms.length; i++) {
 			// Remove term types (eg. noun, verb)
 			terms[i] = terms[i][0];
 			// tie this into shell interactions as a safe search term
-			glossForm.innerHTML += "<a class='token' href='#glossToken'>" + terms[i] + "</a>";
+			glossTokens.innerHTML += "<a class='token' href='#glossToken'>" + terms[i] + "</a>";
 		}
 	}
 

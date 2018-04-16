@@ -167,13 +167,15 @@ header select {
 }
 
 #glossForm {
-	max-height: 50px;
+	padding: 5px;
+}
+#glossForm #glossTokens {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	white-space: nowrap;
 }
-#glossForm .token {
-	margin: 5px;
+#glossTokens .token {
+	margin: 3px;
 }
 
 #googleForm {
