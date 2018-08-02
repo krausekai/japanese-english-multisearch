@@ -83,7 +83,7 @@ function tabOneClickback(e) {
 				url = "https://www.ldoceonline.com/" + url;
 			}
 			else if (targetClass == "kotobankDict") {
-				url = "http://kotobank.jp/" + url;
+				url = "https://kotobank.jp/" + url;
 			}
 		}
 
@@ -95,7 +95,7 @@ function tabOneClickback(e) {
 		else if (url.startsWith("http://ejje.weblio.jp/content/") || url.startsWith("https://ejje.weblio.jp/content/")) {
 			webScraper.weblioDictionary(url);
 		}
-		else if (url.startsWith("http://kotobank.jp/word/") || url.startsWith("http://kotobank.jp/word/")) {
+		else if (url.startsWith("https://kotobank.jp/word/") || url.startsWith("https://kotobank.jp/word/")) {
 			webScraper.kotobankDictionary(url);
 		}
 		else if (url.startsWith("http://www.ldoceonline.com/") || url.startsWith("https://www.ldoceonline.com/")) {

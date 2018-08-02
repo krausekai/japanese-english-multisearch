@@ -79,7 +79,7 @@ webscraper.dictionarySearch = async function (searchTerm) {
 
 	//secondaryOutput
 	if (lang.source == "ja") {
-		var kotobankUrl = "http://kotobank.jp/word/" + encodeURI(searchTerm);
+		var kotobankUrl = "https://kotobank.jp/word/" + encodeURI(searchTerm);
 		webscraper.kotobankDictionary(kotobankUrl);
 	} else if (lang.source == "en") {
 		var ldoceUrl = "http://www.ldoceonline.com/search/?q=" + encodeURI(searchTerm);
