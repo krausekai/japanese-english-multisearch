@@ -10,8 +10,13 @@ const cas = https.globalAgent.options.ca;
 // ALC Certificate
 const fs = require("fs");
 const path = require("path");
-const alcCert = path.join(__dirname, "./ssl/GlobalSignOrganizationValidationCA-SHA256-G2.crt");
+const alcCert = path.join(__dirname, "./ssl/alc.crt");
 fs.readFile(alcCert, (err, data) => {
+	cas.push(data);
+});
+// Kotobank Certificate
+const kotobankCert = path.join(__dirname, "./ssl/kotobankjp.crt");
+fs.readFile(kotobankCert, (err, data) => {
 	cas.push(data);
 });
 
@@ -74,7 +79,7 @@ webscraper.dictionarySearch = async function (searchTerm) {
 
 	//secondaryOutput
 	if (lang.source == "ja") {
-		var kotobankUrl = "https://kotobank.jp/word/" + encodeURI(searchTerm);
+		var kotobankUrl = "http://kotobank.jp/word/" + encodeURI(searchTerm);
 		webscraper.kotobankDictionary(kotobankUrl);
 	} else if (lang.source == "en") {
 		var ldoceUrl = "http://www.ldoceonline.com/search/?q=" + encodeURI(searchTerm);
@@ -138,6 +143,7 @@ webscraper.weblioDictionary = async function (url) {
 
 	$("script").replaceWith("");
 	$(".free-reg-banner").replaceWith("");
+	$(".free-member-features").replaceWith("");
 	$(".theme-learning-banner").replaceWith("");
 	$(".addToSlBtnCntner").replaceWith("");
 	$(".sntcA").replaceWith("");
@@ -229,9 +235,9 @@ webscraper.ldoceDictionary = async function (url) {
 var gWeblioUrl = '';
 var gAlcUrl = '';
 
-function seeMore() {
-	if (gWeblioUrl != '') weblioCorpus(gWeblioUrl);
-	if (gAlcUrl != '') alcCorpus(gAlcUrl);
+webscraper.seeMore = function() {
+	if (gWeblioUrl != '') webscraper.weblioCorpus(gWeblioUrl);
+	if (gAlcUrl != '') webscraper.alcCorpus(gAlcUrl);
 	seeMoreBtnVisibilityCheck();
 }
 function seeMoreBtnVisibilityCheck() {
@@ -240,7 +246,7 @@ function seeMoreBtnVisibilityCheck() {
 	else seeMoreBtn.style.visibility = 'visible';
 }
 
-webscraper.weblioCorpus = async function (url) {
+webscraper.weblioCorpus = async function(url) {
 	var output = doc.getElementById("weblioOutput");
 	gWeblioUrl = '';
 

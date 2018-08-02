@@ -2,7 +2,7 @@
 	"name": "japanese_english_multisearch",
 	"productName": "Japanese-English MultiSearch",
 	"description": "Search multiple Japanese-English dictionaries and corpora",
-	"version": "0.2.1",
+	"version": "0.2.3",
 	"author": "Kai Krause <kaikrause95@gmail.com>",
 	"copyright": "© 2017, Kai Krause <kaikrause95@gmail.com>",
 	"homepage": "https://github.com/krausekai/",
@@ -52,15 +52,15 @@
 		"package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=./build/icon.png --prune=true --out=dist"
 	},
 	"devDependencies": {
-		"electron": "^2.0.2",
-		"electron-builder": "^20.15.1",
+		"electron": "^2.0.6",
+		"electron-builder": "^20.27.0",
 		"electron-packager": "^12.1.0",
-		"electron-rebuild": "^1.7.3"
+		"electron-rebuild": "^1.8.2"
 	},
 	"dependencies": {
 		"cheerio": "latest",
-		"electron-context-menu": "latest",
-		"request": "^2.85.0",
+		"electron-context-menu": "^0.10.0",
+		"request": "^2.87.0",
 		"request-promise": "latest",
 		"ssl-root-cas": "^1.2.5"
 	}
