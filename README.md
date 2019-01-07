@@ -5,7 +5,7 @@ Search multiple online Japanese-English dictionaries and corpora
 
 **Dictionaries and Corpora**
 
-This program searches these dictionaries and corpora (not all are HTTPS compliant):
+This program searches these dictionaries and corpora:
 
 *   [http://ejje.weblio.jp/](http://ejje.weblio.jp/)
 *   [https://kotobank.jp/](https://kotobank.jp/)
@@ -13,4 +13,4 @@ This program searches these dictionaries and corpora (not all are HTTPS complian
 *   [https://www.alc.co.jp/](https://www.alc.co.jp/)
 *   [https://www.linguee.com/](https://www.linguee.com/)
 
-This program is **not** associated or directly involved with the dictionaries and corpora searched from this program, or any associated entity or person. This program makes no effort to store or cache the data from any dictionary or corpus, and makes no effort to infringe upon any copyright. This program is made in good faith.
+Kai Krause and this program is **not** associated or directly involved with the respective owners of the above dictionaries and corpora searched from within this program, or any associated entity or person. All trademarks, dictionary and corpora data displayed in this program is copyright of and property of their respective owners.
