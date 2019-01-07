@@ -47,7 +47,7 @@ async function getRequest(url) {
 		else return response.body;
 	}).catch((error) => {
 		if (error.name == "StatusCodeError") return outputError(statusCodeMeaning(error.statusCode));
-		else return outputError(error.message);
+		else return outputError(error.message); // TODO: check whether it is an SSL error, and if so, to return a re-try for HTTP, else return error.message
 	});
 }
 

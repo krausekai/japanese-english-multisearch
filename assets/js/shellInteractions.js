@@ -10,9 +10,7 @@ var doc = document;
 
 shellInteractions.onload = function () {
 	//Disable evals for scripts
-	window.eval = global.eval = function() {
-		return;
-	}
+	window.eval = global.eval = null;
 
 	//Disable drag drop events
 	doc.addEventListener('dragover', function (e) {e.preventDefault()});
@@ -60,7 +58,7 @@ function tabOneClickback(e) {
 	if (e.which == 3) return;
 
 	// if this is a clicked URL
-	if (e.target.localName == "a" || e.target.localName == "A" || e.target.parentNode.nodeName == "a" || e.target.parentNode.nodeName == "A") {
+	if (e.target.localName.toLowerCase() == "a" || e.target.parentNode.nodeName.toLowerCase() == "a") {
 		e.preventDefault();
 
 		var url = e.target.parentNode.href || e.target.href;
@@ -116,7 +114,7 @@ function defaultClickback(e) {
 	//return if right click
 	if (e.which == 3) return;
 
-	if (e.target.localName == "a" || e.target.localName == "A" || e.target.parentNode.nodeName == "a" || e.target.parentNode.nodeName == "A") {
+	if (e.target.localName.toLowerCase() == "a" || e.target.parentNode.nodeName.toLowerCase() == "a") {
 		e.preventDefault();
 		shell.openExternal(e.target.href);
 	}

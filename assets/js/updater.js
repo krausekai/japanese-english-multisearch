@@ -1,3 +1,5 @@
+// TODO: Update the program by downloading the changed app data (html, css, js) instead of needing to download a new compiled build
+
 var updater = module.exports = {};
 
 const request = require('request-promise');

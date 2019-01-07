@@ -1,0 +1,7 @@
+updater.js
+- // TODO: Update the program by downloading the changed app data (html, css, js) instead of needing to download a new compiled build
+	Size of core files is insignificant, and would be a welcome change to update by only downloading core changes if possible.
+
+webscraper.js
+- // TODO: check whether it is an SSL error, and if so, to return a re-try for HTTP, else return error.message
+	Currently, SSL validation fails half the time and introduces unnecessary complexity. Remove validation checks.
