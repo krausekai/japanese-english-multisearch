@@ -5,3 +5,8 @@ updater.js
 webscraper.js
 - // TODO: check whether it is an SSL error, and if so, to return a re-try for HTTP, else return error.message
 	Currently, SSL validation fails half the time and introduces unnecessary complexity. Remove validation checks.
+- Separate file better, perhaps into 2-3 files, and clean up code
+- Separate as an 'api' file, to differentiate front-end and back-end more?
+
+General
+- Remove third-party dependencies for requests?
