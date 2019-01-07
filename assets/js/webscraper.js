@@ -4,6 +4,7 @@ const request = require('request-promise');
 const cheerio = require('cheerio');
 
 // Fix broken chains for SSL Certificates by adding their authority to the trust - https://stackoverflow.com/a/23303587/1679669
+/*
 const https = require("https");
 require("ssl-root-cas").inject();
 const cas = https.globalAgent.options.ca;
@@ -19,6 +20,7 @@ const kotobankCert = path.join(__dirname, "./ssl/kotobankjp.crt");
 fs.readFile(kotobankCert, (err, data) => {
 	cas.push(data);
 });
+*/
 
 // Readable request status codes
 function statusCodeMeaning(statusCode) {
@@ -46,6 +48,7 @@ async function getRequest(url) {
 		if (response.statusCode != 200) return outputError("", response.statusCode);
 		else return response.body;
 	}).catch((error) => {
+		console.error(error);
 		if (error.name == "StatusCodeError") return outputError(statusCodeMeaning(error.statusCode));
 		else return outputError(error.message); // TODO: check whether it is an SSL error, and if so, to return a re-try for HTTP, else return error.message
 	});
