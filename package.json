@@ -2,7 +2,7 @@
 	"name": "japanese_english_multisearch",
 	"productName": "Japanese-English MultiSearch",
 	"description": "Search multiple Japanese-English dictionaries and corpora",
-	"version": "0.2.4",
+	"version": "0.2.5",
 	"author": "Kai Krause <kaikrause95@gmail.com>",
 	"copyright": "© 2017, Kai Krause <kaikrause95@gmail.com>",
 	"homepage": "https://github.com/krausekai/",
@@ -60,8 +60,6 @@
 	"dependencies": {
 		"cheerio": "latest",
 		"electron-context-menu": "latest",
-		"request": "latest",
-		"request-promise": "latest",
-		"ssl-root-cas": "latest"
+		"request-promise": "latest"
 	}
 }
