@@ -10,24 +10,26 @@ var remoteVersion = localStorage.getItem("remoteVersion");
 var updateUrl = "https://github.com/krausekai/japanese-english-multisearch/releases/latest";
 
 async function getRemoteUrl(url) {
-	return https.get(url, (resp) => {
-		let data = "";
+	return new Promise((resolve, reject) => {
+		https.get(url, (resp) => {
+			let data = "";
 
-		resp.on("data", (chunk) => {
-			data += chunk;
+			resp.on("data", (chunk) => {
+				data += chunk;
+			});
+
+			resp.on('end', () => {
+				data = JSON.parse(data);
+				resolve(data);
+			});
 		});
-
-		resp.on('end', () => {
-			data = JSON.parse(data);
-			console.log(data)
-		});
-
-		return data;
 	});
 }
 
 updater.checkVersion = async function () {
 	var response = await getRemoteUrl(remoteVersionUrl);
+	if (!response || !response.version) return;
+
 	localStorage.setItem("remoteVersion", response.version);
 
 	if (response.version !== localVersion) {
@@ -39,6 +41,10 @@ updater.checkVersion = async function () {
 			}, 1000)
 		}
 	}
+
+	console.log(localVersion)
+	console.log(response.version)
+
 }
 
 updater.onload = function () {
