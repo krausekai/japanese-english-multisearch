@@ -42,9 +42,6 @@ updater.checkVersion = async function () {
 		}
 	}
 
-	console.log(localVersion)
-	console.log(response.version)
-
 }
 
 updater.onload = function () {
