@@ -13,4 +13,4 @@ This program searches these dictionaries and corpora:
 *   [https://www.alc.co.jp/](https://www.alc.co.jp/)
 *   [https://www.linguee.com/](https://www.linguee.com/)
 
-Kai Krause and this program is **not** associated or directly involved with the respective owners of the above dictionaries and corpora searched from within this program, or any associated entity or person. All trademarks, dictionary and corpora data displayed in this program is copyright of and property of their respective owners.
+This Software and its creator(s) are not associated or affiliated with the respective owners of the dictionaries or corpora searched from within this Software, or any associated entity or person. All trademarks, dictionary and corpora data displayed in this program is copyright of and property of their respective owners.

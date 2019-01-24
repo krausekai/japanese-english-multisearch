@@ -1,12 +1,14 @@
 // Modules required from electron
-const {app, BrowserWindow} = require('electron')
-const ipc = require('electron').ipcMain
+const {app, BrowserWindow} = require('electron');
+const ipc = require('electron').ipcMain;
 
-const path = require('path')
-const url = require('url')
+app.setName("Japanese-English MultiSearch");
+
+const path = require('path');
+const url = require('url');
 
 // Keep a global reference of the window object to prevent the window closing when JavaScript object is garbage collected.
-let mainWindow
+let mainWindow;
 
 // Right-click context menu - https://github.com/sindresorhus/electron-context-menu
 require('electron-context-menu')({});
@@ -37,7 +39,7 @@ function createWindow() {
 }
 
 // Create window after initialization. Some APIs can only be used after this event.
-app.on('ready', createWindow)
+app.on('ready', createWindow);
 
 app.on('browser-window-created', function(e,window) {
 	//Hide each newly created window's menu
@@ -81,30 +83,5 @@ ipc.on('open-about-window', function () {
 
 	aboutWindow.on('closed', function () {
 			aboutWindow = null;
-	});
-});
-
-
-var updaterWindow = null;
-ipc.on('open-updater-window', function () {
-	if (aboutWindow) {
-			return;
-	}
-
-	updaterWindow = new BrowserWindow({
-			frame: true,
-			height: 250,
-			resizable: true,
-			width: 650
-	});
-
-	updaterWindow.loadURL(url.format({
-		pathname: path.join(__dirname, './assets/updater.html'),
-		protocol: 'file:',
-		slashes: true
-	}))
-
-	updaterWindow.on('closed', function () {
-			updaterWindow = null;
 	});
 });

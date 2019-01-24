@@ -4,7 +4,7 @@ Dictionary tables have special rules for search results and search field input.
 */
 var shellInteractions = module.exports = {};
 
-const {shell} = require("electron");
+var {shell} = require("electron");
 
 var doc = document;
 

@@ -60,6 +60,7 @@
 	"dependencies": {
 		"cheerio": "latest",
 		"electron-context-menu": "latest",
+		"request": "^2.88.0",
 		"request-promise": "latest"
 	}
 }

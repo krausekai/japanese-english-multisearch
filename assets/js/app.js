@@ -3,6 +3,7 @@ const inputFocus = require("./js/inputFocus");
 const searchHistory = require("./js/searchHistory");
 const webScraper = require("./js/webscraper");
 const shellinteractions = require("./js/shellInteractions");
+const updater = require("./js/updater");
 
 // app interaction
 var doc = document;
@@ -43,6 +44,7 @@ window.onload = function () {
 	searchHistory.onload();
 	inputFocus.onload();
 	shellinteractions.onload();
+	updater.onload();
 
 	// app interaction
 	var searchform = doc.getElementById("freeSearchForm");

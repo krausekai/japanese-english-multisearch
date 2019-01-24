@@ -1,18 +1,46 @@
-// TODO: Update the program by downloading the changed app data (html, css, js) instead of needing to download a new compiled build
-
 var updater = module.exports = {};
 
-const request = require('request-promise');
-const localVersion = require('electron').remote.app.getVersion();
-const remoteVersionUrl = 'https://raw.githubusercontent.com/krausekai/japanese-english-multisearch/master/package.json';
-const remoteVersion = localStorage.getItem("remoteVersion");
+var https = require("https");
+var {shell} = require("electron");
+var app = require("electron").remote.app
+
+var localVersion = require('electron').remote.app.getVersion();
+var remoteVersionUrl = 'https://raw.githubusercontent.com/krausekai/japanese-english-multisearch/master/package.json';
+var remoteVersion = localStorage.getItem("remoteVersion");
+var updateUrl = "https://github.com/krausekai/japanese-english-multisearch/releases/latest";
+
+async function getRemoteUrl(url) {
+	return https.get(url, (resp) => {
+		let data = "";
+
+		resp.on("data", (chunk) => {
+			data += chunk;
+		});
+
+		resp.on('end', () => {
+			data = JSON.parse(data);
+			console.log(data)
+		});
+
+		return data;
+	});
+}
 
 updater.checkVersion = async function () {
-	request(remoteVersionUrl, function (error, response, body) {
-		response = JSON.parse(body);
-		localStorage.setItem("remoteVersion", response.version);
-		if (response.version !== localVersion) {
-			ipcRenderer.send('open-updater-window');
+	var response = await getRemoteUrl(remoteVersionUrl);
+	localStorage.setItem("remoteVersion", response.version);
+
+	if (response.version !== localVersion) {
+		var confirmation = confirm("New Update Available! Go to update page?");
+		if (confirmation == true) {
+			shell.openExternal(updateUrl);
+			setTimeout(function() {
+				app.quit();
+			}, 1000)
 		}
-	});
+	}
+}
+
+updater.onload = function () {
+	updater.checkVersion();
 }
