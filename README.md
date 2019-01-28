@@ -4,16 +4,16 @@ Search multiple online Japanese-English dictionaries and corpora, including Webl
 
 ![Screenshot](/build/screenshot.png?raw=true "Version 0.2.0")
 
-<h2><a href="https://github.com/krausekai/japanese-english-multisearch/releases/latest">Download Now</a></h2>
+<h3><a href="https://github.com/krausekai/japanese-english-multisearch/releases/latest">Download Now</a></h3>
 
 
-<h1>Feature Requests</h1>
+<h2>Feature Requests</h2>
 
 If you would like a new feature, please [donate](https://krausekai.com/donate) what you think the feature is worth.
 
 Feature requests will be prioritized by feasibility, helpfulness, and donation status.
 
-<h1>Donate</h1>
+<h2>Donate</h2>
 
 Research, design, programming, and testing takes time.
 
