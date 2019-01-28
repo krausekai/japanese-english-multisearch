@@ -1,17 +1,19 @@
-<img src="https://raw.githubusercontent.com/krausekai/japanese-english-multisearch/master/build/icon.png" width="35px"><font size="18">Japanese-English MultiSearch</font><hr />
+<h1><img src="https://raw.githubusercontent.com/krausekai/japanese-english-multisearch/master/build/icon.png" width="35px"> Japanese-English MultiSearch</h1>
 
-Search multiple online Japanese-English dictionaries and corpora
+Search multiple online Japanese-English dictionaries and corpora, including Weblio, Kotobank, LDOCEonline, ALC, and Linguee.
 
 ![Screenshot](/build/screenshot.png?raw=true "Version 0.2.0")
 
-**Dictionaries and Corpora**
+<h1>Feature Requests</h1>
 
-This program searches these dictionaries and corpora:
+If you would like a new feature, [please donate](https://krausekai.com/donate) what you think the feature is worth.
 
-*   [http://ejje.weblio.jp/](http://ejje.weblio.jp/)
-*   [https://kotobank.jp/](https://kotobank.jp/)
-*   [http://www.ldoceonline.com/](http://www.ldoceonline.com/)
-*   [https://www.alc.co.jp/](https://www.alc.co.jp/)
-*   [https://www.linguee.com/](https://www.linguee.com/)
+Feature requests will be prioritized by feasibility, helpfulness, and donation status.
 
-This Software and its creator(s) are not associated or affiliated with the respective owners of the dictionaries or corpora searched from within this Software, or any associated entity or person. All trademarks, dictionary and corpora data displayed in this program is copyright of and property of their respective owners.
+<h1>Donate</h1>
+
+Research, design, programming, and testing takes time.
+
+Please consider donating. Thank you.
+
+<a href="https://krausekai.com/donate"><img src="https://i.imgur.com/chfDVUo.png" width="150px"></a>
