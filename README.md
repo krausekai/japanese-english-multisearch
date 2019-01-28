@@ -1,4 +1,4 @@
-<span style="font-size:38px"><img src="https://raw.githubusercontent.com/krausekai/japanese-english-multisearch/master/build/icon.png" width="35px"> Japanese-English MultiSearch</span><hr />
+<img src="https://raw.githubusercontent.com/krausekai/japanese-english-multisearch/master/build/icon.png" width="35px"><font size="18">Japanese-English MultiSearch</font><hr />
 
 Search multiple online Japanese-English dictionaries and corpora
 
