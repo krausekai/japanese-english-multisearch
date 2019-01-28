@@ -16,4 +16,4 @@ Research, design, programming, and testing takes time.
 
 Please consider [donating](https://krausekai.com/donate). Thank you.
 
-<a href="https://krausekai.com/donate"><img src="https://i.imgur.com/sVBYHpo.png" width="150px"></a>
+<a href="https://krausekai.com/donate"><img src="https://i.imgur.com/sVBYHpo.png" width="175px"></a>
