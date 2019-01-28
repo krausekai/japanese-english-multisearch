@@ -11,7 +11,8 @@
 	"keywords": [
 		"Japanese",
 		"English",
-		"MultiSearch"
+		"MultiSearch",
+		"study"
 	],
 	"main": "main.js",
 	"build": {
