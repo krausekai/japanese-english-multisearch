@@ -13,7 +13,7 @@ If you would like a new feature, please [donate](https://krausekai.com/donate) w
 
 Feature requests will be prioritized by feasibility, helpfulness, and donation status.
 
-Donations do not guarantee the development or implementation of feature requests.
+However, donations do not guarantee the development or implementation of feature requests.
 
 <h2>Donate</h2>
 
