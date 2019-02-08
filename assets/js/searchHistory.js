@@ -28,12 +28,16 @@ searchHistory.add = function (searchTerm) {
 	searchTerms.push(searchTerm);
 }
 
+var menuIsOpen = false;
 searchHistory.jump = function () {
+	// prevent searches when the menu is opened, and only when a menu option is selected
+	if (!menuIsOpen) return menuIsOpen = true;
+	else menuIsOpen = false;
 	//Get the search term and searchHistory item
-	var searchTerm = document.getElementById("search").elements["searchbar"].value;
+	var searchTerm = document.getElementById("gloss_form").elements["searchbar"].value;
 	var searchHistoryItem = searchHistoryMenu.value;
-	if (searchTerm == "" || searchTerm == searchHistoryItem) return;
+	if (searchTerm == searchHistoryItem) return;
 	//Redo the search
-	document.getElementById("search").elements["searchbar"].value = searchHistoryItem;
-	document.getElementById("search").elements["searchbutton"].click();
+	document.getElementById("gloss_form").elements["searchbar"].value = searchHistoryItem;
+	document.getElementById("gloss_form").elements["searchbutton"].click();
 }
