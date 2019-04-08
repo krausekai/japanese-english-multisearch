@@ -22,7 +22,7 @@ tabs.onload = async function () {
 	pageTabs[0].click();
 
 	// monitor key events to change tab
-	window.addEventListener("keyup", function (e) {
+	window.addEventListener("keydown", function (e) {
 		var evtobj = window.event? event : e;
 
 		var tabKey = 9;
