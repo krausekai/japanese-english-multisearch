@@ -1,6 +1,8 @@
 var tabs = module.exports = {};
 var doc = document;
 
+var pageTabs = [];
+
 tabs.onload = async function () {
 	//Resize GUI
 	var tableResize = async function () {
@@ -13,7 +15,40 @@ tabs.onload = async function () {
 	tableResize();
 	window.addEventListener("resize", tableResize, false);
 
-	tabs.changeTab(event, 'tabOne');
+	// get all tabs
+	pageTabs = document.getElementsByClassName("tablinks");
+
+	// change to the main tab
+	pageTabs[0].click();
+
+	// monitor key events to change tab
+	window.addEventListener("keyup", function (e) {
+		var evtobj = window.event? event : e;
+
+		var tabKey = 9;
+
+		// re-cache currently active tab
+		pageTabs = document.getElementsByClassName("tablinks");
+
+		// get current tab
+		var currentTabIndex;
+		for (var i = 0; i < pageTabs.length; i++) {
+			if (pageTabs[i].classList.contains("active")) {
+				currentTabIndex = i;
+				break;
+			}
+		}
+
+		// tab back
+		if (evtobj.ctrlKey && evtobj.shiftKey && evtobj.keyCode == tabKey) {
+			if (currentTabIndex-1 > -1) return pageTabs[currentTabIndex-1].click();
+		}
+
+		// tab forward
+		if (evtobj.ctrlKey && !evtobj.shiftKey && evtobj.keyCode == tabKey) {
+			if (currentTabIndex+1 < pageTabs.length) return pageTabs[currentTabIndex+1].click();
+		}
+	}, true);
 }
 
 tabs.changeTab = async function (evt, tabName) {

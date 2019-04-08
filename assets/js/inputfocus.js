@@ -12,12 +12,11 @@ inputFocus.onload = async function () {
 
 inputFocus.focus = async function (event, id, element) {
 	var keycode = event.which || event.keycode;
-	//Prevent the up and down arrow keys from focusing the input
-	var upArrowKey = 38;
-	var downArrowKey = 40;
-	if (keycode == upArrowKey || keycode == downArrowKey) {
-		return;
-	}
+
+	//Prevent the up & down arrow keys, and shift & alt keys from focusing the input
+	var ignoredKeys = [38, 40, 16, 18];
+	if (ignoredKeys.indexOf(keycode) > -1) return;
+
 	//Prevent the ctrl+c keycode from focusing the input
 	var ctrlKey = 17;
 	var cmdKey = 91;
