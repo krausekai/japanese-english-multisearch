@@ -1,3 +1,7 @@
+This project has been replaced by <a href="https://github.com/krausekai/multisitesearcher">MultiSiteSearcher</a>.
+
+<hr />
+
 <h1><img src="https://raw.githubusercontent.com/krausekai/japanese-english-multisearch/master/build/icon.png" width="35px"> Japanese-English MultiSearch</h1>
 
 Search multiple online Japanese-English dictionaries and corpora, including Weblio, Kotobank, LDOCEonline, ALC, and Linguee, side-by-side in a single window.
